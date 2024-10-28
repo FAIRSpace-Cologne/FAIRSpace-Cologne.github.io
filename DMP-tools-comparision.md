@@ -1,6 +1,6 @@
 | **Feature**       | [**Argos**](https://argos.openaire.eu/splash/) | [**DMPTool**](https://dmptool.org) | [**DMPonline**](https://dmponline.dcc.ac.uk/) | [**Data Stewardship Wizard**](https://ds-wizard.org/) |
 |--------------------------|-----------|--------------|---------------|----------------------------------|
-| **Cost**                 | Free      | Free         | Free (template customization requires institutional subscription) | Free (basic); customization requires programming skills |
+| **Cost**                 | Free      | Free         | Free | Free (basic); customization requires programming skills |
 | **Login Requirement**    | Yes (account required) | Yes (account required) | Yes (account required) | Yes (account required) |
 | **Number of Users**      | Not specified | 124,380 Users | 142,003 Users | Not specified |
 | **Number of Participating Institutions** | Not specified | 407 Institutions | 342 Organizations | Not specified |

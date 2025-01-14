@@ -37,15 +37,39 @@ If the answer is yes to any of the questions above, you should carry-on reading 
 
 There are various ways to implement version control, each suited to different project needs. Select the approach that aligns best with your specific use case:
 
-[Simple Version Control](#Simple-Version-Management)
-- Date in File Name: Include the date in the file name (e.g., HealthTest-2008-04-06).
-- Version Numbers: Use version numbers in file names (e.g., HealthTest_v2).
+**[Simple Version Control](#Simple-Version-Control)**  
+- **Date in File Name:** Include the date in the file name (e.g., `HealthTest-2008-04-06`).  
+  <details>
+  <summary><strong>Use Case</strong></summary>
+  Useful for small projects or personal files where tracking changes by date is sufficient. Examples include quick notes, drafts, or single-user documents.
+  </details>  
+- **Version Numbers:** Use version numbers in file names (e.g., `HealthTest_v2`).  
+  <details>
+  <summary><strong>Use Case</strong></summary>
+  Best for projects with incremental updates. Examples include design files, project proposals, or single-user coding projects.
+  </details>  
 
-[Advanced Version Control](#Advance-Version-Control)
-- Version History or Tables: Record changes, dates, authors, and notes directly in the file or a dedicated table.
-- Versioning Tools: Use tools like GitHub for structured version management.
-- File-Sharing Platforms: Platforms like Dropbox and Google Docs offer built-in version control.
-- Software Features: Leverage pre-built version control options provided by your software.
+**[Advanced Version Control](#Advanced-Version-Control)**  
+- **Version History or Tables:** Record changes, dates, authors, and notes directly in the file or a dedicated table.  
+  <details>
+  <summary><strong>Use Case</strong></summary>
+  Ideal for documents requiring detailed tracking of edits, such as reports, research papers, or collaborative projects.
+  </details>  
+- **Specific Versioning Tools:** Use tools like [GitHub](https://github.com) for structured version management.  
+  <details>
+  <summary><strong>Use Case</strong></summary>
+  Best for coding projects, software development, or any work requiring collaboration and detailed version logs.
+  </details>  
+- **File-Sharing Platforms:** Platforms like [Dropbox](https://www.dropbox.com) and [Google Docs](https://docs.google.com) offer built-in version control.  
+  <details>
+  <summary><strong>Use Case</strong></summary>
+  Suitable for slides, text documents, spreadsheets, or collaborative writing and presentations.
+  </details>  
+- **Software Features:** Leverage pre-built version control options provided by the software you are using, like MS Word.  
+  <details>
+  <summary><strong>Use Case</strong></summary>
+  Great for managing changes in text-heavy documents, legal contracts, or large reports.
+  </details> 
 
 >[!Note]
 >The following are some key points for implementing version control for your project:
@@ -60,7 +84,7 @@ There are various ways to implement version control, each suited to different pr
 
 ### Simple Version Management
 
-[File Naming Conventions](DataStorage/file-naming-conventions.md):
+####[File Naming Conventions](DataStorage/file-naming-conventions.md)
 
 A simple method consists of numbering each version, regardless of the changes, by adding a suffix in the filename of the document. The suffix should consist of ordinal numbers (v1.0, v2.0, v3.0) for major revisions and decimals for minor changes (v1.1, v1.2, v2.1, v2.2). In addition to the version number, the suffix could contain the date, the status of the document, and/or reviewer initials.
 
@@ -79,7 +103,7 @@ For more information, see [File Naming Conventions Page](DataStorage/file-naming
 
 ### Advanced Version Control
 
-Version Control Table / Version History:
+#### Version Control Table / Version History
 
 A good file naming convention shows that there are different versions, but it doesn't explain the differences between them. Using a version control table makes it clear **who** did **what** changes and **when**.
 This makes it easier to track and recover content that was deleted or changed in earlier versions.
@@ -104,12 +128,25 @@ This makes it easier to track and recover content that was deleted or changed in
 >  Where should I store the version control table?
 > You can store the version history directly in the file (in headings, notes, or metadata), or maintain it as an attached spreadsheet or README file. Typically, it should be placed on the first page of the data file.
 
+#### Version Control Software
+
+Version control software helps manage and track changes in files, making collaboration and versioning efficient and reliable. These tools are essential for projects where multiple users work on the same files or where maintaining a history of changes is critical.
+
+Key Features of Version Control Software
+- Change Tracking: Automatically tracks every modification, allowing you to view or revert to previous versions.
+- Collaboration: Enables multiple users to work on the same project simultaneously without overwriting each other's work.
+- Branching and Merging: Allows you to create branches for experimentation or parallel development, which can later be merged into the main version.
+- History Logs: Maintains detailed logs of changes, including dates, authors, and commit messages.
+
+Popular version control tools:
+1. [**Git**](https://git-scm.com/): A widely used distributed version control system known for its speed, flexibility, and support for branching.  
+2. [**Subversion (SVN)**](https://subversion.apache.org/): A centralized version control system ideal for projects that require structured workflows.  
+3. [**Mercurial**](https://www.mercurial-scm.org/): A user-friendly distributed version control system designed for performance and scalability.  
+4. [**Perforce**](https://www.perforce.com/products/helix-core): A version control system for large-scale development with strong support for binary files and enterprise needs.  
+
+For most modern projects, [**Git**](https://git-scm.com/) is the preferred choice, with hosting platforms like [GitHub](https://github.com), [GitLab](https://about.gitlab.com/), and [Bitbucket](https://bitbucket.org/) further enhancing its capabilities.
+
 ---
-
-
-
-
-
 
 #### Authors  
 Ahmad Abu Dayeh  

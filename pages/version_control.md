@@ -5,6 +5,18 @@
 
 # Version Control
 
+## Table of Contents
+
+- [Version Control](#version-control)
+  - [What is Version Control?](#what-is-version-control)
+  - [Do I need to use version control for my project?](#do-i-need-to-use-version-control-for-my-project)
+  - [How can I go about implementing version control?](#how-can-i-go-about-implementing-version-control)
+  - [Simple Version Management](#simple-version-management)
+  - [Version Control Table / Version History](#version-control-table--version-history)
+  - [Version Control Software](#version-control-software)
+  - [Summary: Best Practices for Versioning](#summary-best-practices-for-versioning)
+  - [Appendix](#authors)
+
 ### What is Version Control?
 
 In research, data files often evolve over time as they are reprocessed, corrected, expanded, or merged with new data. Managing multiple versions of your data files is essential to FAIR research data management
@@ -73,12 +85,12 @@ There are various ways to implement version control, each suited to different pr
 
 >[!Note]
 >The following are some key points for implementing version control for your project:
->- Version Retention & Organization: Decide how many versions to keep, which ones to retain, and for how long. Focus on milestone versions, such as major versions (e.g., version 02-00) and avoid keeping minor revisions (e.g., version 02-01).
->- Unique Identification: Use a systematic naming convention (e.g., version numbers or dates) to clearly differentiate versions.
->- Change Documentation: Record the changes made to a file whenever a new version is created.
->- File Relationships: Track relationships between files, such as between code and data files, or between data files and their documentation or metadata.
->- File Storage & Synchronization: Ensure all files are stored in identifiable locations. Regularly synchronize files across different locations using tools like MS SyncToy.
->- Centralized Storage: Store milestone and master versions in a single location to maintain consistency.
+>- **Version Retention & Organization**: Decide how many versions to keep, which ones to retain, and for how long. Focus on milestone versions, such as major versions (e.g., version 02-00) and avoid keeping minor revisions (e.g., version 02-01).
+>- **Unique Identification**: Use a systematic naming convention (e.g., version numbers or dates) to clearly differentiate versions.
+>- **Change Documentation**: Record the changes made to a file whenever a new version is created.
+>- **File Relationships**: Track relationships between files, such as between code and data files, or between data files and their documentation or metadata.
+>- **File Storage & Synchronization**: Ensure all files are stored in identifiable locations. Regularly synchronize files across different locations using tools like MS SyncToy.
+>- **Centralized Storage**: Store milestone and master versions in a single location to maintain consistency.
 
 ---
 
@@ -134,10 +146,10 @@ This makes it easier to track and recover content that was deleted or changed in
 Version control software helps manage and track changes in files, making collaboration and versioning efficient and reliable. These tools are essential for projects where multiple users work on the same files or where maintaining a history of changes is critical.
 
 Key Features of Version Control Software
-- Change Tracking: Automatically tracks every modification, allowing you to view or revert to previous versions.
-- Collaboration: Enables multiple users to work on the same project simultaneously without overwriting each other's work.
-- Branching and Merging: Allows you to create branches for experimentation or parallel development, which can later be merged into the main version.
-- History Logs: Maintains detailed logs of changes, including dates, authors, and commit messages.
+- **Change Tracking**: Automatically tracks every modification, allowing you to view or revert to previous versions.
+- **Collaboration**: Enables multiple users to work on the same project simultaneously without overwriting each other's work.
+- **Branching and Merging**: Allows you to create branches for experimentation or parallel development, which can later be merged into the main version.
+- **History Logs**: Maintains detailed logs of changes, including dates, authors, and commit messages.
 
 Popular version control tools:
 1. [**Git**](https://git-scm.com/): A widely used distributed version control system known for its speed, flexibility, and support for branching.  
@@ -146,6 +158,32 @@ Popular version control tools:
 4. [**Perforce**](https://www.perforce.com/products/helix-core): A version control system for large-scale development with strong support for binary files and enterprise needs.  
 
 For most modern projects, [**Git**](https://git-scm.com/) is the preferred choice, with hosting platforms like [GitHub](https://github.com), [GitLab](https://about.gitlab.com/), and [Bitbucket](https://bitbucket.org/) further enhancing its capabilities.
+
+---
+
+### Summary: Best Practices for Versioning
+
+- **Raw Data Preservation**: Always keep an untouched version of the raw data file. Ensure it is protected from changes (e.g., make it read-only, store it in a secure location, or restrict access permissions).
+  
+- **Work on Copies**: Keep the original raw data intact. Work on copies of the data for any processing or modifications, allowing you to always revert to the original data if needed.
+  
+- **Maintain Previous Versions**: Retain previous versions of your files to track changes over time. At a minimum, save milestone versions where substantial updates occurred.
+  
+- **Version Naming Strategy**: Implement a clear naming convention for different versions of your files, such as including a version number (e.g., v01, v02, v03) in the file name.
+  
+- **Consistency in Naming**: Use consistent naming patterns for file versions to avoid confusion.
+  
+- **Avoid Ambiguous Labels**: Refrain from using unclear version labels like '_new', '_lastversion', '_final', etc. If possible, use built-in version control tools within your software.
+  
+- **Version Control Software**: Consider using version control systems like Git for managing file versions when applicable.
+  
+- **Date Recording**: Include the date in your file names to track versions (e.g., 20190902_documentation_for_my_data).
+  
+- **Version Control Table**: Create and maintain a version control table to track changes and versions systematically.
+  
+- **Document Changes**: Keep a record of the changes made to each version of the file.
+  
+- **Version Retention Policy**: Decide on the number of versions to retain, which specific versions to save, how long to keep them, and how to organize them.
 
 ---
 

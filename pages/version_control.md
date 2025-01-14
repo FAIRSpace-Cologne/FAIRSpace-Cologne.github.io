@@ -5,17 +5,14 @@
 
 # Version Control
 
-## Table of Contents
-
-- [Version Control](#version-control)
-  - [What is Version Control?](#what-is-version-control)
-  - [Do I need to use version control for my project?](#do-i-need-to-use-version-control-for-my-project)
-  - [How can I go about implementing version control?](#how-can-i-go-about-implementing-version-control)
-  - [Simple Version Management](#simple-version-management)
-  - [Version Control Table / Version History](#version-control-table--version-history)
-  - [Version Control Software](#version-control-software)
-  - [Summary: Best Practices for Versioning](#summary-best-practices-for-versioning)
-  - [Appendix](#authors)
+- [What is Version Control?](#what-is-version-control)
+- [Do I need to use version control for my project?](#do-i-need-to-use-version-control-for-my-project)
+- [How can I go about implementing version control?](#how-can-i-go-about-implementing-version-control)
+- [Simple Version Management](#simple-version-management)
+- [Version Control Table / Version History](#version-control-table--version-history)
+- [Version Control Software](#version-control-software)
+- [Summary: Best Practices for Versioning](#summary-best-practices-for-versioning)
+- [Appendix](#authors)
 
 ### What is Version Control?
 

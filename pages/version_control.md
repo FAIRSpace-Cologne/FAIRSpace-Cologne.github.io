@@ -101,9 +101,7 @@ For more information, see [File Naming Conventions Page](DataStorage/file-naming
 
 ---
 
-### Advanced Version Control
-
-#### Version Control Table / Version History
+### Version Control Table / Version History
 
 A good file naming convention shows that there are different versions, but it doesn't explain the differences between them. Using a version control table makes it clear **who** did **what** changes and **when**.
 This makes it easier to track and recover content that was deleted or changed in earlier versions.
@@ -129,9 +127,9 @@ This makes it easier to track and recover content that was deleted or changed in
 > 
 > You can store the version history directly in the file (in headings, notes, or metadata), or maintain it as an attached spreadsheet or README file. Typically, it should be placed on the first page of the data file.
 
-----------
+---
 
-#### Version Control Software
+### Version Control Software
 
 Version control software helps manage and track changes in files, making collaboration and versioning efficient and reliable. These tools are essential for projects where multiple users work on the same files or where maintaining a history of changes is critical.
 

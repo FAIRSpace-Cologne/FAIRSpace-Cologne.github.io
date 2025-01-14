@@ -84,13 +84,13 @@ There are various ways to implement version control, each suited to different pr
 
 ### Simple Version Management
 
-####[File Naming Conventions](DataStorage/file-naming-conventions.md)
+#### [File Naming Conventions](DataStorage/file-naming-conventions.md)
 
 A simple method consists of numbering each version, regardless of the changes, by adding a suffix in the filename of the document. The suffix should consist of ordinal numbers (v1.0, v2.0, v3.0) for major revisions and decimals for minor changes (v1.1, v1.2, v2.1, v2.2). In addition to the version number, the suffix could contain the date, the status of the document, and/or reviewer initials.
 
 This method goes a long way: just include a version number, date, and/or reviewer initials to know what you need to:
 
-- `filename_v03.pdf` (no single digits!) is the third major version of a file.
+- `filename_v03.pdf` is the third major version of a file.
 - `filename_v02-01.pdf` is the first minor revision of version 2.
 - `filename_20191117.pdf` is the version dated November 17, 2019.
 - `filename_js.pdf` was revised or commented on by John Smith.
@@ -127,6 +127,8 @@ This makes it easier to track and recover content that was deleted or changed in
 > [!Note]
 >  Where should I store the version control table?
 > You can store the version history directly in the file (in headings, notes, or metadata), or maintain it as an attached spreadsheet or README file. Typically, it should be placed on the first page of the data file.
+
+----
 
 #### Version Control Software
 

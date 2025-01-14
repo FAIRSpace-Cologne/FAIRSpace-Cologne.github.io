@@ -128,7 +128,7 @@ This makes it easier to track and recover content that was deleted or changed in
 >  Where should I store the version control table?
 > You can store the version history directly in the file (in headings, notes, or metadata), or maintain it as an attached spreadsheet or README file. Typically, it should be placed on the first page of the data file.
 
-----
+----------
 
 #### Version Control Software
 
@@ -160,7 +160,5 @@ CC0 1.0 [Link](https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1
 2024.10.13
 
 #### References
-1. [IBM: What is a data management plan (DMP)?](https://www.ibm.com/topics/data-management-plan)
-2. [Harvard: Data Management Plans](https://datamanagement.hms.harvard.edu/plan-design/data-management-plans)
 
 #### Helpful Links

@@ -37,7 +37,7 @@ If the answer is yes to any of the questions above, you should carry-on reading 
 
 There are various ways to implement version control, each suited to different project needs. Select the approach that aligns best with your specific use case:
 
-**[Simple Version Control](#Simple-Version-Control)**  
+**Simple Version Control**  
 - **Date in File Name:** Include the date in the file name (e.g., `HealthTest-2008-04-06`).  
   <details>
   <summary><strong>Use Case</strong></summary>
@@ -49,7 +49,7 @@ There are various ways to implement version control, each suited to different pr
   Best for projects with incremental updates. Examples include design files, project proposals, or single-user coding projects.
   </details>  
 
-**[Advanced Version Control](#Advanced-Version-Control)**  
+**Advanced Version Control**  
 - **Version History or Tables:** Record changes, dates, authors, and notes directly in the file or a dedicated table.  
   <details>
   <summary><strong>Use Case</strong></summary>

@@ -126,6 +126,7 @@ This makes it easier to track and recover content that was deleted or changed in
 
 > [!Note]
 >  Where should I store the version control table?
+> 
 > You can store the version history directly in the file (in headings, notes, or metadata), or maintain it as an attached spreadsheet or README file. Typically, it should be placed on the first page of the data file.
 
 ----------

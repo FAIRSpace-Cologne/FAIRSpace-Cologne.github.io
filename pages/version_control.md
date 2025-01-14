@@ -84,7 +84,7 @@ There are various ways to implement version control, each suited to different pr
 
 ### Simple Version Management
 
-#### [File Naming Conventions](/DataStorage/file-naming-conventions.md)
+#### [File Naming Conventions](DataStorage/file-naming-conventions.md)
 
 A simple method consists of numbering each version, regardless of the changes, by adding a suffix in the filename of the document. The suffix should consist of ordinal numbers (v1.0, v2.0, v3.0) for major revisions and decimals for minor changes (v1.1, v1.2, v2.1, v2.2). In addition to the version number, the suffix could contain the date, the status of the document, and/or reviewer initials.
 

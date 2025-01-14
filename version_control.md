@@ -40,25 +40,28 @@ There are various ways to implement version control, each suited to different pr
 [Simple Version Control](#Simple-Version-Management)
 - Date in File Name: Include the date in the file name (e.g., HealthTest-2008-04-06).
 - Version Numbers: Use version numbers in file names (e.g., HealthTest_v2).
-Advanced Version Control
+
+[Advanced Version Control](#Advance-Version-Control)
 - Version History or Tables: Record changes, dates, authors, and notes directly in the file or a dedicated table.
 - Versioning Tools: Use tools like GitHub for structured version management.
 - File-Sharing Platforms: Platforms like Dropbox and Google Docs offer built-in version control.
 - Software Features: Leverage pre-built version control options provided by your software.
 
-The following are some key points for implementing version control for your project:
-- Version Retention & Organization: Decide how many versions to keep, which ones to retain, and for how long. Focus on milestone versions, such as major versions (e.g., version 02-00) and avoid keeping minor revisions (e.g., version 02-01).
-- Unique Identification: Use a systematic naming convention (e.g., version numbers or dates) to clearly differentiate versions.
-- Change Documentation: Record the changes made to a file whenever a new version is created.
-- File Relationships: Track relationships between files, such as between code and data files, or between data files and their documentation or metadata.
-- File Storage & Synchronization: Ensure all files are stored in identifiable locations. Regularly synchronize files across different locations using tools like MS SyncToy.
-- Centralized Storage: Store milestone and master versions in a single location to maintain consistency.
+>[!Note]
+>The following are some key points for implementing version control for your project:
+>- Version Retention & Organization: Decide how many versions to keep, which ones to retain, and for how long. Focus on milestone versions, such as major versions (e.g., version 02-00) and avoid keeping minor revisions (e.g., version 02-01).
+>- Unique Identification: Use a systematic naming convention (e.g., version numbers or dates) to clearly differentiate versions.
+>- Change Documentation: Record the changes made to a file whenever a new version is created.
+>- File Relationships: Track relationships between files, such as between code and data files, or between data files and their documentation or metadata.
+>- File Storage & Synchronization: Ensure all files are stored in identifiable locations. Regularly synchronize files across different locations using tools like MS SyncToy.
+>- Centralized Storage: Store milestone and master versions in a single location to maintain consistency.
 
 ---
 
 ### Simple Version Management
 
 [File Naming Conventions](DataStorage/file-naming-conventions.md):
+
 A simple method consists of numbering each version, regardless of the changes, by adding a suffix in the filename of the document. The suffix should consist of ordinal numbers (v1.0, v2.0, v3.0) for major revisions and decimals for minor changes (v1.1, v1.2, v2.1, v2.2). In addition to the version number, the suffix could contain the date, the status of the document, and/or reviewer initials.
 
 This method goes a long way: just include a version number, date, and/or reviewer initials to know what you need to:
@@ -74,7 +77,10 @@ For more information, see [File Naming Conventions Page](DataStorage/file-naming
 
 ---
 
-### Version control table
+### Advanced Version Control
+
+Version Control Table / Version History:
+
 A good file naming convention shows that there are different versions, but it doesn't explain the differences between them. Using a version control table makes it clear **who** did **what** changes and **when**.
 This makes it easier to track and recover content that was deleted or changed in earlier versions.
 

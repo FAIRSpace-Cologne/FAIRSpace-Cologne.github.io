@@ -172,8 +172,6 @@ For most modern projects, [**Git**](https://git-scm.com/) is the preferred choic
   
 - **Avoid Ambiguous Labels**: Refrain from using unclear version labels like '_new', '_lastversion', '_final', etc. If possible, use built-in version control tools within your software.
   
-- **Version Control Software**: Consider using version control systems like Git for managing file versions when applicable.
-  
 - **Date Recording**: Include the date in your file names to track versions (e.g., 20190902_documentation_for_my_data).
   
 - **Version Control Table**: Create and maintain a version control table to track changes and versions systematically.
@@ -181,6 +179,8 @@ For most modern projects, [**Git**](https://git-scm.com/) is the preferred choic
 - **Document Changes**: Keep a record of the changes made to each version of the file.
   
 - **Version Retention Policy**: Decide on the number of versions to retain, which specific versions to save, how long to keep them, and how to organize them.
+
+- **Version Control Software**: Consider using version control systems like Git for managing file versions when applicable.
 
 ---
 

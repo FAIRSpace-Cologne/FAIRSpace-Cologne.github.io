@@ -1,7 +1,7 @@
 >[!TIP]
 > FAIR indicator: <code>[Findable]()</code>, <code>[Reproducible]()</code>
 > 
-> Project stage: <code>Planning</code>  || Audience: <code>PI</code>, <code>Researcher</code>, <code>PhD</code>
+> Project stage: <code>Collect & Analyze</code>  || Audience: <code>PI</code>, <code>Researcher</code>, <code>PhD</code>
 
 # Version Control
 

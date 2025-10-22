@@ -96,7 +96,7 @@ This repository is intended for:
 
 ## Supplementary Reading
 
-- 
+- No Suplementary reading
 
 ## License
 

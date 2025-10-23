@@ -1,0 +1,146 @@
+/* Colors (softened versions) */
+:root{
+  --deep-blue: #264b73;   /* header/footer */
+  --soft-orange: #f08b3a; /* nav / accents */
+  --neutral-gray: #f6f6f6; /* background sections */
+  --text-color: #21334b;
+}
+
+/* Reset / base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--text-color);
+  background: #ffffff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header full-width */
+.site-header {
+  background: var(--deep-blue);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 22px 0;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  width: 92%;
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Logo blocks */
+.header-inner img {
+  max-height: 64px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.logo-left { flex: 0 0 25%; display:flex; align-items:center; }
+.site-title { flex: 1 1 auto; text-align:center; }
+.logo-right { flex: 0 0 25%; display:flex; align-items:center; justify-content:flex-end; gap:14px; }
+
+/* Title */
+.site-title h1{
+  color: #ffffff;
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+}
+
+/* Nav full-width */
+.main-nav {
+  background: var(--soft-orange);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  text-align:center;
+  padding: 10px 0;
+  color: #fff;
+  font-weight:700;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+.main-nav .nav-inner { width: 92%; margin: 0 auto; }
+
+/* Main (content stretches full-width visually but content block has comfortable max-width) */
+.site-main {
+  background: var(--neutral-gray);
+  width: 100%;
+  padding: 28px 0 80px;
+}
+
+/* Intro and doc blocks: full width area but with internal max width for large screens */
+.intro {
+  width: 100%;
+  padding: 12px 6%;
+}
+.intro .lead { margin-top: 6px; color: #4b5968; }
+
+/* CONTENT area — you asked text full width too: we keep page content readable by using 92% width with side padding,
+   but remove the centered max-width to make it appear full-width on screen while keeping padding for readability */
+.content {
+  width: 100%;
+  padding: 12px 6%;
+}
+
+/* Article box */
+.doc {
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(34,50,72,0.06);
+  line-height: 1.6;
+}
+
+/* Images inside document */
+.lifecycle-figure img {
+  display:block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  opacity: 0.95;
+}
+
+/* Footer full-width */
+.site-footer {
+  background: var(--deep-blue);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 18px 0;
+  color: #fff;
+  margin-top: 40px;
+}
+.footer-inner {
+  width: 92%;
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+}
+.footer-logos img { height:36px; margin-right: 12px; opacity: 0.98; vertical-align: middle; }
+.footer-copy { font-size: 14px; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .header-inner { gap: 12px; }
+  .logo-right img { height: 46px; }
+  .site-title h1 { font-size: 20px; text-align:center; }
+  .header-inner { flex-wrap:wrap; }
+  .logo-left, .logo-right { flex: 0 0 100%; display:flex; justify-content:center; margin-bottom:8px; }
+  .site-title { order: 2; width:100%; }
+  .logo-right { order: 3; }
+  .logo-left { order: 1; }
+  .doc { padding: 16px; }
+}

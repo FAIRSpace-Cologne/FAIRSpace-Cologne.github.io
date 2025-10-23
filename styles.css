@@ -49,7 +49,7 @@ body {
 
 /* Title */
 .site-title h1{
-  color:var(--soft-orange);
+  color: #ffffff;
   margin: 0;
   font-size: 28px;
   letter-spacing: 0.2px;
@@ -112,7 +112,7 @@ body {
 
 /* Footer full-width */
 .site-footer {
-  background: var(--soft-orange);
+  background: var(--deep-blue);
   width: 100vw;
   position: relative;
   left: 50%;

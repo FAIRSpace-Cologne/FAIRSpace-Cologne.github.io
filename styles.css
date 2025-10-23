@@ -19,7 +19,7 @@ body {
 
 /* Header full-width */
 .site-header {
-  background: var(--deep-blue);
+  background: var(--soft-orange);
   width: 100vw;
   position: relative;
   left: 50%;

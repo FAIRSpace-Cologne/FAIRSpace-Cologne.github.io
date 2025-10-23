@@ -112,7 +112,7 @@ body {
 
 /* Footer full-width */
 .site-footer {
-  background: var(--deep-blue);
+  background: var(--soft-orange);
   width: 100vw;
   position: relative;
   left: 50%;

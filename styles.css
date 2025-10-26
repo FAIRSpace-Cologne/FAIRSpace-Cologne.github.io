@@ -129,7 +129,7 @@ body {
   justify-content:space-between;
   gap: 12px;
 }
-.footer-logos img { height:36px; margin-right: 12px; opacity: 0.98; vertical-align: middle; }
+.footer-logos img { height:50px; margin-right: 12px; opacity: 0.98; vertical-align: middle; }
 .footer-copy { font-size: 14px; }
 
 /* Responsive tweaks */

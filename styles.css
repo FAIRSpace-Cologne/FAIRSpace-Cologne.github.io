@@ -34,6 +34,7 @@ body {
   display:flex;
   align-items:center;
   justify-content:space-between;
+  position: relative; /* added: allow absolute centering of the title */
 }
 
 /* Logo blocks */
@@ -44,9 +45,20 @@ body {
 }
 
 .logo-left { flex: 0 0 60%; display:flex; align-items:center; }
-.site-title { flex: 1 1 auto; text-align:center;align-items:center; display:flex; justify-content:center; }
+.site-title { flex: 1 1 auto; text-align:center; }
 .logo-right { flex: 0 0 35%; display:flex; align-items:center; justify-content:flex-end; gap:14px; }
 
+.site-title {
+  position: absolute;         /* center independently of side logo widths */
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex: 0 0 auto;
+  width: auto;
+  pointer-events: none;       /* allow logos to receive pointer events; enable on h1 below */
+  z-index: 1;
+}
 /* Title */
 .site-title h1{
   color: #ffffff;

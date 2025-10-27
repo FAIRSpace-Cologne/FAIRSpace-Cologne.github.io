@@ -44,7 +44,7 @@ body {
 }
 
 .logo-left { flex: 0 0 60%; display:flex; align-items:center; }
-.site-title { flex: 1 1 auto; text-align:center; }
+.site-title { flex: 1 1 auto; text-align:center;align-items:center; display:flex; justify-content:center; }
 .logo-right { flex: 0 0 35%; display:flex; align-items:center; justify-content:flex-end; gap:14px; }
 
 /* Title */

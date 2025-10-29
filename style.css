@@ -1,0 +1,416 @@
+:root {
+  /* Independent logo sizes — tweak freely */
+  --logo1-size: 60px;
+  --logo2-size: 75px;
+  --logo3-size: 45px;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  color: #1a1a1a;
+  background-color: #f8f9fb;
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #264b73;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  min-height: 80px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* Left side (menu + logo) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo text */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+}
+
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* Center nav menu */
+.nav-menu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+  color: #aad0ff;
+}
+
+/* Right-side partner logos */
+.nav-logos {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.nav-logos img:nth-child(1) {
+  height: var(--logo1-size);
+}
+
+.nav-logos img:nth-child(2) {
+  height: var(--logo2-size);
+}
+
+.nav-logos img:nth-child(3) {
+  height: var(--logo3-size);
+}
+
+.nav-logos img {
+  width: auto;
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: url('images/fairspace.jpg') center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background: #0066cc;
+  border: none;
+  color: #ffffff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0053a3;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  padding: 5rem 2rem;
+  background: #ffffff;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  background: #f0f4f8;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.service-card {
+  background: #264b73;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: #ffffff;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.project-card {
+  background: #264b73;
+  color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== TEAM ===== */
+.team {
+  background: #f0f4f8;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: #264b73;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 250px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: #1f4e8a;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+}
+
+/* ===== ARTICLES ===== */
+.articles {
+  padding: 5rem 2rem;
+  background: #fff;
+}
+
+.article-card {
+  background: #e9eef5;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.article-card h3 {
+  color: #264b73;
+  margin-top: 0.5rem;
+}
+
+.article-card .date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #264b73;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer-logos {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-logos img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Center logo properly */
+  .nav-left {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    left: 0;
+  }
+
+  .logo {
+    text-align: center;
+    flex: none;
+  }
+
+  /* Hide desktop nav */
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #f1f3f6;
+    /* gray drawer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 1500;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav-menu a {
+    color: #264b73;
+    /* blue text */
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  /* Hide right-side logos */
+  .nav-logos {
+    display: none;
+  }
+
+  /* Show logos in footer */
+  .footer-logos {
+    display: flex;
+  }
+
+  /* Body scroll lock */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    width: 24px;
+    height: 18px;
+  }
+
+  .menu-toggle .bar {
+    height: 2.5px;
+  }
+
+  .footer-logos img {
+    height: 35px;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1.2rem;
+  }
+}

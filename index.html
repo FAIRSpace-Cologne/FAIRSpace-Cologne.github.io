@@ -1,150 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FAIRSpace Cologne — Research Data Management Framework</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAIRspace Cologne</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-  <!-- Full-width header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="logo-left">
-        <img src="images/BI-K-Logo-white-EN.png" alt="Left logo" />
-      </div>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="logo">FAIRspace Cologne</div>
+    </div>
 
-      <div class="site-title">
-        <h1>FAIRspace Cologne</h1>
-      </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#articles">Articles</a></li>
+      </ul>
+    </nav>
 
-      <div class="logo-right">
-        <img src="images/uzkwhite.png" alt="Right logo 1" />
-        <img src="images/ukklogowhite.png" alt="Right logo 2" />
-      </div>
+    <div class="nav-logos">
+      <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+      <img src="images/ukklogowhite.png" alt="UKK Logo" />
+      <img src="images/uzkwhite.png" alt="UZK Logo" />
     </div>
   </header>
 
-  <!-- Full-width nav bar -->
-  <!-- <nav class="main-nav">
-    <div class="nav-inner">
-      <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to FAIRspace Cologne</h1>
+      <p>
+        Tools, templates, and best practices to make your research data
+        findable, accessible, interoperable, and reusable.
+      </p>
+      <button class="btn-primary" onclick="scrollToSection('about')">Learn More</button>
     </div>
-  </nav> -->
+  </section>
 
-  <!-- Main content (full width but with padding) -->
-  <main class="site-main">
-    <section class="intro">
-      <h2>Welcome!</h2>
-      <p class="lead">Welcome to FAIRSpace Cologne project and research data management framework.</p>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      FAIRspace Cologne is an initiative focused on supporting research data
+      management and promoting the FAIR principles – Findable, Accessible,
+      Interoperable, and Reusable. Our mission is to provide tools, training,
+      and infrastructure that empower researchers to manage, share, and reuse
+      data effectively.
+    </p>
+    <p>
+      We collaborate with universities, research institutions, and data
+      stewards to ensure scientific data is handled transparently and
+      sustainably. Our goal is to make open science not just possible but
+      practical.
+    </p>
+  </section>
 
-    <section class="content">
-      <!-- This block intentionally uses Markdown-style content inside the HTML for clarity.
-           You can paste your README text here or convert to static HTML. -->
-      <article class="doc">
-        <h2>Research-Data-Management-Framework</h2>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>FAIR Data Consultation</h3>
         <p>
-          A comprehensive repository for managing research data. This framework is designed to facilitate organized,
-          reproducible, and collaborative research workflows. Ideal for researchers looking to maintain a well-structured
-          approach to data handling throughout the lifecycle of their projects.
+          Get expert guidance on implementing FAIR principles in your research
+          workflow and data management practices.
         </p>
-
-        <h3>Table of Contents</h3>
-        <ol>
-          <li>Introduction</li>
-          <li>Data Cycle Steps
-            <ul>
-              <li>Step 1: Design of Experiment</li>
-              <li>Step 2: Data Design and Planning</li>
-              <li>Step 3: Data Capture (Equipment Phase)</li>
-              <li>Step 4: Data Processing and Curation</li>
-              <li>Step 5: Data Linking and Integration</li>
-              <li>Step 6: Data Analysis and Interpretation</li>
-              <li>Step 7: Information and Insight Publishing</li>
-            </ul>
-          </li>
-          <li>References</li>
-          <li>Intended Audience</li>
-          <li>Authors</li>
-          <li>Supplementary Reading</li>
-          <li>License</li>
-        </ol>
-
-        <h3>Introduction</h3>
-        <p>
-          Effective data management is critical for ensuring the quality, accessibility, and reusability of research data.
-          This repository outlines the data management cycle based on the principles of <strong>Data Stewardship for Open Science</strong>
-          as described by Barend Mons. Each step in this cycle is crucial for maintaining the integrity and usability of data
-          throughout the research process. It aims to assist researchers, data stewards, and institutions in effectively
-          managing research data following the FAIR (Findable, Accessible, Interoperable, Reusable) principles.
-        </p>
-
-        <figure class="lifecycle-figure">
-          <img src="images/data-lifecycle-preview.png" alt="Data Life Cycle" />
-        </figure>
-
-        <h3>Data Cycle Steps</h3>
-        <details><summary><strong>Step 1: Design of Experiment</strong></summary>
-          <p>The first step in the data management cycle is the Design of Experiment...</p>
-        </details>
-
-        <details><summary><strong>Step 2: Data Design and Planning</strong></summary>
-          <p>Data Design and Planning: set up formats, metadata, storage, and FAIR considerations...</p>
-        </details>
-
-        <details><summary><strong>Step 3: Data Capture (Equipment Phase)</strong></summary>
-          <p>Data capture details...</p>
-        </details>
-
-        <details><summary><strong>Step 4: Data Processing and Curation</strong></summary>
-          <p>Processing and curation details...</p>
-        </details>
-
-        <details><summary><strong>Step 5: Data Linking and Integration</strong></summary>
-          <p>Linking and integration details...</p>
-        </details>
-
-        <details><summary><strong>Step 6: Data Analysis and Interpretation</strong></summary>
-          <p>Analysis and interpretation details...</p>
-        </details>
-
-        <details><summary><strong>Step 7: Information and Insight Publishing</strong></summary>
-          <p>Publishing and reproducibility details...</p>
-        </details>
-
-        <h3>References</h3>
-        <ul>
-          <li>Mons, B. (2021). Data Stewardship for Open Science: Implementing FAIR principles. Chapman & Hall/CRC</li>
-        </ul>
-
-        <h3>Intended Audience</h3>
-        <ul>
-          <li>Researchers and data scientists involved in data-intensive research.</li>
-          <li>Data stewards and PIs responsible for managing research data.</li>
-        </ul>
-
-        <h3>Authors</h3>
-        <p><strong>Affiliation:</strong> Universität zu Köln</p>
-
-        <h3>Supplementary Reading</h3>
-        <p>No supplementary reading.</p>
-
-        <h3>License</h3>
-        <p>—</p>
-      </article>
-    </section>
-  </main>
-
-  <!-- Footer (full-width) -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-logos">
-        <!-- <img src="images/dataverse.png" alt="Dataverse" /> -->
-        <!-- <img src="images/BI-K-Logo-white-EN.png" alt="BIK" /> -->
       </div>
-      <div class="footer-copy">© 2025 FAIRspace Cologne</div>
+      <div class="service-card">
+        <h3>Training & Workshops</h3>
+        <p>
+          Attend workshops and tutorials on topics like data stewardship,
+          metadata standards, and reproducible research.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3>Infrastructure Support</h3>
+        <p>
+          We provide tools, templates, and repository support to make your data
+          storage and sharing seamless.
+        </p>
+      </div>
     </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h2>Our Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100x100?text=Dataverse" alt="Dataverse" />
+        <h3>Dataverse</h3>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100x100?text=ARTICYST" alt="ARTICYST" />
+        <h3>ARTICYST</h3>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100x100?text=Ontologies" alt="Ontologies" />
+        <h3>Ontologies</h3>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100x100?text=Data+Steward" alt="Data Steward Guides" />
+        <h3>Data Steward Guides</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifecycle -->
+  <!-- <section class="lifecycle">
+    <h2>Development Life Cycle</h2>
+    <img src="https://via.placeholder.com/800x400?text=Research+Technology+Diagram" alt="Research Lifecycle Diagram" />
+  </section> -->
+
+  <!-- Team -->
+  <section id="team" class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="avatar"></div>
+        <h3>Hajira Jabeen</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci vitae quam.</p>
+      </div>
+      <div class="team-card">
+        <div class="avatar"></div>
+        <h3>Sergio Avila-Calero</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci vitae quam.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section id="articles" class="articles">
+    <h2>Articles & Publications</h2>
+    <div class="article-card">
+      <span class="date">20 August 2024</span>
+      <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+      <p>
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it...
+      </p>
+    </div>
+    <div class="article-card">
+      <span class="date">10 May 2024</span>
+      <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+      <p>
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it...
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logos">
+      <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+      <img src="images/ukklogowhite.png" alt="UKK Logo" />
+      <img src="images/uzkwhite.png" alt="UZK Logo" />
+    </div>
+    <p>© 2025 FAIRspace Cologne</p>
   </footer>
 </body>
+
 </html>

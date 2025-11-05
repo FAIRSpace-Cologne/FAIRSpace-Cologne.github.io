@@ -23,22 +23,27 @@
 
     <nav class="nav-menu">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#articles">Articles</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="articles.html">Articles</a></li>
       </ul>
     </nav>
-
-    <div class="nav-logos">
-      <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
-      <img src="images/ukklogowhite.png" alt="UKK Logo" />
-      <img src="images/uzkwhite.png" alt="UZK Logo" />
-    </div>
   </header>
 
+  <!-- Announcement bar (rotating) -->
+  <div class="announcement-bar" role="region" aria-live="polite">
+    <div class="announcement-inner">
+      <span class="announcement-text">Welcome to FAIRspace Cologne — tools and resources for FAIR data.</span>
+      <div class="announcement-controls" aria-hidden="true">
+        <button class="announce-prev" aria-label="Previous announcement">‹</button>
+        <button class="announce-next" aria-label="Next announcement">›</button>
+      </div>
+    </div>
+  </div>
 
+  <!-- Hero Section -->
   <section class="hero">
     <img src="images/rdm_organization_web-quality.png" alt="FAIRspace Hero" class="hero-bg" />
     <div class="hero-content">
@@ -46,6 +51,15 @@
       <p>Tools, templates, and best practices to make your research data findable, accessible, interoperable, and
         reusable.</p>
       <button class="btn-primary">Learn More</button>
+    </div>
+  </section>
+
+  <!-- Logos below hero -->
+  <section class="logos-below-hero">
+    <div class="logo-container">
+      <img src="images/BIK.png" alt="BI-K Logo" class="logos logo-bik" />
+      <img src="images/ukk-logo-removebg.png" alt="UKK Logo" class="logos logo-ukk" />
+      <img src="images/UzK_Logo_ENG.png" alt="UZK Logo" class="logos logo-uzk" />
     </div>
   </section>
 
@@ -190,114 +204,6 @@
     <h2>Development Life Cycle</h2>
     <img src="https://via.placeholder.com/800x400?text=Research+Technology+Diagram" alt="Research Lifecycle Diagram" />
   </section> -->
-
-  <!-- Team -->
-  <section id="team" class="team">
-    <h2>Meet Our Team</h2>
-    <div class="team-grid">
-      <div class="team-card dark">
-        <div class="avatar">
-          <img src="images/profile_pic.png" alt="Hajira Jabeen">
-        </div>
-        <h3>Hajira Jabeen</h3>
-        <p>Data Scientist passionate about research data management and open science.</p>
-      </div>
-
-      <div class="team-card light">
-        <div class="avatar">
-          <img src="images/profile_pic.png" alt="Sergio Avila-Calero">
-        </div>
-        <h3>Sergio Avila-Calero</h3>
-        <p>Research Software Engineer focused on interoperability and data workflows.</p>
-      </div>
-
-      <div class="team-card dark">
-        <div class="avatar">
-          <img src="images/profile_pic.png" alt="Anna Müller">
-        </div>
-        <h3>Anna Müller</h3>
-        <p>Metadata specialist and training coordinator for FAIR data practices.</p>
-      </div>
-
-      <div class="team-card light">
-        <div class="avatar">
-          <img src="images/profile_pic.png" alt="Michael Brown">
-        </div>
-        <h3>Michael Brown</h3>
-        <p>Infrastructure engineer supporting repository and data integration tools.</p>
-      </div>
-
-      <div class="team-card dark">
-        <div class="avatar">
-          <img src="images/profile_pic.png" alt="Laura Schmidt">
-        </div>
-        <h3>Laura Schmidt</h3>
-        <p>Communications lead ensuring transparency and collaboration across teams.</p>
-      </div>
-
-      <div class="team-card light">
-        <div class="avatar">
-          <img src="images/profile_pic.png" alt="David Kim">
-        </div>
-        <h3>David Kim</h3>
-        <p>Policy advisor working on institutional FAIR data strategies and compliance.</p>
-      </div>
-
-      <div class="team-card dark">
-        <div class="avatar">
-          <img src="images/profile_pic.png" alt="Sofia Rossi">
-        </div>
-        <h3>Sofia Rossi</h3>
-        <p>Project coordinator managing FAIR initiatives and stakeholder engagement.</p>
-      </div>
-
-      <div class="team-card light">
-        <div class="avatar">
-          <img src="images/profile_pic.png" alt="Robert Lee">
-        </div>
-        <h3>Robert Lee</h3>
-        <p>Developer creating visualization tools for data stewardship and curation.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Articles -->
-  <section id="articles" class="articles">
-    <h2>Articles & Publications</h2>
-    <div class="article-card">
-      <span class="date">20 August 2024</span>
-      <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-        Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-        source.
-      </p>
-    </div>
-    <div class="article-card">
-      <span class="date">10 May 2024</span>
-      <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-        Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-        source.
-      </p>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer>

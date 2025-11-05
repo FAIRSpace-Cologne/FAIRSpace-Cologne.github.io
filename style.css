@@ -1,24 +1,23 @@
 :root {
-  /* Independent logo sizes — tweak freely */
   --logo1-size: 60px;
   --logo2-size: 75px;
   --logo3-size: 45px;
   --nav-height: 80px;
-  /* keep in sync with your fixed header height */
+  /* fixed header height */
+  --hero-height: 70vh;
+  /* hero height */
 }
 
+/* ===== BASE ===== */
 html {
   scroll-behavior: smooth;
 }
 
-
-/* ===== BASE ===== */
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
   color: #1a1a1a;
   background-color: #f8f9fb;
-  scroll-behavior: smooth;
 }
 
 /* ===== NAVBAR ===== */
@@ -27,25 +26,23 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #264b73;
+  background: #0a488b;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 2rem;
-  min-height: 80px;
+  min-height: var(--nav-height);
   box-sizing: border-box;
   z-index: 1000;
 }
 
-/* Left side (menu + logo) */
 .nav-left {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/* Logo text */
 .logo {
   font-size: 1.4rem;
   font-weight: 600;
@@ -100,37 +97,11 @@ body {
   color: #aad0ff;
 }
 
-/* Right-side partner logos */
-.nav-logos {
-  display: flex;
-  gap: 0.8rem;
-  align-items: center;
-}
-
-.nav-logos img:nth-child(1) {
-  height: var(--logo1-size);
-}
-
-.nav-logos img:nth-child(2) {
-  height: var(--logo2-size);
-}
-
-.nav-logos img:nth-child(3) {
-  height: var(--logo3-size);
-}
-
-.nav-logos img {
-  width: auto;
-  object-fit: contain;
-  display: block;
-  max-width: 100%;
-}
-
 /* ===== HERO ===== */
 .hero {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   /* about 70% of screen height */
   overflow: hidden;
   display: flex;
@@ -138,26 +109,23 @@ body {
   /* center horizontally */
   align-items: flex-end;
   /* move content to the bottom */
-  margin-top: 80px;
+  margin-top: var(--nav-height);
   /* offset navbar */
   box-sizing: border-box;
   padding-bottom: 3rem;
-  /* space from bottom edge */
 }
 
 /* Full-width, uncropped image */
 .hero-bg {
-  filter: brightness(90%);
+  filter: brightness(75%);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* show full image */
   object-position: center;
-  background-color: #264b73;
-  /* fill gaps if aspect ratio leaves space */
+  background-color: #0a488b;
   z-index: 0;
 }
 
@@ -168,6 +136,9 @@ body {
   color: #ffffff;
   text-align: center;
   max-width: 800px;
+  /* Add drop shadow to text */
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  /* You can adjust the values */
 }
 
 /* Text styling */
@@ -182,16 +153,9 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Responsive adjustment for large screens */
-@media (min-width: 992px) {
-  .hero-bg {
-    object-fit: cover;
-  }
-}
-
 /* Button styling */
 .btn-primary {
-  background: #264b73;
+  background: #0a488b;
   border: none;
   color: #ffffff;
   padding: 0.8rem 1.8rem;
@@ -205,10 +169,58 @@ body {
   background: #0053a3;
 }
 
+@media (min-width: 992px) {
+  .hero-bg {
+    object-fit: cover;
+  }
+}
 
+
+/* ===== LOGOS BELOW HERO ===== */
+.logos-below-hero {
+  background-color: #f0f4f8;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  /* space between logos */
+}
+
+.logos {
+  height: 120px;
+  /* increase logo size */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  /* Add drop shadow to logos */
+  filter: drop-shadow(8px 7px 7px rgba(0, 0, 0, 0.4));
+  /* Subtle shadow */
+}
+
+/* Custom logo sizes */
+.logo-bik {
+  width: 220px;
+  height: 220px;
+  /* BI-K Logo size */
+}
+
+.logo-ukk {
+  width: 250px;
+  height: 220px;
+  /* UKK Logo size */
+}
+
+.logo-uzk {
+  width: 220px;
+  height: 220px;
+  /* UZK Logo size */
+}
 
 /* ===== ABOUT ===== */
-/* Full-width background */
 .about {
   width: 100%;
   background: #ffffff;
@@ -216,16 +228,15 @@ body {
 }
 
 .about-content h2 {
-  color: #264b73;
+  color: #0a488b;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
+  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Constrain text to center region */
 .about-content {
   width: 70%;
-  /* leaves ~15% gap each side */
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
@@ -238,7 +249,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Responsive adjustment */
 @media (max-width: 768px) {
   .about-content {
     width: 90%;
@@ -253,6 +263,86 @@ body {
   }
 }
 
+/* ...existing code... */
+
+/* ===== ANNOUNCEMENT BAR ===== */
+.announcement-bar {
+  background: #d39700;
+  color: #0a488b;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(10, 72, 139, 0.06);
+  font-weight: 600;
+  box-sizing: border-box;
+
+  /* removed margin-top to avoid extra white gap */
+  margin-top: 0;
+  position: relative;
+  z-index: 900;
+}
+
+.announcement-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.5rem;
+}
+
+.announcement-text {
+  display: inline-block;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  opacity: 1;
+}
+
+.announcement-text.fade-out {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.announcement-controls {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.announcement-controls button {
+  background: transparent;
+  border: 1px solid rgba(10, 72, 139, 0.12);
+  color: #0a488b;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.announcement-controls button:hover {
+  background: rgba(10, 72, 139, 0.04);
+}
+
+/* when the announcement bar exists, push the page down by the navbar height
+    to avoid the fixed header overlapping it; otherwise keep the hero offset */
+body.has-announcement {
+  padding-top: var(--nav-height);
+}
+
+body:not(.has-announcement) .hero {
+  margin-top: var(--nav-height);
+}
+
+body.has-announcement .hero {
+  margin-top: 0;
+}
+
+/* Hide controls on small screens */
+@media (max-width: 768px) {
+  .announcement-controls {
+    display: none;
+  }
+}
+
+/* ...existing code... */
 
 /* ===== SERVICES ===== */
 .services {
@@ -263,13 +353,13 @@ body {
 }
 
 .services h2 {
-  color: #264b73;
+  color: #0a488b;
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
+  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Horizontal scroll container */
 .service-scroll {
   display: flex;
   gap: 2rem;
@@ -279,7 +369,6 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Hide scrollbar but keep scrollable */
 .service-scroll::-webkit-scrollbar {
   height: 10px;
 }
@@ -293,10 +382,8 @@ body {
   background: #e4e9ef;
 }
 
-/* Each service card */
 .service-card {
   flex: 0 0 300px;
-  /* fixed width */
   border-radius: 12px;
   color: #fff;
   padding: 2rem 1.5rem;
@@ -313,26 +400,23 @@ body {
   transform: translateY(-5px);
 }
 
-/* Dark and Light variations */
 .service-card.dark {
-  background: #264b73;
+  background: #0a488b;
+  color: #ffffff;
 }
 
 .service-card.light {
   background: #91aac5;
+  color: #0d213a;
 }
 
-/* Icons */
 .service-icon {
   width: 60px;
   height: 60px;
   object-fit: contain;
   margin-bottom: 1rem;
-  filter: brightness(0) invert(1);
-  /* make dummy icons white-ish */
 }
 
-/* Text inside cards */
 .service-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
@@ -343,7 +427,6 @@ body {
   line-height: 1.5;
 }
 
-/* Responsive: reduce card width and spacing on mobile */
 @media (max-width: 768px) {
   .service-card {
     flex: 0 0 250px;
@@ -360,7 +443,6 @@ body {
   }
 }
 
-
 /* ===== PROJECTS ===== */
 .projects {
   background: #ffffff;
@@ -370,13 +452,13 @@ body {
 }
 
 .projects h2 {
-  color: #264b73;
+  color: #0a488b;
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
+  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Horizontal scroll container */
 .project-scroll {
   display: flex;
   gap: 2rem;
@@ -386,7 +468,6 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Scrollbar styling */
 .project-scroll::-webkit-scrollbar {
   height: 10px;
 }
@@ -400,10 +481,8 @@ body {
   background: #e4e9ef;
 }
 
-/* Project card styling */
 .project-card {
   flex: 0 0 280px;
-  /* fixed card width */
   border-radius: 12px;
   padding: 2rem 1.5rem;
   text-align: center;
@@ -419,9 +498,8 @@ body {
   transform: translateY(-5px);
 }
 
-/* Alternating backgrounds */
 .project-card.dark {
-  background: #264b73;
+  background: #0a488b;
   color: #ffffff;
 }
 
@@ -430,7 +508,6 @@ body {
   color: #0d213a;
 }
 
-/* Project icons — keep original color */
 .project-icon {
   width: 110px;
   height: 110px;
@@ -439,7 +516,6 @@ body {
   display: block;
 }
 
-/* Title and description */
 .project-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.6rem;
@@ -450,10 +526,8 @@ body {
   line-height: 1.5;
   margin: 0;
   color: inherit;
-  /* matches card text color automatically */
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .project-card {
     flex: 0 0 240px;
@@ -470,8 +544,6 @@ body {
   }
 }
 
-
-
 /* ===== TEAM ===== */
 .team {
   background: #f0f4f8;
@@ -480,13 +552,13 @@ body {
 }
 
 .team h2 {
-  color: #264b73;
+  color: #0a488b;
   font-size: 2rem;
   margin-bottom: 3rem;
   font-weight: 700;
+  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Grid layout */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -495,7 +567,6 @@ body {
   margin: 0 auto;
 }
 
-/* Team cards */
 .team-card {
   color: white;
   padding: 2rem 1.5rem;
@@ -509,9 +580,12 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Alternating colors */
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
 .team-card.dark {
-  background: #264b73;
+  background: #0a488b;
 }
 
 .team-card.light {
@@ -519,31 +593,20 @@ body {
   color: #0d213a;
 }
 
-.team-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Avatar with image */
 .avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  /* crop image inside the circle */
   margin-bottom: 1rem;
-  /* background: #1f4e8a; */
-  /* fallback background */
 }
 
 .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* ensures face is centered and not stretched */
-  display: block;
 }
 
-/* Text inside cards */
 .team-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
@@ -556,7 +619,6 @@ body {
   color: inherit;
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
   .team-grid {
     gap: 1.5rem;
@@ -590,38 +652,31 @@ body {
   text-align: center;
 }
 
-/* Consistent heading styling */
 .articles h2 {
-  color: #264b73;
+  color: #0a488b;
   font-size: 2rem;
   margin-bottom: 2.5rem;
   font-weight: 700;
   text-align: center;
+  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Individual article cards */
 .article-card {
   background: #e9eef5;
   margin: 1.5rem auto;
   padding: 1.8rem;
   border-radius: 10px;
   width: 90%;
-  /* ✅ fill 90% of the screen */
-  /* max-width: 1200px; */
-  /* still keep readable width on large screens */
   text-align: left;
   box-sizing: border-box;
 }
 
-
-/* Title inside card */
 .article-card h3 {
-  color: #264b73;
+  color: #0a488b;
   margin: 0.6rem 0 0.8rem;
   font-size: 1.2rem;
 }
 
-/* Date above title */
 .article-card .date {
   color: #666;
   font-size: 0.9rem;
@@ -629,14 +684,12 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* Paragraph content */
 .article-card p {
   line-height: 1.6;
   color: #333;
   font-size: 1rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .articles h2 {
     font-size: 1.6rem;
@@ -651,14 +704,14 @@ body {
   }
 }
 
-
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
-  background: #264b73;
+  background: #0a488b;
   color: #fff;
   font-size: 0.9rem;
+  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 .footer-logos {
@@ -681,7 +734,6 @@ footer {
     display: flex;
   }
 
-  /* Center logo properly */
   .nav-left {
     width: 100%;
     justify-content: center;
@@ -698,7 +750,6 @@ footer {
     flex: none;
   }
 
-  /* Hide desktop nav */
   .nav-menu {
     position: fixed;
     top: 80px;
@@ -706,7 +757,6 @@ footer {
     width: 100%;
     height: calc(100vh - 80px);
     background: #f1f3f6;
-    /* gray drawer */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -725,29 +775,20 @@ footer {
   }
 
   .nav-menu a {
-    color: #264b73;
-    /* blue text */
+    color: #0a488b;
     font-size: 1.2rem;
     font-weight: 600;
   }
 
-  /* Hide right-side logos */
-  .nav-logos {
-    display: none;
-  }
-
-  /* Show logos in footer */
   .footer-logos {
     display: flex;
   }
 
-  /* Body scroll lock */
   body.menu-open {
     overflow: hidden;
   }
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 600px) {
   .navbar {
     padding: 0.6rem 1rem;
@@ -760,10 +801,6 @@ footer {
   .menu-toggle {
     width: 24px;
     height: 18px;
-  }
-
-  .menu-toggle .bar {
-    height: 2.5px;
   }
 
   .footer-logos img {

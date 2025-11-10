@@ -1,4 +1,3 @@
-// ...existing code...
 // ===== Hamburger Menu Toggle =====
 (function () {
     if (document.querySelector('.announcement-bar')) {
@@ -23,35 +22,48 @@ navLinks.forEach(link => {
     link.addEventListener('click', e => {
         const href = link.getAttribute('href');
 
-        // If it's an anchor on the same page, smooth scroll
-        if (href.includes('#')) {
+        // Close the menu first
+        navMenu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+
+        // Only handle smooth scrolling if we're on index.html AND clicking an anchor
+        if (href.startsWith('#')) {
+            // Pure anchor link (like #about) - only on same page
             e.preventDefault();
-            const targetId = href.split('#')[1];
-            const target = document.getElementById(targetId);
-
-            // Close the menu
-            navMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
-
+            const target = document.getElementById(href.substring(1));
             if (target) {
                 window.scrollTo({
                     top: target.offsetTop - 60,
                     behavior: 'smooth'
                 });
             }
-        } else {
-            // For links to other pages
-            navMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
         }
+        // For all other links (team.html, articles.html, index.html#about), let browser handle normally
     });
+});
+
+// Handle scrolling to section after page load (when coming from another page with #hash)
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (hash) {
+        // Small delay to ensure page is fully rendered
+        setTimeout(() => {
+            const target = document.getElementById(hash.substring(1));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
+    }
 });
 
 // ===== ANNOUNCEMENT ROTATOR =====
 (function () {
     const announcements = [
-        "Welcome to FAIRspace Cologne — tools and resources for FAIR data.",
-        "Join our FAIR training workshops — next session: 12 Nov 2025.",
+        "Welcome to FAIRspace Cologne – tools and resources for FAIR data.",
+        "Join our FAIR training workshops – next session: 12 Nov 2025.",
         "Check out our Dataverse integration guides and templates.",
         "Subscribe to our newsletter for updates."
     ];

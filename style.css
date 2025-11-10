@@ -220,6 +220,52 @@ body {
   /* UZK Logo size */
 }
 
+.logo-num {
+  width: 180px;
+  height: 220px;
+}
+
+.logo-med {
+  width: 180px;
+  height: 220px;
+}
+
+/* Make logo section responsive */
+@media (max-width: 1200px) {
+  .logo-container {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .logos {
+    height: 100px;
+  }
+
+  .logo-bik,
+  .logo-ukk,
+  .logo-uzk,
+  .logo-num,
+  .logo-med {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logos {
+    height: 80px;
+  }
+
+  .logo-bik,
+  .logo-ukk,
+  .logo-uzk,
+  .logo-num,
+  .logo-med {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 /* ===== ABOUT ===== */
 .about {
   width: 100%;
@@ -232,7 +278,6 @@ body {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
-  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 .about-content {
@@ -357,7 +402,6 @@ body.has-announcement .hero {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
-  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 .service-scroll {
@@ -456,7 +500,6 @@ body.has-announcement .hero {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
-  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 .project-scroll {

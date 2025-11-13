@@ -74,7 +74,8 @@ body {
 .nav-menu {
   flex: 2;
   display: flex;
-  justify-content: center;
+  /* move the nav items to the right on wide screens */
+  justify-content: flex-end;
   transition: transform 0.4s ease;
 }
 
@@ -84,6 +85,14 @@ body {
   gap: 1.8rem;
   margin: 0;
   padding: 0;
+}
+
+/* Desktop: push the nav list to the far right of the header */
+@media (min-width: 993px) {
+  .nav-menu ul {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
 
 .nav-menu a {
@@ -178,8 +187,8 @@ body {
 
 /* ===== LOGOS BELOW HERO ===== */
 .logos-below-hero {
-  background-color: #f0f4f8;
-  padding: 4rem 0;
+  background-color: #e9f6fe;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -221,12 +230,12 @@ body {
 }
 
 .logo-num {
-  width: 180px;
+  width: 150px;
   height: 220px;
 }
 
 .logo-med {
-  width: 180px;
+  width: 150px;
   height: 220px;
 }
 
@@ -281,8 +290,8 @@ body {
 }
 
 .about-content {
-  width: 70%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
   padding: 0 2rem;
@@ -801,6 +810,7 @@ footer {
     height: calc(100vh - 80px);
     background: #f1f3f6;
     display: flex;
+    /* keep overlay menu centered on small screens */
     justify-content: center;
     align-items: center;
     transform: translateX(-100%);

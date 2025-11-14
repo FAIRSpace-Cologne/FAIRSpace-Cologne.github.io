@@ -608,7 +608,6 @@ body.has-announcement .hero {
   font-size: 2rem;
   margin-bottom: 3rem;
   font-weight: 700;
-  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 .team-grid {
@@ -710,7 +709,6 @@ body.has-announcement .hero {
   margin-bottom: 2.5rem;
   font-weight: 700;
   text-align: center;
-  text-shadow: 8px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 .article-card {

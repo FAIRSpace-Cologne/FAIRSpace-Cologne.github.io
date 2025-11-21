@@ -146,7 +146,8 @@ body {
   text-align: center;
   max-width: 800px;
   /* Add drop shadow to text */
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  /* stronger, darker shadow for better contrast */
+  text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.85);
   /* You can adjust the values */
 }
 

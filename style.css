@@ -138,34 +138,41 @@ body {
   z-index: 0;
 }
 
-/* Overlay text content (bottom center) */
+/* Overlay text content (bottom center, with semi-transparent background) */
 .hero-content {
   position: relative;
   z-index: 1;
   color: #ffffff;
   text-align: center;
   max-width: 800px;
-  /* Add drop shadow to text */
-  /* stronger, darker shadow for better contrast */
-  text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.85);
-  /* You can adjust the values */
+  /* Semi-transparent blue background to soften the image light */
+  background: rgba(0, 72, 139, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  /* Add drop shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Remove text shadow since background provides contrast */
 }
 
 /* Text styling */
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  /* Add drop shadow to h1 text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  /* Add drop shadow to p text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Button styling */
 .btn-primary {
-  background: #0a488b;
+  background: #3b80b1;
   border: none;
   color: #ffffff;
   padding: 0.8rem 1.8rem;
@@ -173,6 +180,8 @@ body {
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s;
+  /* Add drop shadow to button text */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .btn-primary:hover {

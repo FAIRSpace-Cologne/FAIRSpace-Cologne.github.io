@@ -116,12 +116,11 @@ body {
   display: flex;
   justify-content: center;
   /* center horizontally */
-  align-items: flex-end;
-  /* move content to the bottom */
+  align-items: center;
+  /* center vertically to place content higher */
   margin-top: var(--nav-height);
   /* offset navbar */
   box-sizing: border-box;
-  padding-bottom: 3rem;
 }
 
 /* Full-width, uncropped image */
@@ -138,16 +137,16 @@ body {
   z-index: 0;
 }
 
-/* Overlay text content (bottom center, with semi-transparent background) */
+/* Overlay text content (centered, with semi-transparent background) */
 .hero-content {
   position: relative;
   z-index: 1;
   color: #ffffff;
   text-align: center;
-  max-width: 800px;
+  max-width: 1500px;
   /* Semi-transparent blue background to soften the image light */
   background: rgba(0, 72, 139, 0.6);
-  padding: 2rem;
+  padding: 6rem;
   border-radius: 10px;
   /* Add drop shadow for depth */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Data Repositories and Infrastructure | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Main Topics -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul>
+                <li><a href="rdm-knowledge.html">Introduction to Research Data Management</a></li>
+                <li><a href="open-fair-data.html">Is Open Data the same as FAIR Data?</a></li>
+                <li><a href="data-security.html">Data Security and Privacy</a></li>
+                <li><a href="data-repositories.html">Data Repositories and Infrastructure</a></li>
+                <li><a href="research-software.html">Research Software and Tools</a></li>
+                <li><a href="data-reuse.html">Reusing Existing Data</a></li>
+                <li><a href="markdown-features-guide.html">Markdown Content Features Guide</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="knowledge-page" class="rdm-knowledge-page">
+                <h2>Data Repositories and Infrastructure</h2>
+
+                <div id="why-repositories" class="rdm-knowledge-card">
+                    <h3>Why Repositories?</h3>
+                    <p>
+                        Data repositories play a crucial role in the research data management lifecycle. They provide
+                        secure,
+                        organized spaces for storing and sharing research data with the broader scientific community.
+                    </p>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li><strong>Preservation</strong>: Ensure long-term preservation of research data</li>
+                        <li><strong>Discoverability</strong>: Make data findable through search interfaces and metadata
+                        </li>
+                        <li><strong>Accessibility</strong>: Provide standardized access to data</li>
+                        <li><strong>Reproducibility</strong>: Enable other researchers to access data for validation and
+                            replication</li>
+                        <li><strong>Compliance</strong>: Meet funder and institutional requirements for data sharing
+                        </li>
+                        <li><strong>Citation</strong>: Generate unique identifiers (DOIs) for data citation</li>
+                    </ul>
+                </div>
+
+                <div id="general-repositories" class="rdm-knowledge-card">
+                    <h3>General Repositories</h3>
+                    <p>
+                        General repositories accept research data across all disciplines and types. These are suitable
+                        for datasets
+                        that don't fit into domain-specific repositories or for researchers seeking maximum visibility.
+                    </p>
+                    <div class="subsection">
+                        <h4>Popular General Repositories:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li><strong>Zenodo</strong> (zenodo.org) - Open access repository for scientific data and
+                                publications</li>
+                            <li><strong>Figshare</strong> (figshare.com) - Repository for sharing all types of research
+                                outputs</li>
+                            <li><strong>OSF Storage</strong> (Open Science Framework) - Platform for research
+                                collaboration and data sharing</li>
+                            <li><strong>Dataverse</strong> (dataverse.org) - Network of repositories for data sharing
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="domain-repositories" class="rdm-knowledge-card">
+                    <h3>Domain-Specific and Domain-Relevant Repositories</h3>
+                    <p>
+                        Domain-specific repositories are tailored to particular research disciplines or data types. They
+                        often provide
+                        specialized features and metadata standards relevant to their field.
+                    </p>
+                    <div class="subsection">
+                        <h4>Examples by Domain:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li><strong>Biology/Life Sciences</strong>: GenBank, UniProt, EMBL-EBI</li>
+                            <li><strong>Astronomy</strong>: SDSS, 2MASS, ESO Archive</li>
+                            <li><strong>Climate/Geosciences</strong>: PANGAEA, NOAA Data Centers</li>
+                            <li><strong>Social Sciences</strong>: ICPSR, UK Data Archive</li>
+                            <li><strong>Chemistry</strong>: PubChem, ChemSpider</li>
+                            <li><strong>Materials Science</strong>: Materials Project, NOMAD</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="infrastructure" class="rdm-knowledge-card">
+                    <h3>Data Infrastructure</h3>
+                    <p>
+                        Beyond individual repositories, research institutions often maintain their own data
+                        infrastructure to support
+                        local data management needs.
+                    </p>
+                    <div class="subsection">
+                        <h4>Components of Data Infrastructure:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li><strong>Storage Systems</strong>: Local storage servers and cloud storage solutions</li>
+                            <li><strong>Databases</strong>: Structured data management systems</li>
+                            <li><strong>Backup Systems</strong>: Redundant copies for disaster recovery</li>
+                            <li><strong>Access Management</strong>: Authentication and authorization systems</li>
+                            <li><strong>Metadata Catalogs</strong>: Systems for discovering and describing data</li>
+                            <li><strong>Collaboration Tools</strong>: Platforms for shared access and collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="selecting-repository" class="rdm-knowledge-card">
+                    <h3>Selecting a Repository</h3>
+                    <p>
+                        Choosing the right repository for your data involves considering several factors:
+                    </p>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li><strong>Discipline Match</strong>: Is there a domain-specific repository suitable for your
+                            data?</li>
+                        <li><strong>Access Requirements</strong>: Does the repository support restricted access if
+                            needed?</li>
+                        <li><strong>Metadata Standards</strong>: Does it use appropriate metadata standards for your
+                            field?</li>
+                        <li><strong>Preservation Commitment</strong>: Does it have long-term preservation guarantees?
+                        </li>
+                        <li><strong>Identifiers</strong>: Does it issue DOIs or other persistent identifiers?</li>
+                        <li><strong>Funder Requirements</strong>: Does it meet your funding agency's requirements?</li>
+                        <li><strong>Data Size Limits</strong>: Can it accommodate your dataset size?</li>
+                        <li><strong>Licensing Options</strong>: Does it support appropriate licensing for your data?
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul>
+                <li><a href="#why-repositories">Why Repositories?</a></li>
+                <li><a href="#general-repositories">General Repositories</a></li>
+                <li><a href="#domain-repositories">Domain-Specific Repositories</a></li>
+                <li><a href="#infrastructure">Data Infrastructure</a></li>
+                <li><a href="#selecting-repository">Selecting a Repository</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="toc-indicator.js"></script>
+</body>
+
+</html>

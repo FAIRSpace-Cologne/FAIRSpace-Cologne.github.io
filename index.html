@@ -4,13 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>FAIRspace Cologne</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script defer src="script.js"></script>
 </head>
 
 <body>
-  <!-- Navigation Bar -->
   <header class="navbar">
     <div class="nav-left">
       <button class="menu-toggle" aria-label="Toggle menu">
@@ -21,21 +24,84 @@
       <div class="logo">FAIRspace Cologne</div>
     </div>
 
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="publication.html">Publications</a></li>
-      </ul>
-    </nav>
+    <div class="nav-center">
+      <div class="search-bar-center">
+        <div class="search-input-wrapper">
+          <i class="fas fa-search search-icon-left"></i>
+          <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne" aria-label="Search"
+            id="searchInput">
+          <button class="search-clear-btn" aria-label="Clear search">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Search Results Dropdown -->
+      <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <div class="nav-right">
+      <!-- Search Results Dropdown -->
+      <div class="search-results" id="searchResults"></div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="latest-news.html">News</a></li>
+          <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+          <li class="dropdown">
+            <a href="services.html" data-keywords="services consultation training workshops support">Services</a>
+            <div class="dropdown-content">
+              <a href="services.html" data-keywords="fair data consultation advice guidance">FAIR Data
+                Consultation</a>
+              <a href="services.html" data-keywords="training workshops tutorials learning sessions">Training &
+                Workshops</a>
+              <a href="services.html" data-keywords="infrastructure support tools repository">Infrastructure
+                Support</a>
+              <a href="services.html" data-keywords="community building network collaboration">Community
+                Building</a>
+              <a href="services.html" data-keywords="policy consultation institutional governance">Policy
+                Consultation</a>
+              <a href="fairdata-cologne.html" data-keywords="fairdata cologne videos tutorials learning">FAIRdata
+                Cologne</a>
+              <a href="rdm-training.html" data-keywords="rdm training materials resources downloads">RDM Training</a>
+            </div>
+          </li>
+          <li>
+            <a href="team.html" data-keywords="team staff members people researchers">Contributors</a>
+          </li>
+          <!-- <li class="dropdown">
+            <a href="publication.html" data-keywords="publications articles papers research">Publications</a>
+            <div class="dropdown-content">
+              <a href="data-policies.html">Data Policies</a>
+              <a href="data-management-plans.html">Data Management Plans</a>
+              <a href="research-papers.html">Research Papers</a>
+              <a href="contributions.html">Contributions</a>
+              <a href="case-studies.html">Case Studies</a>
+              <a href="training-materials.html">Training Materials</a>
+              <a href="white-papers.html">White Papers</a>
+              <a href="conference-proceedings.html">Conference Proceedings</a>
+              <a href="technical-reports.html">Technical Reports</a>
+            </div>
+          </li> -->
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Announcement bar (rotating) -->
   <div class="announcement-bar" role="region" aria-live="polite">
     <div class="announcement-inner">
-      <span class="announcement-text">Welcome to FAIRspace Cologne — tools and resources for FAIR data.</span>
+      <div class="announcement-message">
+        <span class="announcement-text">Welcome to FAIRspace Cologne – tools and resources for FAIR data.</span>
+        <a class="announcement-link" href="latest-news.html">Read more</a>
+      </div>
       <div class="announcement-controls" aria-hidden="true">
         <button class="announce-prev" aria-label="Previous announcement">‹</button>
         <button class="announce-next" aria-label="Next announcement">›</button>
@@ -57,7 +123,8 @@
   <!-- Logos below hero -->
   <section class="logos-below-hero">
     <div class="logo-container">
-      <img src="images/BIK.png" alt="BI-K Logo" class="logos logo-bik" />
+      <img src="images/BIK.png" alt="BI-K Logo" class="logos logo-bik" data-light-src="images/BIK.png"
+        data-dark-src="images/BI-K-Logo-white-EN.png" />
       <img src="images/ukk-logo-removebg.png" alt="UKK Logo" class="logos logo-ukk" />
       <img src="images/UzK_Logo_ENG.png" alt="UZK Logo" class="logos logo-uzk" />
       <img src="images/NUM-DIZ-Kombilogo-POS-RGB.png" alt="NUM DIZ Logo" class="logos logo-num" />
@@ -65,31 +132,67 @@
     </div>
   </section>
 
+  <!-- About Us Section -->
+  <section class="about-content">
+    <div class="about-section">
+      <h1 style="color: #003366; font-size: 3rem;">About FAIRspace Cologne</h1>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="about-content">
-      <h2>About Us</h2>
-      <p>
-        FAIRspace Cologne is an initiative focused on supporting research data
-        management and promoting the FAIR principles - Findable, Accessible,
-        Interoperable, and Reusable. Our mission is to provide tools, training,
-        and infrastructure that empower researchers to manage, share, and reuse
-        data effectively.
-      </p>
-      <p>
-        We collaborate with universities, research institutions, and data
-        stewards to ensure scientific data is handled transparently and
-        sustainably. Our goal is to make open science not just possible but
-        practical.
-      </p>
+      <h2 style="color: #5dade2; font-size: 2rem;">What We Do</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Training & Education</h3>
+          <p>
+            We provide comprehensive training programs, workshops, and resources to help researchers
+            and data professionals develop essential skills in research data management.
+          </p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-tools"></i>
+          <h3>Tools & Infrastructure</h3>
+          <p>
+            We develop and maintain tools, templates, and infrastructure solutions that support
+            FAIR data practices and streamline research workflows.
+          </p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-users"></i>
+          <h3>Community Building</h3>
+          <p>
+            We foster collaboration among researchers, data stewards, and institutions to create
+            a supportive network for sharing knowledge and best practices.
+          </p>
+        </div>
+      </div>
+      <a href="about.html" class="btn-primary">Read More</a>
     </div>
   </section>
 
   <!-- Services Section -->
+  <!-- in this light and dark means dark and light color of cards, not theme-->
   <section id="services" class="services">
-    <h2>Our Services</h2>
+    <h2>Services</h2>
     <div class="service-scroll">
+      <div class="service-card dark">
+        <img src="images/serv1.png" alt="FAIRdata Cologne" class="service-icon" />
+        <h3>FAIRdata Cologne</h3>
+        <p>
+          Access comprehensive tutorials and training materials for FAIR data management
+          and research data best practices.
+        </p>
+        <a href="fairdata-cologne.html#tutorials-section" class="service-link">Video Tutorials</a>
+        <a href="user-guidelines.html" class="service-link">User Guidelines</a>
+      </div>
+      <div class="service-card light">
+        <img src="images/serv2.png" alt="RDM Training" class="service-icon" />
+        <h3>RDM Training</h3>
+        <p>
+          Download training materials, workshop slides, handouts, and resources for
+          research data management training sessions.
+        </p>
+        <a href="rdm-training.html#training-materials-section" class="service-link">Training Materials</a>
+        <a href="rdm-training.html#download-all-section" class="service-link">Download All</a>
+      </div>
       <div class="service-card dark">
         <img src="images/serv1.png" alt="Service Icon" class="service-icon" />
         <h3>FAIR Data Consultation</h3>
@@ -97,6 +200,8 @@
           Get expert guidance on implementing FAIR principles in your research
           workflow and data management practices.
         </p>
+        <a href="#services" class="service-link">Get Consultation</a>
+        <a href="#services" class="service-link">FAIR Guidance</a>
       </div>
 
       <div class="service-card light">
@@ -106,6 +211,8 @@
           Attend workshops and tutorials on topics like data stewardship,
           metadata standards, and reproducible research.
         </p>
+        <a href="#services" class="service-link">View Schedule</a>
+        <a href="#services" class="service-link">Workshop Topics</a>
       </div>
 
       <div class="service-card dark">
@@ -115,6 +222,8 @@
           We provide tools, templates, and repository support to make your data
           storage and sharing seamless.
         </p>
+        <a href="#services" class="service-link">Tools & Templates</a>
+        <a href="#services" class="service-link">Repository Support</a>
       </div>
 
       <div class="service-card light">
@@ -124,6 +233,8 @@
           Connect with like-minded researchers and data experts through our FAIR
           data community.
         </p>
+        <a href="#services" class="service-link">Join Community</a>
+        <a href="#services" class="service-link">Events & Meetups</a>
       </div>
 
       <div class="service-card dark">
@@ -133,6 +244,8 @@
           Receive guidance on aligning your institutional data policy with FAIR
           and open science principles.
         </p>
+        <a href="#services" class="service-link">Policy Guidance</a>
+        <a href="#services" class="service-link">Institutional Support</a>
       </div>
       <div class="service-card light">
         <img src="images/serv5.png" alt="Service Icon" class="service-icon" />
@@ -141,14 +254,37 @@
           Receive guidance on aligning your institutional data policy with FAIR
           and open science principles.
         </p>
+        <a href="#services" class="service-link">Policy Guidance</a>
+        <a href="#services" class="service-link">Institutional Support</a>
       </div>
+    </div>
+  </section>
+
+  <!-- RDM Knowledge Section -->
+  <section id="rdm-knowledge" class="rdm-knowledge">
+    <div class="rdm-content">
+      <h2>Research Data Management Knowledge</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+      </p>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+        doloremque laudantium, totam rem aperiam, eaq ue ipsa quae ab illo inventore
+        veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+        voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+      </p>
+      <a href="rdm-knowledge.html" class="btn-primary">Explore RDM Resources</a>
     </div>
   </section>
 
 
   <!-- Projects -->
-  <section id="projects" class="projects">
-    <h2>Our Projects</h2>
+  <!-- <section id="projects" class="projects">
+    <h2>Projects</h2>
     <div class="project-scroll">
       <div class="project-card dark">
         <img src="images/dataverse.png" alt="Dataverse" class="project-icon" />
@@ -200,7 +336,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!-- Lifecycle -->
@@ -209,12 +345,98 @@
     <img src="https://via.placeholder.com/800x400?text=Research+Technology+Diagram" alt="Research Lifecycle Diagram" />
   </section> -->
 
+  <!-- News & Events Section (Rotating) -->
+  <section class="news-events">
+    <h2>Latest News & Events</h2>
+    <div class="news-container">
+      <div class="news-slide active">
+        <div class="news-image">
+          <img src="images/serv1.png" alt="FAIR Data Workshop" />
+        </div>
+        <div class="news-content">
+          <h3>FAIR Data Management Workshop</h3>
+          <span class="news-date">February 15, 2025</span>
+          <p>
+            Join us for an intensive workshop on FAIR data principles and their practical implementation
+            in research workflows. Learn best practices for making your research data Findable, Accessible,
+            Interoperable, and Reusable. This hands-on session will cover metadata standards, data
+            repositories, and documentation strategies.
+          </p>
+          <a href="news-fair-data-workshop.html" class="news-read-more">Read More →</a>
+        </div>
+      </div>
+
+      <div class="news-slide">
+        <div class="news-image">
+          <img src="images/serv2.png" alt="Research Data Symposium" />
+        </div>
+        <div class="news-content">
+          <h3>Research Data Symposium 2025</h3>
+          <span class="news-date">March 10, 2025</span>
+          <p>
+            Our annual Research Data Symposium brings together data stewards, researchers, and IT
+            professionals to discuss the latest trends in research data management. Topics include
+            open science initiatives, data preservation strategies, and emerging technologies for
+            data sharing and collaboration.
+          </p>
+          <a href="news-research-symposium.html" class="news-read-more">Read More →</a>
+        </div>
+      </div>
+
+      <div class="news-slide">
+        <div class="news-image">
+          <img src="images/serv3.png" alt="Dataverse Training" />
+        </div>
+        <div class="news-content">
+          <h3>Dataverse Platform Training</h3>
+          <span class="news-date">March 25, 2025</span>
+          <p>
+            Comprehensive training session on using the Dataverse platform for data publication and
+            preservation. Learn how to create datasets, manage permissions, assign DOIs, and ensure
+            long-term accessibility of your research data. Suitable for both beginners and advanced users.
+          </p>
+          <a href="news-dataverse-training.html" class="news-read-more">Read More →</a>
+        </div>
+      </div>
+
+      <div class="news-slide">
+        <div class="news-image">
+          <img src="images/serv4.png" alt="Data Stewardship Network" />
+        </div>
+        <div class="news-content">
+          <h3>Data Stewardship Network Meetup</h3>
+          <span class="news-date">April 5, 2025</span>
+          <p>
+            Monthly networking event for data stewards across institutions. Share experiences, discuss
+            challenges, and collaborate on solutions for common data management issues. This informal
+            gathering provides an excellent opportunity to build connections within the data stewardship
+            community.
+          </p>
+          <a href="news-data-stewardship-meetup.html" class="news-read-more">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Navigation controls -->
+      <div class="news-controls">
+        <button class="news-prev" aria-label="Previous news">‹</button>
+        <div class="news-dots"></div>
+        <button class="news-next" aria-label="Next news">›</button>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <div class="footer-logos">
       <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
       <img src="images/ukklogowhite.png" alt="UKK Logo" />
       <img src="images/uzkwhite.png" alt="UZK Logo" />
+    </div>
+    <div class="dark-mode-toggle" id="darkModeToggle">
+      <span id="toggleLabel">Dark Mode</span>
+      <div class="toggle-switch" id="toggleSwitch">
+        <div class="toggle-slider"></div>
+      </div>
     </div>
     <p>© 2025 FAIRspace Cologne</p>
   </footer>

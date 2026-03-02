@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check if Functions are Defined</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        .test {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .success {
+            background: #efe;
+            color: #080;
+        }
+
+        .error {
+            background: #fee;
+            color: #800;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Function Availability Test</h1>
+
+    <div id="test-results"></div>
+
+    <script src="marked.min.js"></script>
+    <script src="markdown-loader.js"></script>
+
+    <script>
+        var results = [];
+
+        // Test 1: marked.js
+        if (typeof marked !== 'undefined') {
+            results.push('<div class="test success">✓ marked.js is available</div>');
+        } else {
+            results.push('<div class="test error">✗ marked.js is NOT available</div>');
+        }
+
+        // Test 2: loadMarkdownContent
+        if (typeof window.loadMarkdownContent === 'function') {
+            results.push('<div class="test success">✓ loadMarkdownContent function is available</div>');
+        } else {
+            results.push('<div class="test error">✗ loadMarkdownContent function is NOT available</div>');
+        }
+
+        // Test 3: Try calling it
+        if (typeof window.loadMarkdownContent === 'function') {
+            results.push('<div class="test">Attempting to call loadMarkdownContent("test.md")...</div>');
+            try {
+                window.loadMarkdownContent('test.md', '#test-results');
+                results.push('<div class="test success">✓ Function call succeeded</div>');
+            } catch (e) {
+                results.push('<div class="test error">✗ Function call failed: ' + e.message + '</div>');
+            }
+        }
+
+        document.getElementById('test-results').innerHTML = results.join('');
+    </script>
+</body>
+
+</html>

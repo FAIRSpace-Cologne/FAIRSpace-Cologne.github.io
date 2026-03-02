@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>FAIRdata Cologne | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FAIRdata Cologne Page Content -->
+    <section class="fairdata-page">
+        <div class="fairdata-header">
+            <h1>FAIRdata Cologne</h1>
+            <p>Comprehensive tutorials and training resources for FAIR data management practices</p>
+        </div>
+
+        <!-- Tutorials Section -->
+        <section class="tutorials-section">
+            <h2>Video Tutorials</h2>
+            <p class="tutorials-intro">
+                Learn FAIR data principles through our curated collection of short, practical video tutorials.
+                Each video is designed to be under 5 minutes for quick and effective learning.
+            </p>
+
+            <div class="video-grid">
+                <!-- Video 1 - YouTube Link -->
+                <div class="video-card">
+                    <div class="video-thumbnail" data-video-type="youtube" data-video-id="veOwUe_J3vA">
+                        <img src="https://img.youtube.com/vi/veOwUe_J3vA/maxresdefault.jpg"
+                            onerror="this.src='https://img.youtube.com/vi/veOwUe_J3vA/hqdefault.jpg'"
+                            alt="Introduction to FAIR Principles" />
+                        <div class="play-overlay">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="rgba(10, 72, 139, 0.9)" />
+                                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="video-duration">4:35</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Introduction to FAIR Principles</h3>
+                        <p>Learn the fundamentals of Findable, Accessible, Interoperable, and Reusable data.</p>
+                        <div class="video-meta">
+                            <span class="video-views">1.2K views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 - YouTube Link -->
+                <div class="video-card">
+                    <div class="video-thumbnail" data-video-type="youtube" data-video-id="veOwUe_J3vA">
+                        <img src="https://img.youtube.com/vi/veOwUe_J3vA/maxresdefault.jpg"
+                            onerror="this.src='https://img.youtube.com/vi/veOwUe_J3vA/hqdefault.jpg'"
+                            alt="Creating Metadata" />
+                        <div class="play-overlay">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="rgba(10, 72, 139, 0.9)" />
+                                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="video-duration">3:45</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Creating Effective Metadata</h3>
+                        <p>Best practices for documenting your research data with comprehensive metadata.</p>
+                        <div class="video-meta">
+                            <span class="video-views">856 views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 - File Upload -->
+                <div class="video-card">
+                    <div class="video-thumbnail" data-video-type="file" data-video-src="videos/dataverse-intro.mp4"
+                        data-poster="videos/thumbnails/dataverse-intro.jpg">
+                        <video class="video-preview" muted>
+                            <source src="videos/dataverse-intro.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="rgba(10, 72, 139, 0.9)" />
+                                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="video-duration">4:58</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Getting Started with Dataverse</h3>
+                        <p>Step-by-step guide to publishing your datasets on the Dataverse platform.</p>
+                        <div class="video-meta">
+                            <span class="video-views">643 views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4 - YouTube Link -->
+                <div class="video-card">
+                    <div class="video-thumbnail" data-video-type="youtube" data-video-id="veOwUe_J3vA">
+                        <img src="https://img.youtube.com/vi/veOwUe_J3vA/maxresdefault.jpg"
+                            onerror="this.src='https://img.youtube.com/vi/veOwUe_J3vA/hqdefault.jpg'"
+                            alt="Data Management Plans" />
+                        <div class="play-overlay">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="rgba(10, 72, 139, 0.9)" />
+                                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="video-duration">4:12</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Writing Data Management Plans</h3>
+                        <p>Essential components and tips for creating comprehensive data management plans.</p>
+                        <div class="video-meta">
+                            <span class="video-views">1.5K views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 5 - File Upload -->
+                <div class="video-card">
+                    <div class="video-thumbnail" data-video-type="file" data-video-src="videos/repository-guide.mp4"
+                        data-poster="videos/thumbnails/repository-guide.jpg">
+                        <video class="video-preview" muted>
+                            <source src="videos/repository-guide.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="rgba(10, 72, 139, 0.9)" />
+                                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="video-duration">3:28</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Choosing the Right Repository</h3>
+                        <p>Compare different data repositories and select the best one for your research.</p>
+                        <div class="video-meta">
+                            <span class="video-views">521 views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 6 - YouTube Link -->
+                <div class="video-card">
+                    <div class="video-thumbnail" data-video-type="youtube" data-video-id="veOwUe_J3vA">
+                        <img src="https://img.youtube.com/vi/veOwUe_J3vA/maxresdefault.jpg"
+                            onerror="this.src='https://img.youtube.com/vi/veOwUe_J3vA/hqdefault.jpg'"
+                            alt="Open Science Practices" />
+                        <div class="play-overlay">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="rgba(10, 72, 139, 0.9)" />
+                                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="video-duration">4:50</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Open Science Best Practices</h3>
+                        <p>Implementing open science principles in your research workflow effectively.</p>
+                        <div class="video-meta">
+                            <span class="video-views">978 views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 7 - File Upload -->
+                <div class="video-card">
+                    <div class="video-thumbnail" data-video-type="file" data-video-src="videos/licensing-guide.mp4"
+                        data-poster="videos/thumbnails/licensing-guide.jpg">
+                        <video class="video-preview" muted>
+                            <source src="videos/licensing-guide.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="rgba(10, 72, 139, 0.9)" />
+                                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="video-duration">3:15</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Understanding Data Licenses</h3>
+                        <p>Navigate different licensing options for sharing your research data openly.</p>
+                        <div class="video-meta">
+                            <span class="video-views">712 views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 8 - YouTube Link -->
+                <div class="video-card">
+                    <div class="video-thumbnail" data-video-type="youtube" data-video-id="veOwUe_J3vA">
+                        <img src="https://img.youtube.com/vi/veOwUe_J3vA/maxresdefault.jpg"
+                            onerror="this.src='https://img.youtube.com/vi/veOwUe_J3vA/hqdefault.jpg'"
+                            alt="Version Control" />
+                        <div class="play-overlay">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="rgba(10, 72, 139, 0.9)" />
+                                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="video-duration">4:22</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>Data Version Control</h3>
+                        <p>Track changes and manage versions of your research datasets efficiently.</p>
+                        <div class="video-meta">
+                            <span class="video-views">1.1K views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close">&times;</button>
+            <div class="video-modal-body">
+                <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="fairdata-videos.js"></script>
+</body>
+
+</html>

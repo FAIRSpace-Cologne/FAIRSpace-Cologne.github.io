@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meet Our Team | FAIRspace Cologne</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>FAIRspace Cologne Contributors</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -20,86 +24,175 @@
             <div class="logo">FAIRspace Cologne</div>
         </div>
 
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="publication.html">Publications</a></li>
-            </ul>
-        </nav>
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
     </header>
 
 
-    <!-- Team -->
+    <!-- Contributors -->
     <section id="team" class="team">
-        <h2>Meet Our Team</h2>
+        <h1>FAIRspace Cologne Contributors</h1>
         <div class="team-grid">
-            <div class="team-card dark">
-                <div class="avatar">
-                    <img src="images/profile_pic.png" alt="Hajira Jabeen">
+            <div class="contributor-card">
+                <div class="contributor-header">
+                    <h3>Dr. Hajira Jabeen</h3>
+                    <p class="contributor-title">Senior Data Scientist</p>
                 </div>
-                <h3>Hajira Jabeen</h3>
-                <p>Data Scientist passionate about research data management and open science.</p>
+                <div class="contributor-body">
+                    <p class="contributor-affiliation">University of Cologne / ITCC / BI-K</p>
+                    <p class="contributor-description">Research data management, data stewardship, and open science
+                        initiatives. Special interest in metadata standards and research data policies.</p>
+                    <p class="contributor-contact"><i class="fas fa-envelope"></i> h.jabeen@uni-koeln.de</p>
+                </div>
             </div>
 
-            <div class="team-card light">
-                <div class="avatar">
-                    <img src="images/profile_pic.png" alt="Sergio Avila-Calero">
+            <div class="contributor-card">
+                <div class="contributor-header">
+                    <h3>Dr. Sergio Avila-Calero</h3>
+                    <p class="contributor-title">Postdoc and Data Steward for CRC1218</p>
                 </div>
-                <h3>Sergio Avila-Calero</h3>
-                <p>Research Software Engineer focused on interoperability and data workflows.</p>
+                <div class="contributor-body">
+                    <p class="contributor-affiliation">University of Cologne / ITCC / BI-K</p>
+                    <p class="contributor-description">Training and support in research data management. Special
+                        interest in metadata annotation, reproducibility, and data sharing.</p>
+                    <p class="contributor-contact"><i class="fas fa-envelope"></i> s.avilacalero@uni-koeln.de</p>
+                </div>
             </div>
 
-            <div class="team-card dark">
-                <div class="avatar">
-                    <img src="images/profile_pic.png" alt="Anna Müller">
+            <div class="contributor-card">
+                <div class="contributor-header">
+                    <h3>Anna Müller</h3>
+                    <p class="contributor-title">Metadata Specialist</p>
                 </div>
-                <h3>Anna Müller</h3>
-                <p>Metadata specialist and training coordinator for FAIR data practices.</p>
+                <div class="contributor-body">
+                    <p class="contributor-affiliation">University of Cologne / ITCC / BI-K</p>
+                    <p class="contributor-description">Metadata management, cataloging standards, and training
+                        coordination for FAIR data practices.</p>
+                    <p class="contributor-contact"><i class="fas fa-envelope"></i> a.mueller@uni-koeln.de</p>
+                </div>
             </div>
 
-            <div class="team-card light">
-                <div class="avatar">
-                    <img src="images/profile_pic.png" alt="Michael Brown">
+            <div class="contributor-card">
+                <div class="contributor-header">
+                    <h3>Michael Brown</h3>
+                    <p class="contributor-title">Infrastructure Engineer</p>
                 </div>
-                <h3>Michael Brown</h3>
-                <p>Infrastructure engineer supporting repository and data integration tools.</p>
+                <div class="contributor-body">
+                    <p class="contributor-affiliation">University of Cologne / ITCC / BI-K</p>
+                    <p class="contributor-description">Repository infrastructure, data integration tools, and technical
+                        support for research data systems.</p>
+                    <p class="contributor-contact"><i class="fas fa-envelope"></i> m.brown@uni-koeln.de</p>
+                </div>
             </div>
 
-            <div class="team-card dark">
-                <div class="avatar">
-                    <img src="images/profile_pic.png" alt="Laura Schmidt">
+            <div class="contributor-card">
+                <div class="contributor-header">
+                    <h3>Laura Schmidt</h3>
+                    <p class="contributor-title">Communications Lead</p>
                 </div>
-                <h3>Laura Schmidt</h3>
-                <p>Communications lead ensuring transparency and collaboration across teams.</p>
+                <div class="contributor-body">
+                    <p class="contributor-affiliation">University of Cologne / ITCC / BI-K</p>
+                    <p class="contributor-description">Stakeholder engagement, community outreach, and transparent
+                        communication across teams and organizations.</p>
+                    <p class="contributor-contact"><i class="fas fa-envelope"></i> l.schmidt@uni-koeln.de</p>
+                </div>
             </div>
 
-            <div class="team-card light">
-                <div class="avatar">
-                    <img src="images/profile_pic.png" alt="David Kim">
+            <div class="contributor-card">
+                <div class="contributor-header">
+                    <h3>Dr. David Kim</h3>
+                    <p class="contributor-title">Policy Advisor</p>
                 </div>
-                <h3>David Kim</h3>
-                <p>Policy advisor working on institutional FAIR data strategies and compliance.</p>
+                <div class="contributor-body">
+                    <p class="contributor-affiliation">University of Cologne / ITCC / BI-K</p>
+                    <p class="contributor-description">Institutional FAIR data strategies, compliance frameworks, and
+                        policy development for research data governance.</p>
+                    <p class="contributor-contact"><i class="fas fa-envelope"></i> d.kim@uni-koeln.de</p>
+                </div>
             </div>
 
-            <div class="team-card dark">
-                <div class="avatar">
-                    <img src="images/profile_pic.png" alt="Sofia Rossi">
+            <div class="contributor-card">
+                <div class="contributor-header">
+                    <h3>Sofia Rossi</h3>
+                    <p class="contributor-title">Project Coordinator</p>
                 </div>
-                <h3>Sofia Rossi</h3>
-                <p>Project coordinator managing FAIR initiatives and stakeholder engagement.</p>
+                <div class="contributor-body">
+                    <p class="contributor-affiliation">University of Cologne / ITCC / BI-K</p>
+                    <p class="contributor-description">FAIR initiatives coordination, stakeholder engagement, and
+                        project management for research data efforts.</p>
+                    <p class="contributor-contact"><i class="fas fa-envelope"></i> s.rossi@uni-koeln.de</p>
+                </div>
             </div>
 
-            <div class="team-card light">
-                <div class="avatar">
-                    <img src="images/profile_pic.png" alt="Robert Lee">
+            <div class="contributor-card">
+                <div class="contributor-header">
+                    <h3>Robert Lee</h3>
+                    <p class="contributor-title">Developer</p>
                 </div>
-                <h3>Robert Lee</h3>
-                <p>Developer creating visualization tools for data stewardship and curation.</p>
+                <div class="contributor-body">
+                    <p class="contributor-affiliation">University of Cologne / ITCC / BI-K</p>
+                    <p class="contributor-description">Visualization tools development, data stewardship software, and
+                        technical implementation of data curation systems.</p>
+                    <p class="contributor-contact"><i class="fas fa-envelope"></i> r.lee@uni-koeln.de</p>
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- Footer -->
@@ -108,6 +201,12 @@
             <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
             <img src="images/ukklogowhite.png" alt="UKK Logo" />
             <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
         </div>
         <p>© 2025 FAIRspace Cologne</p>
     </footer>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Open Data vs FAIR Data | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Main Topics -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul>
+                <li><a href="rdm-knowledge.html">Introduction to Research Data Management</a></li>
+                <li><a href="open-fair-data.html">Is Open Data the same as FAIR Data?</a></li>
+                <li><a href="data-security.html">Data Security and Privacy</a></li>
+                <li><a href="data-repositories.html">Data Repositories and Infrastructure</a></li>
+                <li><a href="research-software.html">Research Software and Tools</a></li>
+                <li><a href="data-reuse.html">Reusing Existing Data</a></li>
+                <li><a href="markdown-features-guide.html">Markdown Content Features Guide</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="knowledge-page" class="rdm-knowledge-page">
+                <h2>Open Data vs FAIR Data</h2>
+
+                <div id="open-data" class="rdm-knowledge-card">
+                    <h3>Open Data</h3>
+                    <p>
+                        Open data refers to data that is publicly available and can be freely used, modified, and
+                        distributed.
+                        Open data is typically available without restrictions, allowing anyone to access and use it for
+                        any purpose.
+                    </p>
+                    <p>
+                        Open data initiatives promote transparency, collaboration, and innovation. Many governments and
+                        organizations
+                        have embraced open data policies to maximize the value of publicly funded research and increase
+                        public engagement.
+                    </p>
+                </div>
+
+                <div id="fair-data" class="rdm-knowledge-card">
+                    <h3>FAIR Data</h3>
+                    <p>
+                        FAIR data refers to data that is Findable, Accessible, Interoperable, and Reusable. The FAIR
+                        principles
+                        focus on making data and the accompanying metadata easily discoverable by both humans and
+                        machines.
+                    </p>
+                    <p>
+                        FAIR data doesn't necessarily mean open data. FAIR data can have access restrictions while still
+                        being
+                        properly described, annotated, and managed according to the FAIR principles.
+                    </p>
+                </div>
+
+                <div id="comparison" class="rdm-knowledge-card">
+                    <h3>Is Open Data the Same as FAIR Data?</h3>
+                    <p>
+                        No, open data and FAIR data are related but distinct concepts. Here are the key differences:
+                    </p>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li><strong>Open Data</strong>: Focuses on accessibility and reusability without restrictions
+                        </li>
+                        <li><strong>FAIR Data</strong>: Focuses on discoverability, accessibility with proper
+                            documentation, interoperability, and reusability</li>
+                        <li><strong>Overlap</strong>: Open data that is well-documented can also be FAIR data</li>
+                        <li><strong>FAIR but not Open</strong>: Sensitive data with access restrictions can still be
+                            FAIR if properly managed</li>
+                        <li><strong>Open but not FAIR</strong>: Data that is freely available but poorly documented is
+                            not FAIR</li>
+                    </ul>
+                </div>
+
+                <div id="fair-principles" class="rdm-knowledge-card">
+                    <h3>FAIR Principles</h3>
+                    <div class="subsection">
+                        <h4>Findable</h4>
+                        <p>
+                            Data should be easy to discover. This includes having a unique identifier, rich metadata,
+                            and being
+                            registered in searchable resources.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h4>Accessible</h4>
+                        <p>
+                            Data should be retrievable through standardized protocols. Even if access is restricted, the
+                            metadata
+                            should remain accessible to help users understand what data exists and how to request
+                            access.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h4>Interoperable</h4>
+                        <p>
+                            Data should use standardized formats and vocabularies to ensure it can be integrated with
+                            other data
+                            sources and used with different tools and systems.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h4>Reusable</h4>
+                        <p>
+                            Data should be documented with clear usage rights and licensing information so others can
+                            understand
+                            how to use it appropriately and give proper credit.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="open-science" class="rdm-knowledge-card">
+                    <h3>Open Science</h3>
+                    <p>
+                        Open Science is a broader movement that encompasses open data, open access publications, open
+                        source software,
+                        and open methodologies. It promotes transparency and collaboration across the research
+                        community.
+                    </p>
+                    <p>
+                        While open data is one component of open science, FAIR data principles provide the framework to
+                        ensure that
+                        data can be effectively used within open science practices, even when data must remain
+                        restricted for privacy
+                        or ethical reasons.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul>
+                <li><a href="#open-data">Open Data</a></li>
+                <li><a href="#fair-data">FAIR Data</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="#fair-principles">FAIR Principles</a></li>
+                <li><a href="#open-science">Open Science</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="toc-indicator.js"></script>
+</body>
+
+</html>

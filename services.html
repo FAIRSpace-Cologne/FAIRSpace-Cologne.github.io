@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Services | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                            <a href="rdm-training.html">RDM Training</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Page Content -->
+    <section class="about-page">
+        <div class="about-hero">
+            <h1>Our Services</h1>
+            <p>Comprehensive Support for FAIR Research Data Management</p>
+        </div>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="service-grid">
+                <div class="service-card dark">
+                    <img src="images/serv1.png" alt="FAIRdata Cologne" class="service-icon" />
+                    <h3>FAIRdata Cologne</h3>
+                    <p>
+                        Access comprehensive tutorials and training materials for FAIR data management
+                        and research data best practices.
+                    </p>
+                    <a href="fairdata-cologne.html#tutorials-section" class="service-link">Video Tutorials</a>
+                    <a href="user-guidelines.html" class="service-link">User Guidelines</a>
+                </div>
+                <div class="service-card light">
+                    <img src="images/serv2.png" alt="RDM Training" class="service-icon" />
+                    <h3>RDM Training</h3>
+                    <p>
+                        Download training materials, workshop slides, handouts, and resources for
+                        research data management training sessions.
+                    </p>
+                    <a href="rdm-training.html#training-materials-section" class="service-link">Training Materials</a>
+                    <a href="rdm-training.html#download-all-section" class="service-link">Download All</a>
+                </div>
+                <div class="service-card dark">
+                    <img src="images/serv1.png" alt="Service Icon" class="service-icon" />
+                    <h3>FAIR Data Consultation</h3>
+                    <p>
+                        Get expert guidance on implementing FAIR principles in your research
+                        workflow and data management practices.
+                    </p>
+                    <a href="services.html" class="service-link">Get Consultation</a>
+                    <a href="services.html" class="service-link">FAIR Guidance</a>
+                </div>
+
+                <div class="service-card light">
+                    <img src="images/serv2.png" alt="Service Icon" class="service-icon" />
+                    <h3>Training & Workshops</h3>
+                    <p>
+                        Attend workshops and tutorials on topics like data stewardship,
+                        metadata standards, and reproducible research.
+                    </p>
+                    <a href="services.html" class="service-link">View Schedule</a>
+                    <a href="services.html" class="service-link">Workshop Topics</a>
+                </div>
+
+                <div class="service-card dark">
+                    <img src="images/serv3.png" alt="Service Icon" class="service-icon" />
+                    <h3>Infrastructure Support</h3>
+                    <p>
+                        We provide tools, templates, and repository support to make your data
+                        storage and sharing seamless.
+                    </p>
+                    <a href="services.html" class="service-link">Tools & Templates</a>
+                    <a href="services.html" class="service-link">Repository Support</a>
+                </div>
+
+                <div class="service-card light">
+                    <img src="images/serv4.png" alt="Service Icon" class="service-icon" />
+                    <h3>Community Building</h3>
+                    <p>
+                        Connect with like-minded researchers and data experts through our FAIR
+                        data community.
+                    </p>
+                    <a href="services.html" class="service-link">Join Community</a>
+                    <a href="services.html" class="service-link">Events & Meetups</a>
+                </div>
+
+                <div class="service-card dark">
+                    <img src="images/serv5.png" alt="Service Icon" class="service-icon" />
+                    <h3>Policy Consultation</h3>
+                    <p>
+                        Receive guidance on aligning your institutional data policy with FAIR
+                        and open science principles.
+                    </p>
+                    <a href="services.html" class="service-link">Policy Guidance</a>
+                    <a href="services.html" class="service-link">Institutional Support</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

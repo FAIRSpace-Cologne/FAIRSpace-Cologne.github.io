@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Loader Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .debug {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Markdown Loader Test</h1>
+
+        <div class="debug">
+            <p><strong>Debug Info:</strong> Open browser console to see debug messages</p>
+        </div>
+
+        <div id="content-here">
+            <p>Loading content...</p>
+        </div>
+    </div>
+
+    <!-- Markdown Parser Library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Markdown Loader -->
+    <script src="markdown-loader.js"></script>
+
+    <!-- Test Script -->
+    <script>
+        console.log('Test page starting...');
+
+        function testMarkdownLoader() {
+            console.log('marked available?', typeof marked !== 'undefined');
+            console.log('loadMarkdownContent available?', typeof window.loadMarkdownContent === 'function');
+
+            if (typeof marked === 'undefined' || typeof window.loadMarkdownContent !== 'function') {
+                setTimeout(testMarkdownLoader, 100);
+                return;
+            }
+
+            console.log('Loading test markdown...');
+            const targetElement = document.getElementById('content-here');
+
+            // Load the markdown with the correct selector
+            window.loadMarkdownContent('test.md', '#content-here');
+        }
+
+        testMarkdownLoader();
+    </script>
+</body>
+
+</html>

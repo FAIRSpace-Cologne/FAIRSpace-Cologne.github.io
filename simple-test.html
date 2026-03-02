@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Markdown Loader Test</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .success {
+            border-left: 4px solid #080;
+        }
+
+        .error {
+            border-left: 4px solid #800;
+        }
+
+        .warning {
+            border-left: 4px solid #880;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        #content {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔍 Markdown Loader Diagnostics</h1>
+
+    <div id="diagnostics"></div>
+    <div id="content"></div>
+
+    <script src="marked.min.js"></script>
+    <script src="markdown-loader.js"></script>
+
+    <script>
+        const diag = document.getElementById('diagnostics');
+        const content = document.getElementById('content');
+        let checks = [];
+
+        // Check 1: marked loaded immediately
+        if (typeof marked !== 'undefined') {
+            checks.push('<div class="box success">✓ <strong>marked.js loaded</strong> - typeof marked = "object"</div>');
+        } else {
+            checks.push('<div class="box error">✗ <strong>marked.js NOT loaded</strong> - about to wait...</div>');
+        }
+
+        // Check 2: Wait a bit then check for loadMarkdownContent
+        setTimeout(() => {
+            if (typeof window.loadMarkdownContent === 'function') {
+                checks.push('<div class="box success">✓ <strong>loadMarkdownContent available</strong> - typeof = "function"</div>');
+                checks.push('<div class="box">Attempting to call loadMarkdownContent("test.md", "#content")...</div>');
+
+                try {
+                    window.loadMarkdownContent('test.md', '#content');
+                    checks.push('<div class="box success">✓ <strong>Function call succeeded</strong> - check #content below</div>');
+                } catch (e) {
+                    checks.push('<div class="box error">✗ <strong>Function call failed:</strong> ' + e.message + '</div>');
+                }
+            } else {
+                checks.push('<div class="box error">✗ <strong>loadMarkdownContent NOT available</strong> - typeof = "' + typeof window.loadMarkdownContent + '"</div>');
+                checks.push('<div class="box warning">Window keys starting with "load": ' + Object.keys(window).filter(k => k.startsWith('load')).join(', ') + '</div>');
+            }
+            diag.innerHTML = checks.join('');
+        }, 500);
+
+        // Initial load message
+        diag.innerHTML = '<div class="box warning">⏳ Checking in 500ms...</div>';
+    </script>
+</body>
+
+</html>

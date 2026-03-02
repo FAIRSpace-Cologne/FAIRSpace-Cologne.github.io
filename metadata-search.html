@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Searching Metadata Records | FAIRdata Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Document Layout with Dual Sidebars -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Topic Navigation -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul class="toc-list">
+                <li><a href="user-guidelines.html">Overview</a></li>
+                <li><a href="user-account-management.html">User Account Management</a></li>
+                <li><a href="version-control.html">Version Control</a></li>
+                <li><a href="metadata-management.html">Metadata Management</a></li>
+                <li><a href="metadata-publication.html">Publishing Metadata</a></li>
+                <li><a href="metadata-search.html" class="active">Searching Records</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="rdm-knowledge-page">
+                <h1>Searching Metadata Records</h1>
+                <p class="intro-text">
+                    This guide explains how to effectively search for and discover metadata records in FAIRdata Cologne.
+                    Learn about search techniques, filters, and advanced query options to find the exact data you need.
+                </p>
+
+                <!-- Basic Search Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="basic-search">Basic Search</h2>
+                    <div class="subsection">
+                        <h3>Accessing the Search Portal</h3>
+                        <p>
+                            Navigate to the FAIRdata Cologne homepage and locate the search bar at the top of the page.
+                            You can begin searching without logging in.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Simple Search Query</h3>
+                        <p>
+                            To perform a basic search:
+                        </p>
+                        <ol>
+                            <li>Click on the search box</li>
+                            <li>Type your search terms (e.g., "climate", "RNA sequencing", "agricultural data")</li>
+                            <li>Press Enter or click the search button</li>
+                            <li>Results appear in the search results page</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3>Search Tips</h3>
+                        <ul>
+                            <li>Use specific keywords rather than general terms</li>
+                            <li>Search is case-insensitive</li>
+                            <li>Multiple words are treated as AND (all must match)</li>
+                            <li>Partial words will match (e.g., "gene" finds "genes", "genetics", etc.)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Advanced Search Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="advanced-search">Advanced Search</h2>
+                    <div class="subsection">
+                        <h3>Accessing Advanced Search</h3>
+                        <p>
+                            From the search results page, click on "Advanced Search" to access more powerful search
+                            options.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Search Operators</h3>
+                        <p>
+                            Use these operators to refine your search:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>AND:</strong> All terms must appear (default, e.g., "climate AND data")
+                            </li>
+                            <li>
+                                <strong>OR:</strong> At least one term must appear (e.g., "plants OR crops")
+                            </li>
+                            <li>
+                                <strong>NOT:</strong> Exclude a term (e.g., "data NOT synthetic")
+                            </li>
+                            <li>
+                                <strong>Phrases:</strong> Search exact phrase in quotes (e.g., "machine learning")
+                            </li>
+                            <li>
+                                <strong>Wildcards:</strong> Use * for partial matches (e.g., "pheno*" matches phenotype,
+                                phenotyping)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Field-Specific Search</h3>
+                        <p>
+                            Search within specific metadata fields:
+                        </p>
+                        <ul>
+                            <li>title: "keyword" - Search only in title</li>
+                            <li>creator: "author name" - Search by creator</li>
+                            <li>subject: "keyword" - Search by subject/keywords</li>
+                            <li>date: "2024" - Search by date</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Using Filters Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="using-filters">Using Search Filters</h2>
+                    <div class="subsection">
+                        <h3>Available Filters</h3>
+                        <p>
+                            Refine your search results using these filters on the left side of the search results page:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Data Type:</strong> Filter by type of data (e.g., dataset, document, software)
+                            </li>
+                            <li>
+                                <strong>Date Range:</strong> Filter by publication or creation date
+                            </li>
+                            <li>
+                                <strong>Creator/Author:</strong> Filter by specific author or institution
+                            </li>
+                            <li>
+                                <strong>Subject/Keywords:</strong> Filter by predefined keywords
+                            </li>
+                            <li>
+                                <strong>Metadata Standard:</strong> Filter by metadata standard used (Dublin Core,
+                                MIAPPE, etc.)
+                            </li>
+                            <li>
+                                <strong>Access Level:</strong> Filter by access type (open, restricted, embargoed)
+                            </li>
+                            <li>
+                                <strong>FAIR Score:</strong> Filter by FAIR compliance score
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Applying Multiple Filters</h3>
+                        <p>
+                            You can combine multiple filters:
+                        </p>
+                        <ol>
+                            <li>Select a filter category</li>
+                            <li>Click on specific filter values to apply them</li>
+                            <li>Results update automatically</li>
+                            <li>Click "X" next to a filter to remove it</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Sorting Results Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="sorting-results">Sorting Results</h2>
+                    <div class="subsection">
+                        <h3>Sort Options</h3>
+                        <p>
+                            Sort your search results by:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Relevance (Default):</strong> Results ranked by relevance to your search
+                            </li>
+                            <li>
+                                <strong>Date (Newest First):</strong> Most recently published records first
+                            </li>
+                            <li>
+                                <strong>Date (Oldest First):</strong> Oldest records first
+                            </li>
+                            <li>
+                                <strong>Title (A-Z):</strong> Alphabetical by title
+                            </li>
+                            <li>
+                                <strong>FAIR Score:</strong> Highest FAIR compliance first
+                            </li>
+                            <li>
+                                <strong>Most Viewed:</strong> Most popular records first
+                            </li>
+                            <li>
+                                <strong>Most Downloaded:</strong> Most frequently downloaded records
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Viewing Details Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="viewing-details">Viewing Record Details</h2>
+                    <div class="subsection">
+                        <h3>Accessing Full Record</h3>
+                        <p>
+                            Click on any record in the search results to view its full metadata. The record detail page
+                            shows:
+                        </p>
+                        <ul>
+                            <li>Complete metadata information</li>
+                            <li>Description and abstract</li>
+                            <li>Creator(s) and contributors</li>
+                            <li>Keywords and subjects</li>
+                            <li>Related resources and links</li>
+                            <li>Access and download options</li>
+                            <li>Citation information and DOI</li>
+                            <li>Usage statistics</li>
+                            <li>Version history</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Accessing Data</h3>
+                        <p>
+                            Depending on the record's access level:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Open Access:</strong> Click "Download" to directly access the data
+                            </li>
+                            <li>
+                                <strong>Restricted Access:</strong> Click "Request Access" to request data access
+                            </li>
+                            <li>
+                                <strong>Embargoed:</strong> Shows embargo expiration date; access becomes available
+                                after
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Saving Searches Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="saving-searches">Saving and Alerts</h2>
+                    <div class="subsection">
+                        <h3>Save Search</h3>
+                        <p>
+                            To save a search query for later:
+                        </p>
+                        <ol>
+                            <li>Perform your search with desired filters</li>
+                            <li>Click "Save This Search" button</li>
+                            <li>Give your search a name</li>
+                            <li>Choose to receive notifications for new matching records</li>
+                            <li>Save to your account</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3>Search Alerts</h3>
+                        <p>
+                            Get notified when new records matching your search criteria are published:
+                        </p>
+                        <ol>
+                            <li>Enable "Email Alerts" when saving a search</li>
+                            <li>Choose alert frequency (daily, weekly, monthly)</li>
+                            <li>Receive email with matching records</li>
+                            <li>Manage all alerts in your profile settings</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Export Results Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="export-results">Exporting Results</h2>
+                    <div class="subsection">
+                        <h3>Export Search Results</h3>
+                        <p>
+                            Export your search results in various formats:
+                        </p>
+                        <ul>
+                            <li>CSV (spreadsheet format)</li>
+                            <li>JSON (machine-readable format)</li>
+                            <li>RDF (semantic web format)</li>
+                            <li>BibTeX (for citations)</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>How to Export</h3>
+                        <p>
+                            To export results:
+                        </p>
+                        <ol>
+                            <li>From search results page, click "Export"</li>
+                            <li>Select desired format</li>
+                            <li>Choose number of results to export</li>
+                            <li>Click "Download"</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul class="toc-list">
+                <li><a href="#basic-search">Basic Search</a></li>
+                <li><a href="#advanced-search">Advanced Search</a></li>
+                <li><a href="#using-filters">Using Filters</a></li>
+                <li><a href="#sorting-results">Sorting Results</a></li>
+                <li><a href="#viewing-details">Viewing Details</a></li>
+                <li><a href="#saving-searches">Saving Searches</a></li>
+                <li><a href="#export-results">Exporting Results</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="toc-indicator.js"></script>
+</body>
+
+</html>

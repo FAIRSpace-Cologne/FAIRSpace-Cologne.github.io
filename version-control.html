@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Version Control | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Markdown Parser Library - USE LOCAL COPY -->
+    <script src="marked.min.js"></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Document Layout with Sidebars -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Topic Navigation -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul class="toc-list">
+                <li><a href="user-guidelines.html">Overview</a></li>
+                <li><a href="user-account-management.html">User Account Management</a></li>
+                <li><a href="version-control.html" class="active">Version Control</a></li>
+                <li><a href="metadata-management.html">Metadata Management</a></li>
+                <li><a href="metadata-publication.html">Publishing Metadata</a></li>
+                <li><a href="metadata-search.html">Searching Records</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="version-control-page">
+                <div id="version-control-card" class="rdm-knowledge-card">
+                    <div style="text-align: center; padding: 40px 20px;">
+                        <p style="font-size: 18px; color: #666;">Loading content...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Table of Contents on the right -->
+            <aside class="toc-sidebar toc-right" id="toc-right">
+                <h3>Content</h3>
+                <ul>
+                </ul>
+            </aside>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 FAIRspace Cologne. All rights reserved.</p>
+            <p><a href="PRIVACY_INFO.md">Privacy Policy</a> | <a href="index.html">Home</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="markdown-loader.js?v=2"></script>
+    <script src="toc-indicator.js"></script>
+
+    <!-- Load markdown content on page load -->
+    <script>
+        console.log('[Init] Version Control page inline script starting');
+
+        // Poll for dependencies and load when ready
+        (function pollForDeps() {
+            if (typeof marked === 'undefined' || typeof window.loadMarkdownContent === 'undefined') {
+                console.log('[Init] Waiting for marked and loadMarkdownContent...');
+                setTimeout(pollForDeps, 500);
+                return;
+            }
+
+            console.log('[Init] ✓ All ready, loading markdown content');
+            window.loadMarkdownContent('version_control.md');
+        })();
+    </script>
+</body>
+
+</html>

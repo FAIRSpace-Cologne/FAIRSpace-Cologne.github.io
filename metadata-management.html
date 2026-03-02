@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Metadata Management | FAIRdata Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Document Layout with Dual Sidebars -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Topic Navigation -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul class="toc-list">
+                <li><a href="user-guidelines.html">Overview</a></li>
+                <li><a href="user-account-management.html">User Account Management</a></li>
+                <li><a href="version-control.html">Version Control</a></li>
+                <li><a href="metadata-management.html" class="active">Metadata Management</a></li>
+                <li><a href="metadata-publication.html">Publishing Metadata</a></li>
+                <li><a href="metadata-search.html">Searching Records</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="rdm-knowledge-page">
+                <h1>Metadata Management</h1>
+                <p class="intro-text">
+                    This guide explains how to create, edit, and manage metadata records in FAIRdata Cologne. Learn to
+                    add new metadata records, fill in required and optional fields, and maintain quality standards.
+                </p>
+
+                <!-- Creating New Records Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="creating-new-record">Creating a New Metadata Record</h2>
+                    <div class="subsection">
+                        <h3>Step 1: Access the Metadata Editor</h3>
+                        <p>
+                            From your dashboard, click on "Create New Record" or navigate to Metadata → New Record
+                            in the main menu.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 2: Select Metadata Standard</h3>
+                        <p>
+                            Choose the appropriate metadata standard for your research data:
+                        </p>
+                        <ul>
+                            <li><strong>Dublin Core:</strong> General purpose metadata standard</li>
+                            <li><strong>MIAPPE:</strong> For plant phenotyping and genotyping data</li>
+                            <li><strong>Custom Standard:</strong> For domain-specific metadata requirements</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 3: Fill in Required Fields</h3>
+                        <p>
+                            Complete all required fields marked with a red asterisk (*). These typically include:
+                        </p>
+                        <ul>
+                            <li>Title</li>
+                            <li>Description</li>
+                            <li>Creator/Author</li>
+                            <li>Date Created</li>
+                            <li>Subject/Keywords</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 4: Add Optional Metadata</h3>
+                        <p>
+                            Fill in optional fields to improve discoverability and FAIR compliance. Click "Add more
+                            fields"
+                            to expand the form and see additional metadata options.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 5: Save Draft</h3>
+                        <p>
+                            Click "Save as Draft" to save your progress without publishing. You can return to edit the
+                            draft at any time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Editing Records Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="editing-records">Editing Metadata Records</h2>
+                    <div class="subsection">
+                        <h3>Editing Your Own Records</h3>
+                        <p>
+                            To edit a record you created:
+                        </p>
+                        <ol>
+                            <li>Go to "My Records" in your dashboard</li>
+                            <li>Find the record you want to edit</li>
+                            <li>Click "Edit" button</li>
+                            <li>Make your changes</li>
+                            <li>Click "Save Draft" or "Update Record"</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3>Version Control</h3>
+                        <p>
+                            When you update a published record:
+                        </p>
+                        <ul>
+                            <li>The system automatically creates a new version</li>
+                            <li>Previous versions are archived and accessible</li>
+                            <li>You can compare versions side-by-side</li>
+                            <li>Changes are tracked with timestamps and usernames</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Metadata Field Guide Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="metadata-fields">Metadata Field Guide</h2>
+                    <div class="subsection">
+                        <h3>Title</h3>
+                        <p>
+                            Provide a clear, descriptive title for your dataset. Keep it concise (under 100 characters)
+                            but specific enough to identify the dataset.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Description</h3>
+                        <p>
+                            Write a comprehensive description of your data. Include:
+                        </p>
+                        <ul>
+                            <li>What the data contains</li>
+                            <li>How it was collected</li>
+                            <li>Any important methodological information</li>
+                            <li>Scope and limitations</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Keywords</h3>
+                        <p>
+                            Add relevant keywords separated by commas. Think about terms someone would use to search
+                            for your data. Use both specific and general terms.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Related Resources</h3>
+                        <p>
+                            Link to related publications, projects, or other datasets. Include:
+                        </p>
+                        <ul>
+                            <li>DOI or URL</li>
+                            <li>Relationship type (e.g., "is cited by", "is related to")</li>
+                            <li>Brief description of the relationship</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Quality Assurance Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="quality-assurance">Quality Assurance and Validation</h2>
+                    <div class="subsection">
+                        <h3>Automatic Validation</h3>
+                        <p>
+                            As you fill in metadata fields, the system performs automatic validation:
+                        </p>
+                        <ul>
+                            <li>Checks for required fields</li>
+                            <li>Validates field formats (dates, URLs, etc.)</li>
+                            <li>Ensures compliance with selected metadata standard</li>
+                            <li>Provides real-time feedback and suggestions</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>FAIR Assessment</h3>
+                        <p>
+                            Before publishing, review your FAIR assessment score. This shows how well your metadata
+                            aligns with FAIR principles. Aim for at least 80% compliance.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Preview Before Publishing</h3>
+                        <p>
+                            Always preview your record before publishing to ensure:
+                        </p>
+                        <ul>
+                            <li>All information is accurate and complete</li>
+                            <li>Formatting is correct</li>
+                            <li>Links are functional</li>
+                            <li>Sensitive information is not included</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bulk Operations Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="bulk-operations">Bulk Operations</h2>
+                    <div class="subsection">
+                        <h3>Bulk Import</h3>
+                        <p>
+                            To import multiple records at once:
+                        </p>
+                        <ol>
+                            <li>Go to Metadata → Bulk Import</li>
+                            <li>Download the template for your metadata standard</li>
+                            <li>Fill in your metadata in the spreadsheet</li>
+                            <li>Upload the file</li>
+                            <li>Review the import preview</li>
+                            <li>Confirm and process the import</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3>Bulk Edit</h3>
+                        <p>
+                            To make changes to multiple records:
+                        </p>
+                        <ol>
+                            <li>Select multiple records from the list view</li>
+                            <li>Click "Bulk Edit"</li>
+                            <li>Select which fields to update</li>
+                            <li>Enter new values</li>
+                            <li>Review and confirm changes</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul class="toc-list">
+                <li><a href="#creating-new-record">Creating Records</a></li>
+                <li><a href="#editing-records">Editing Records</a></li>
+                <li><a href="#metadata-fields">Field Guide</a></li>
+                <li><a href="#quality-assurance">Quality Assurance</a></li>
+                <li><a href="#bulk-operations">Bulk Operations</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="toc-indicator.js"></script>
+</body>
+
+</html>

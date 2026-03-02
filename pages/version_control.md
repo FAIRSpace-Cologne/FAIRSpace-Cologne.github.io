@@ -5,16 +5,7 @@
 
 # Version Control
 
-- [What is Version Control?](#what-is-version-control)
-- [Do I need to use version control for my project?](#do-i-need-to-use-version-control-for-my-project)
-- [How can I go about implementing version control?](#how-can-i-go-about-implementing-version-control)
-- [Simple Version Management](#simple-version-management)
-- [Version Control Table / Version History](#version-control-table--version-history)
-- [Version Control Software](#version-control-software)
-- [Summary: Best Practices for Versioning](#summary-best-practices-for-versioning)
-- [Appendix](#authors)
-
-### What is Version Control?
+## What is Version Control?
 
 In research, data files often evolve over time as they are reprocessed, corrected, expanded, or merged with new data. Managing multiple versions of your data files is essential to FAIR research data management
 
@@ -31,7 +22,8 @@ By systematically organizing and documenting different versions of your data, yo
 > - Adopting data versioning practices is a fundamental step toward ensuring your research data is reliable, transparent, reproducable, and ready for future reuse or sharing.
 
 ---
-### Do I need to use version control for my project?
+
+## Do I need to use version control for my project?
 
 Consider the following questions for your project:
 1. Do you need to collaborate on files, possibly simultaneously?
@@ -42,7 +34,7 @@ If the answer is yes to any of the questions above, you should carry-on reading 
 
 ---
 
-### How can I go about implementing version control?
+## How can I go about implementing version control?
 
 There are various ways to implement version control, each suited to different project needs. Select the approach that aligns best with your specific use case:
 
@@ -91,7 +83,7 @@ There are various ways to implement version control, each suited to different pr
 
 ---
 
-### Simple Version Management
+## Simple Version Management
 
 A simple method consists of numbering each version, regardless of the changes, by adding a suffix in the filename of the document. The suffix should consist of ordinal numbers (v1.0, v2.0, v3.0) for major revisions and decimals for minor changes (v1.1, v1.2, v2.1, v2.2). In addition to the version number, the suffix could contain the date, the status of the document, and/or reviewer initials.
 
@@ -108,7 +100,7 @@ For more information, see [File Naming Conventions Page](DataStorage/file-naming
 
 ---
 
-### Version Control Table / Version History
+## Version Control Table / Version History
 
 A good file naming convention shows that there are different versions, but it doesn't explain the differences between them. Using a version control table makes it clear **who** did **what** changes and **when**.
 This makes it easier to track and recover content that was deleted or changed in earlier versions.
@@ -136,7 +128,7 @@ This makes it easier to track and recover content that was deleted or changed in
 
 ---
 
-### Version Control Software
+## Version Control Software
 
 Version control software helps manage and track changes in files, making collaboration and versioning efficient and reliable. These tools are essential for projects where multiple users work on the same files or where maintaining a history of changes is critical.
 
@@ -156,7 +148,7 @@ For most modern projects, [**Git**](https://git-scm.com/) is the preferred choic
 
 ---
 
-### Summary: Best Practices for Versioning
+## Summary: Best Practices for Versioning
 
 - **Raw Data Preservation**: Always keep an untouched version of the raw data file. Ensure it is protected from changes (e.g., make it read-only, store it in a secure location, or restrict access permissions).
   
@@ -182,15 +174,15 @@ For most modern projects, [**Git**](https://git-scm.com/) is the preferred choic
 
 ---
 
-#### Authors  
+## Authors  
 Ahmad Abu Dayeh  
 
-#### License  
+## License  
 CC0 1.0 [Link](https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1)
 
-#### Last Updated  
+## Last Updated  
 2025.01.13
 
-#### References
+## References
 
-#### Helpful Links
+## Helpful Links

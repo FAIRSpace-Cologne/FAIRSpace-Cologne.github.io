@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>RDM Training | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for file type icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                            <a href="rdm-training.html">RDM Training</a>
+                        </div>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- RDM Training Page Content -->
+    <section class="rdm-training-page">
+        <div class="rdm-training-header">
+            <h1>RDM Training</h1>
+            <p>Comprehensive training materials and resources for research data management workshops and courses</p>
+        </div>
+
+        <!-- Training Materials Section -->
+        <section class="training-materials-section">
+            <h2>Training Materials</h2>
+            <p class="materials-intro">
+                Download presentation slides, handouts, exercises, and supplementary materials from our
+                research data management training sessions. Materials are organized by workshop and course
+                for your convenience.
+            </p>
+
+            <!-- Workshop 1: Introduction to FAIR Data Principles -->
+            <div class="workshop-group">
+                <div class="workshop-header">
+                    <div class="workshop-icon">
+                        <i class="fa-solid fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="workshop-info">
+                        <h3>Introduction to FAIR Data Principles</h3>
+                        <p class="workshop-meta">
+                            <span><i class="fa-solid fa-calendar"></i> Half-day Workshop</span>
+                            <span><i class="fa-solid fa-users"></i> Beginner Level</span>
+                            <span><i class="fa-solid fa-clock"></i> 4 hours</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+                    <!-- Material 1 - Zenodo Dataset -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper zip">
+                            <i class="fa-solid fa-file-archive"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>RDM Training Materials Collection</h3>
+                            <p class="material-description">
+                                Comprehensive collection of research data management training materials including
+                                presentations,
+                                exercises, and supplementary resources hosted on Zenodo.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-link"></i> Zenodo Dataset</span>
+                                <span class="material-size">Multiple files</span>
+                                <span class="material-pages">Various formats</span>
+                            </div>
+                            <a href="https://zenodo.org/records/17306826" class="download-btn" target="_blank">
+                                <i class="fa-solid fa-external-link-alt"></i> View on Zenodo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 2 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pptx">
+                            <i class="fa-solid fa-file-powerpoint"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>FAIR Principles Presentation</h3>
+                            <p class="material-description">
+                                Complete presentation covering the fundamentals of FAIR data principles with examples
+                                and case studies.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PowerPoint</span>
+                                <span class="material-size">2.5 MB</span>
+                                <span class="material-pages">45 slides</span>
+                            </div>
+                            <a href="materials/fair-intro/fair-principles-presentation.pptx" class="download-btn"
+                                download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 2 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Participant Handout</h3>
+                            <p class="material-description">
+                                Summary handout with key concepts, definitions, and practical examples for workshop
+                                participants.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PDF</span>
+                                <span class="material-size">850 KB</span>
+                                <span class="material-pages">6 pages</span>
+                            </div>
+                            <a href="materials/fair-intro/participant-handout.pdf" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 3 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>FAIR Principles Infographic</h3>
+                            <p class="material-description">
+                                Visual infographic poster explaining FAIR principles in an easy-to-understand format.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PDF</span>
+                                <span class="material-size">2.8 MB</span>
+                                <span class="material-pages">1 page</span>
+                            </div>
+                            <a href="materials/fair-intro/fair-infographic.pdf" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 2: Data Management Planning -->
+            <div class="workshop-group">
+                <div class="workshop-header">
+                    <div class="workshop-icon">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <div class="workshop-info">
+                        <h3>Data Management Planning</h3>
+                        <p class="workshop-meta">
+                            <span><i class="fa-solid fa-calendar"></i> Full-day Workshop</span>
+                            <span><i class="fa-solid fa-users"></i> Intermediate Level</span>
+                            <span><i class="fa-solid fa-clock"></i> 6 hours</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+                    <!-- Material 1 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pptx">
+                            <i class="fa-solid fa-file-powerpoint"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>DMP Workshop Slides</h3>
+                            <p class="material-description">
+                                Comprehensive slides covering all aspects of creating effective data management plans.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PowerPoint</span>
+                                <span class="material-size">3.2 MB</span>
+                                <span class="material-pages">58 slides</span>
+                            </div>
+                            <a href="materials/dmp-workshop/dmp-slides.pptx" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 2 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>DMP Template</h3>
+                            <p class="material-description">
+                                Comprehensive DMP template following international standards and best practices.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PDF</span>
+                                <span class="material-size">1.2 MB</span>
+                                <span class="material-pages">12 pages</span>
+                            </div>
+                            <a href="materials/dmp-workshop/dmp-template.pdf" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 3 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper word">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>DMP Exercises & Case Studies</h3>
+                            <p class="material-description">
+                                Practical exercises with real-world case studies and detailed solutions.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> Word</span>
+                                <span class="material-size">1.5 MB</span>
+                                <span class="material-pages">22 pages</span>
+                            </div>
+                            <a href="materials/dmp-workshop/dmp-exercises.docx" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 3: Metadata and Documentation -->
+            <div class="workshop-group">
+                <div class="workshop-header">
+                    <div class="workshop-icon">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <div class="workshop-info">
+                        <h3>Metadata and Documentation</h3>
+                        <p class="workshop-meta">
+                            <span><i class="fa-solid fa-calendar"></i> Half-day Workshop</span>
+                            <span><i class="fa-solid fa-users"></i> Intermediate Level</span>
+                            <span><i class="fa-solid fa-clock"></i> 3.5 hours</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+                    <!-- Material 1 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pptx">
+                            <i class="fa-solid fa-file-powerpoint"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Metadata Standards Presentation</h3>
+                            <p class="material-description">
+                                Overview of metadata standards, schemas, and best practices for data documentation.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PowerPoint</span>
+                                <span class="material-size">2.1 MB</span>
+                                <span class="material-pages">38 slides</span>
+                            </div>
+                            <a href="materials/metadata-workshop/metadata-presentation.pptx" class="download-btn"
+                                download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 2 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper excel">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Metadata Standards Checklist</h3>
+                            <p class="material-description">
+                                Interactive Excel workbook with checklists and examples for implementing metadata
+                                standards.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> Excel</span>
+                                <span class="material-size">850 KB</span>
+                                <span class="material-pages">5 sheets</span>
+                            </div>
+                            <a href="materials/metadata-workshop/metadata-checklist.xlsx" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 3 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper excel">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Data Documentation Template</h3>
+                            <p class="material-description">
+                                Structured Excel template for documenting dataset variables, units, and methodologies.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> Excel</span>
+                                <span class="material-size">680 KB</span>
+                                <span class="material-pages">3 sheets</span>
+                            </div>
+                            <a href="materials/metadata-workshop/documentation-template.xlsx" class="download-btn"
+                                download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 4: Open Science & Data Sharing -->
+            <div class="workshop-group">
+                <div class="workshop-header">
+                    <div class="workshop-icon">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <div class="workshop-info">
+                        <h3>Open Science & Data Sharing</h3>
+                        <p class="workshop-meta">
+                            <span><i class="fa-solid fa-calendar"></i> Full-day Workshop</span>
+                            <span><i class="fa-solid fa-users"></i> Advanced Level</span>
+                            <span><i class="fa-solid fa-clock"></i> 5 hours</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+                    <!-- Material 1 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pptx">
+                            <i class="fa-solid fa-file-powerpoint"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Open Science Principles</h3>
+                            <p class="material-description">
+                                Presentation on open science practices, data licensing, and strategies for effective
+                                data sharing.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PowerPoint</span>
+                                <span class="material-size">3.1 MB</span>
+                                <span class="material-pages">52 slides</span>
+                            </div>
+                            <a href="materials/open-science/open-science-slides.pptx" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 2 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Data Repositories Guide</h3>
+                            <p class="material-description">
+                                Comprehensive guide listing recommended data repositories by discipline and data type.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PDF</span>
+                                <span class="material-size">1.8 MB</span>
+                                <span class="material-pages">8 pages</span>
+                            </div>
+                            <a href="materials/open-science/repositories-guide.pdf" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 3 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper word">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Licensing Decision Guide</h3>
+                            <p class="material-description">
+                                Step-by-step guide to help researchers choose appropriate licenses for their data.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> Word</span>
+                                <span class="material-size">1.1 MB</span>
+                                <span class="material-pages">14 pages</span>
+                            </div>
+                            <a href="materials/open-science/licensing-guide.docx" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course: RDM Fundamentals -->
+            <div class="workshop-group">
+                <div class="workshop-header">
+                    <div class="workshop-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="workshop-info">
+                        <h3>RDM Fundamentals Course</h3>
+                        <p class="workshop-meta">
+                            <span><i class="fa-solid fa-calendar"></i> Multi-week Course</span>
+                            <span><i class="fa-solid fa-users"></i> All Levels</span>
+                            <span><i class="fa-solid fa-clock"></i> 20 hours</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+                    <!-- Material 1 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper zip">
+                            <i class="fa-solid fa-file-zipper"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Complete Course Package</h3>
+                            <p class="material-description">
+                                All lectures, exercises, reading materials, and resources for the complete RDM
+                                fundamentals course.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> ZIP Archive</span>
+                                <span class="material-size">28.5 MB</span>
+                                <span class="material-pages">All materials</span>
+                            </div>
+                            <a href="materials/rdm-course/complete-course-package.zip" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 2 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Course Syllabus</h3>
+                            <p class="material-description">
+                                Detailed syllabus with learning objectives, schedule, and assessment criteria.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> PDF</span>
+                                <span class="material-size">650 KB</span>
+                                <span class="material-pages">5 pages</span>
+                            </div>
+                            <a href="materials/rdm-course/course-syllabus.pdf" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Material 3 -->
+                    <div class="material-card">
+                        <div class="material-icon-wrapper word">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Assignments & Assessments</h3>
+                            <p class="material-description">
+                                Collection of assignments, quizzes, and final project guidelines with rubrics.
+                            </p>
+                            <div class="material-meta">
+                                <span class="material-type"><i class="fa-solid fa-file"></i> Word</span>
+                                <span class="material-size">2.2 MB</span>
+                                <span class="material-pages">35 pages</span>
+                            </div>
+                            <a href="materials/rdm-course/assignments.docx" class="download-btn" download>
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download All Button -->
+            <div class="download-all-section" id="download-all-section">
+                <h3>Download All Training Materials</h3>
+                <p>Get all materials from all workshops and courses in one comprehensive package</p>
+                <a href="materials/all-rdm-training-materials.zip" class="download-all-btn" download>
+                    <i class="fa-solid fa-download"></i> Download All Materials (45.8 MB)
+                </a>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

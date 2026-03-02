@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Direct Function Test</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+
+        .test {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ddd;
+        }
+
+        .success {
+            border-left-color: #080;
+            background: #efe;
+        }
+
+        .error {
+            border-left-color: #800;
+            background: #fee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔬 Direct Function Test</h1>
+    <div id="log"></div>
+
+    <script src="marked.min.js"></script>
+    <script src="markdown-loader.js"></script>
+
+    <script>
+        const log = document.getElementById('log');
+
+        function logTest(msg, success) {
+            const div = document.createElement('div');
+            div.className = 'test ' + (success ? 'success' : 'error');
+            div.textContent = (success ? '✓ ' : '✗ ') + msg;
+            log.appendChild(div);
+        }
+
+        // Test immediately
+        logTest('Script loaded, checking window at ' + new Date().toISOString(), true);
+        logTest('typeof marked = ' + typeof marked, typeof marked !== 'undefined');
+        logTest('typeof window.loadMarkdownContent = ' + typeof window.loadMarkdownContent, typeof window.loadMarkdownContent === 'function');
+
+        // Test after 100ms
+        setTimeout(() => {
+            logTest('[AFTER 100MS] typeof window.loadMarkdownContent = ' + typeof window.loadMarkdownContent, typeof window.loadMarkdownContent === 'function');
+
+            // Try calling it
+            if (typeof window.loadMarkdownContent === 'function') {
+                logTest('[CALL TEST] Calling loadMarkdownContent("test.md", "#log")', true);
+                window.loadMarkdownContent('test.md', '#log').then(() => {
+                    logTest('[CALL RESULT] Fetch completed successfully', true);
+                }).catch(err => {
+                    logTest('[CALL ERROR] ' + err.message, false);
+                });
+            } else {
+                logTest('[CALL ERROR] Function not available', false);
+            }
+        }, 100);
+
+        // Test after 1 second
+        setTimeout(() => {
+            logTest('[AFTER 1S] typeof window.loadMarkdownContent = ' + typeof window.loadMarkdownContent, typeof window.loadMarkdownContent === 'function');
+        }, 1000);
+    </script>
+</body>
+
+</html>

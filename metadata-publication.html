@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Publishing Metadata | FAIRdata Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Document Layout with Dual Sidebars -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Topic Navigation -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul class="toc-list">
+                <li><a href="user-guidelines.html">Overview</a></li>
+                <li><a href="user-account-management.html">User Account Management</a></li>
+                <li><a href="version-control.html">Version Control</a></li>
+                <li><a href="metadata-management.html">Metadata Management</a></li>
+                <li><a href="metadata-publication.html" class="active">Publishing Metadata</a></li>
+                <li><a href="metadata-search.html">Searching Records</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="rdm-knowledge-page">
+                <h1>Publishing Metadata</h1>
+                <p class="intro-text">
+                    This guide walks you through the process of publishing your metadata records to make them publicly
+                    discoverable and FAIR compliant. Learn about the publication workflow, review process, and how to
+                    manage
+                    published records.
+                </p>
+
+                <!-- Submission Workflow Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="submission-workflow">Publication Submission Workflow</h2>
+                    <div class="subsection">
+                        <h3>Step 1: Prepare Your Metadata</h3>
+                        <p>
+                            Before submitting, ensure your metadata record is complete:
+                        </p>
+                        <ul>
+                            <li>All required fields are filled</li>
+                            <li>FAIR assessment score is at least 80%</li>
+                            <li>No validation errors are present</li>
+                            <li>Content has been reviewed for accuracy</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 2: Submit for Publication</h3>
+                        <p>
+                            To submit your record:
+                        </p>
+                        <ol>
+                            <li>Open your draft record</li>
+                            <li>Click "Submit for Publication"</li>
+                            <li>Review the pre-publication checklist</li>
+                            <li>Add any notes for reviewers</li>
+                            <li>Click "Confirm Submission"</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 3: Review Process</h3>
+                        <p>
+                            Your submission enters a review queue where:
+                        </p>
+                        <ul>
+                            <li>Publishers review metadata quality</li>
+                            <li>FAIR compliance is verified</li>
+                            <li>Standard compliance is checked</li>
+                            <li>Content is assessed for appropriateness</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 4: Publication</h3>
+                        <p>
+                            Once approved, your record is published and:
+                        </p>
+                        <ul>
+                            <li>Assigned a unique DOI (Digital Object Identifier)</li>
+                            <li>Made publicly discoverable</li>
+                            <li>Indexed in search engines</li>
+                            <li>Added to public API</li>
+                            <li>You receive notification of successful publication</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Publication Options Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="publication-options">Publication Options</h2>
+                    <div class="subsection">
+                        <h3>Open Access</h3>
+                        <p>
+                            Your metadata and data are fully public and freely accessible to anyone. This is the default
+                            option and strongly recommended for FAIR data.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Restricted Access</h3>
+                        <p>
+                            Your metadata is public, but access to the data is restricted:
+                        </p>
+                        <ul>
+                            <li>Can require login to access data</li>
+                            <li>Can restrict to specific institutions</li>
+                            <li>Can require explicit approval</li>
+                            <li>Metadata remains discoverable</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Embargo</h3>
+                        <p>
+                            Delay public release of your data:
+                        </p>
+                        <ul>
+                            <li>Set an embargo period (3-24 months)</li>
+                            <li>Data is private during embargo</li>
+                            <li>Automatically released after embargo expires</li>
+                            <li>Metadata may be visible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Managing Published Records Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="managing-published">Managing Published Records</h2>
+                    <div class="subsection">
+                        <h3>View Published Record</h3>
+                        <p>
+                            Once published, your record receives a public URL where it can be accessed. This page shows:
+                        </p>
+                        <ul>
+                            <li>Complete metadata</li>
+                            <li>DOI and citation information</li>
+                            <li>Download/access options</li>
+                            <li>Version history</li>
+                            <li>Related resources</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Updating Published Records</h3>
+                        <p>
+                            To update a published record:
+                        </p>
+                        <ol>
+                            <li>Go to your published record</li>
+                            <li>Click "Create New Version"</li>
+                            <li>Make your changes</li>
+                            <li>Submit updated version for publication</li>
+                            <li>System automatically assigns new version number</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3>Versioning System</h3>
+                        <p>
+                            Published records use semantic versioning (e.g., 1.0, 1.1, 2.0):
+                        </p>
+                        <ul>
+                            <li><strong>Patch versions (1.0 → 1.1):</strong> Minor corrections</li>
+                            <li><strong>Minor versions (1.0 → 2.0):</strong> Significant updates</li>
+                            <li>All versions remain accessible</li>
+                            <li>Original DOI points to latest version by default</li>
+                            <li>Version-specific DOIs available for citations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Citation and Attribution Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="citation-attribution">Citation and Attribution</h2>
+                    <div class="subsection">
+                        <h3>DOI (Digital Object Identifier)</h3>
+                        <p>
+                            When your record is published, a DOI is automatically assigned:
+                        </p>
+                        <ul>
+                            <li>Unique, permanent identifier</li>
+                            <li>Format: 10.5281/zenodo.XXXXXXX</li>
+                            <li>Never changes, even if URL changes</li>
+                            <li>Used for citation and tracking</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Citation Formats</h3>
+                        <p>
+                            Your published record provides citation in multiple formats:
+                        </p>
+                        <ul>
+                            <li>APA</li>
+                            <li>MLA</li>
+                            <li>Chicago</li>
+                            <li>Harvard</li>
+                            <li>BibTeX</li>
+                        </ul>
+                        <p>
+                            Click the "Cite" button on your published record page to copy citations in your preferred
+                            format.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Metrics and Analytics Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="metrics-analytics">Metrics and Analytics</h2>
+                    <div class="subsection">
+                        <h3>View Record Metrics</h3>
+                        <p>
+                            After publishing, access statistics for your record:
+                        </p>
+                        <ol>
+                            <li>Go to your published record</li>
+                            <li>Click "Analytics" tab</li>
+                            <li>View metrics including:</li>
+                        </ol>
+                        <ul>
+                            <li>Number of views</li>
+                            <li>Number of downloads</li>
+                            <li>Referrers (where traffic comes from)</li>
+                            <li>Geographic distribution of users</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul class="toc-list">
+                <li><a href="#submission-workflow">Submission Workflow</a></li>
+                <li><a href="#publication-options">Publication Options</a></li>
+                <li><a href="#managing-published">Managing Published</a></li>
+                <li><a href="#citation-attribution">Citation</a></li>
+                <li><a href="#metrics-analytics">Metrics</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="toc-indicator.js"></script>
+</body>
+
+</html>

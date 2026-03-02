@@ -1,0 +1,67 @@
+# FAIRspace Cologne - Apache Configuration
+# No Cache, No Cookies, Maximum Privacy
+
+# =============================================
+# DISABLE ALL CACHING
+# =============================================
+<IfModule mod_headers.c>
+    # Prevent caching of all files
+    Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+    
+    # Additional security headers
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy - don't send referrer information
+    Header set Referrer-Policy "no-referrer"
+    
+    # Feature Policy - disable unnecessary browser features
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+</IfModule>
+
+# =============================================
+# DISABLE ETAGS (another form of caching)
+# =============================================
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# =============================================
+# EXPIRES HEADERS - Set everything to expire immediately
+# =============================================
+<IfModule mod_expires.c>
+    ExpiresActive Off
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 0 seconds"
+    ExpiresByType text/javascript "access plus 0 seconds"
+    ExpiresByType application/javascript "access plus 0 seconds"
+    ExpiresByType image/png "access plus 0 seconds"
+    ExpiresByType image/jpeg "access plus 0 seconds"
+    ExpiresByType image/gif "access plus 0 seconds"
+    ExpiresByType image/svg+xml "access plus 0 seconds"
+</IfModule>
+
+# =============================================
+# PREVENT DIRECTORY BROWSING
+# =============================================
+Options -Indexes
+
+# =============================================
+# PROTECT SENSITIVE FILES
+# =============================================
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|md)$">
+    Require all denied
+</FilesMatch>
+
+# =============================================
+# FORCE HTTPS (Optional - Uncomment if using HTTPS)
+# =============================================
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>

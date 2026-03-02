@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Latest News & Events - FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-results" id="searchResults"></div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html"
+                            data-keywords="services consultation training workshops support">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html" data-keywords="fair data consultation advice guidance">FAIR
+                                Data
+                                Consultation</a>
+                            <a href="services.html"
+                                data-keywords="training workshops tutorials learning sessions">Training &
+                                Workshops</a>
+                            <a href="services.html"
+                                data-keywords="infrastructure support tools repository">Infrastructure
+                                Support</a>
+                            <a href="services.html" data-keywords="community building network collaboration">Community
+                                Building</a>
+                            <a href="services.html" data-keywords="policy consultation institutional governance">Policy
+                                Consultation</a>
+                            <a href="fairdata-cologne.html"
+                                data-keywords="fairdata cologne videos tutorials learning">FAIRdata
+                                Cologne</a>
+                            <a href="rdm-training.html" data-keywords="rdm training materials resources downloads">RDM
+                                Training</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html"
+                            data-keywords="publications articles papers research">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="news-page">
+        <h1>Latest News & Events</h1>
+        <div class="news-list">
+            <article class="news-card" id="news-0">
+                <a href="news-fair-data-workshop.html" class="news-card-link">
+                    <div class="news-image">
+                        <img src="images/serv1.png" alt="FAIR Data Workshop" />
+                    </div>
+                    <div class="news-content">
+                        <h3>FAIR Data Management Workshop</h3>
+                        <span class="news-date">February 15, 2025</span>
+                        <p>
+                            Join us for an intensive workshop on FAIR data principles and their practical implementation
+                            in research workflows. Learn best practices for making your research data Findable,
+                            Accessible,
+                            Interoperable, and Reusable. This hands-on session will cover metadata standards, data
+                            repositories, and documentation strategies.
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="news-card" id="news-1">
+                <a href="news-research-symposium.html" class="news-card-link">
+                    <div class="news-image">
+                        <img src="images/serv2.png" alt="Research Data Symposium" />
+                    </div>
+                    <div class="news-content">
+                        <h3>Research Data Symposium 2025</h3>
+                        <span class="news-date">March 10, 2025</span>
+                        <p>
+                            Our annual Research Data Symposium brings together data stewards, researchers, and IT
+                            professionals to discuss the latest trends in research data management. Topics include
+                            open science initiatives, data preservation strategies, and emerging technologies for
+                            data sharing and collaboration.
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="news-card" id="news-2">
+                <a href="news-dataverse-training.html" class="news-card-link">
+                    <div class="news-image">
+                        <img src="images/serv3.png" alt="Dataverse Training" />
+                    </div>
+                    <div class="news-content">
+                        <h3>Dataverse Platform Training</h3>
+                        <span class="news-date">March 25, 2025</span>
+                        <p>
+                            Comprehensive training session on using the Dataverse platform for data publication and
+                            preservation. Learn how to create datasets, manage permissions, assign DOIs, and ensure
+                            long-term accessibility of your research data. Suitable for both beginners and advanced
+                            users.
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="news-card" id="news-3">
+                <a href="news-data-stewardship-meetup.html" class="news-card-link">
+                    <div class="news-image">
+                        <img src="images/serv4.png" alt="Data Stewardship Network" />
+                    </div>
+                    <div class="news-content">
+                        <h3>Data Stewardship Network Meetup</h3>
+                        <span class="news-date">April 5, 2025</span>
+                        <p>
+                            Monthly networking event for data stewards across institutions. Share experiences, discuss
+                            challenges, and collaborate on solutions for common data management issues. This informal
+                            gathering provides an excellent opportunity to build connections within the data stewardship
+                            community.
+                        </p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+</body>
+
+</html>

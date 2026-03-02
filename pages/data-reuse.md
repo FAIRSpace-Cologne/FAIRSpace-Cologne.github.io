@@ -1,6 +1,3 @@
->[!TIP]
-> FAIR indicator: <code>[Reusable]()</code>
-> 
 > Project stage: <code>Beginning</code>  || Audience: <code>PI</code>, <code>Researcher</code>, <code>PhD</code>
 
 # Reusing Existing Data

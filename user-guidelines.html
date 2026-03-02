@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>User Guidelines | FAIRdata Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Document Layout with Dual Sidebars -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Topic Navigation -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul class="toc-list">
+                <li><a href="user-guidelines.html">Overview</a></li>
+                <li><a href="user-account-management.html">User Account Management</a></li>
+                <li><a href="version-control.html">Version Control</a></li>
+                <li><a href="metadata-management.html">Metadata Management</a></li>
+                <li><a href="metadata-publication.html">Publishing Metadata</a></li>
+                <li><a href="metadata-search.html">Searching Records</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="rdm-knowledge-page">
+                <h1>User Guidelines</h1>
+                <p class="intro-text">
+                    Welcome to the FAIRdata Cologne User Guidelines. This comprehensive guide provides step-by-step
+                    instructions on how to use the FAIRdata Cologne platform effectively.
+                </p>
+
+                <!-- Getting Started Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="getting-started">Getting Started</h2>
+
+                    <h3>What is FAIRdata Cologne?</h3>
+                    <p>
+                        FAIRdata Cologne is a comprehensive platform designed to help researchers and institutions
+                        implement FAIR (Findable, Accessible, Interoperable, Reusable) data management principles.
+                        Our platform provides tools for creating, organizing, publishing, and discovering research data
+                        with full compliance to international standards.
+                    </p>
+                    <h4>Core Mission</h4>
+                    <p>
+                        We aim to facilitate FAIR data practices across research institutions and help researchers make
+                        their data discoverable,
+                        accessible, and reusable by the scientific community.
+                    </p>
+
+                    <h3>Platform Overview</h3>
+                    <p>
+                        The FAIRdata Cologne platform consists of several integrated modules:
+                    </p>
+                    <h4>Account Management Module</h4>
+                    <p>
+                        Create and manage user accounts with granular permission controls. Support for institutional
+                        authentication and single sign-on integration.
+                    </p>
+                    <h4>Metadata Editor</h4>
+                    <p>
+                        Create and edit metadata records with support for multiple metadata standards. The intuitive
+                        editor guides users through all required and optional fields.
+                    </p>
+                    <h4>Publication System</h4>
+                    <p>
+                        Publish and manage versions of metadata records. Track publication history and enable
+                        collaborative review workflows.
+                    </p>
+                    <h4>Discovery Portal</h4>
+                    <p>
+                        Search and browse published records with advanced filtering and faceted navigation capabilities.
+                    </p>
+                </div>
+
+                <!-- System Requirements Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="system-requirements">System Requirements</h2>
+
+                    <h3>Minimum Requirements</h3>
+                    <p>
+                        To use FAIRdata Cologne, you need the following minimum setup:
+                    </p>
+                    <h4>Browser Requirements</h4>
+                    <p>
+                        A modern web browser is essential. Supported versions include Chrome 90+, Firefox 88+, Safari
+                        14+, and Edge 90+.
+                    </p>
+                    <h4>Network and Settings</h4>
+                    <p>
+                        A stable internet connection is required. JavaScript must be enabled in your browser, and
+                        cookies
+                        must be allowed for session management and user preferences.
+                    </p>
+
+                    <h3>Recommended Setup</h3>
+                    <p>
+                        For optimal performance and user experience, we recommend:
+                    </p>
+                    <h4>Hardware</h4>
+                    <p>
+                        Use a desktop or laptop computer with at least 4GB of RAM. Mobile devices can be used for
+                        browsing,
+                        but editing operations work best on larger screens.
+                    </p>
+                    <h4>Display</h4>
+                    <p>
+                        Screen resolution of 1366x768 or higher is recommended for comfortable use of all platform
+                        features.
+                    </p>
+                    <h4>Connectivity</h4>
+                    <p>
+                        A high-speed internet connection (10+ Mbps) ensures smooth operation, especially when uploading
+                        files
+                        or working with large metadata records.
+                    </p>
+                </div>
+
+                <!-- Access and Permissions Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="access-permissions">Access and Permissions</h2>
+
+                    <h3>User Roles and Permissions</h3>
+                    <p>
+                        FAIRdata Cologne supports multiple user roles with different levels of access and capabilities:
+                    </p>
+                    <h4>Visitor Role</h4>
+                    <p>
+                        Visitors can browse and search published metadata records without requiring a login.
+                        This role is ideal for the general public and external researchers.
+                    </p>
+                    <h4>Contributor Role</h4>
+                    <p>
+                        Contributors can create, edit, and manage their own metadata records. They can draft records and
+                        submit them for publication review.
+                    </p>
+                    <h4>Publisher Role</h4>
+                    <p>
+                        Publishers can review, approve, and publish metadata records submitted by contributors.
+                        They ensure records meet institutional standards before publication.
+                    </p>
+                    <h4>Administrator Role</h4>
+                    <p>
+                        Administrators have full system access, managing users, settings, metadata standards,
+                        and system configuration.
+                    </p>
+
+                    <h3>Permission Matrix</h3>
+                    <h4>Permission Details by Role</h4>
+                    <p>
+                        Each role has specific permissions for different operations. Visitors have read-only access,
+                        Contributors can create and edit, Publishers can review and approve, and Administrators have
+                        unrestricted access. For detailed information about specific permissions for each user role,
+                        please refer to the User Account Management guide.
+                    </p>
+                    <h4>Permission Inheritance</h4>
+                    <p>
+                        Higher-level roles inherit permissions from lower levels. For example, Publishers can perform
+                        all Contributor operations plus publishing functions.
+                    </p>
+                </div>
+
+                <!-- Key Features Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="key-features">Key Features Overview</h2>
+
+                    <h3>Metadata Creation and Management</h3>
+                    <h4>Comprehensive Metadata Support</h4>
+                    <p>
+                        Create comprehensive metadata records with support for multiple metadata standards including
+                        Dublin Core, MIAPPE, and custom standards. The intuitive editor guides you through all required
+                        and optional fields.
+                    </p>
+                    <h4>Template-Based Editing</h4>
+                    <p>
+                        Use predefined templates to ensure consistency and completeness of your metadata records.
+                        Templates can be customized for specific research domains.
+                    </p>
+
+                    <h3>Validation and Quality Assurance</h3>
+                    <h4>Automatic Validation</h4>
+                    <p>
+                        Automatic validation ensures your metadata meets FAIR principles and selected standards
+                        before publication. Real-time feedback helps you improve data quality as you work.
+                    </p>
+                    <h4>Quality Checks</h4>
+                    <p>
+                        The system performs comprehensive quality checks including schema validation, controlled
+                        vocabulary verification,
+                        and completeness assessment.
+                    </p>
+
+                    <h3>Search and Discovery</h3>
+                    <h4>Advanced Search</h4>
+                    <p>
+                        Advanced search capabilities with filters, full-text search, and faceted navigation make it
+                        easy to discover and access relevant metadata records.
+                    </p>
+                    <h4>Search Features</h4>
+                    <p>
+                        Search by keywords, author, date, subject area, and other custom fields. Save frequently used
+                        search
+                        queries for quick access.
+                    </p>
+
+                    <h3>Version Control</h3>
+                    <h4>Full Version History</h4>
+                    <p>
+                        Track changes to metadata records with full version history. Easily revert to previous
+                        versions or compare different versions of a record side-by-side.
+                    </p>
+                    <h4>Change Tracking</h4>
+                    <p>
+                        See who made what changes and when, with detailed changelogs for audit and compliance purposes.
+                    </p>
+                </div>
+
+                <!-- Support and Help Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="support-help">Support and Help</h2>
+
+                    <h3>Getting Help</h3>
+                    <p>
+                        If you need assistance with FAIRdata Cologne, multiple support options are available:
+                    </p>
+                    <h4>Self-Service Resources</h4>
+                    <p>
+                        Check the FAQ section for common questions. Review the step-by-step guides for specific tasks.
+                        Browse video tutorials for visual learning.
+                    </p>
+                    <h4>Contact Support</h4>
+                    <p>
+                        Contact our support team at support@fairspace-cologne.de. Attend our regular training sessions
+                        and webinars held every two weeks.
+                    </p>
+
+                    <h3>Common Issues and Troubleshooting</h3>
+                    <h4>Login Problems</h4>
+                    <p>
+                        If you cannot log in, verify your internet connection, check that caps lock is off,
+                        and try resetting your password using the "Forgot Password" link.
+                    </p>
+                    <h4>Browser Compatibility</h4>
+                    <p>
+                        If you experience display issues, try a different browser or clear your browser cache.
+                        Ensure you are using a supported browser version.
+                    </p>
+
+                    <h3>Reporting Issues</h3>
+                    <h4>Bug Reports</h4>
+                    <p>
+                        Found a bug? Please report it through our issue tracking system. Navigate to Help → Report an
+                        Issue
+                        or email us at feedback@fairspace-cologne.de.
+                    </p>
+                    <h4>Feature Requests</h4>
+                    <p>
+                        Have a feature request? We welcome suggestions from our users. Submit your ideas through the
+                        feedback portal or during our community meetings.
+                    </p>
+                </div>
+
+                <!-- Next Steps Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="next-steps">Next Steps</h2>
+
+                    <h3>Getting Started with Tasks</h3>
+                    <p>
+                        Now that you understand the basics of FAIRdata Cologne, proceed to the following guides to
+                        learn how to perform specific tasks:
+                    </p>
+                    <h4>Create Your Account</h4>
+                    <p>
+                        Visit the <a href="user-account-management.html">User Account Management</a> guide to learn
+                        how to create and manage your account with proper security settings.
+                    </p>
+                    <h4>Learn Metadata Creation</h4>
+                    <p>
+                        Check the <a href="metadata-management.html">Metadata Management</a> guide to discover how to
+                        create and edit metadata records following FAIR principles.
+                    </p>
+                    <h4>Publish Your Metadata</h4>
+                    <p>
+                        Read the <a href="metadata-publication.html">Publishing Metadata</a> guide to master the
+                        publication workflow and make your data discoverable.
+                    </p>
+                    <h4>Search and Find Data</h4>
+                    <p>
+                        Explore the <a href="metadata-search.html">Searching Records</a> guide to learn advanced search
+                        techniques and discover relevant datasets.
+                    </p>
+
+                    <h3>Training and Community</h3>
+                    <h4>Join Our Community</h4>
+                    <p>
+                        Connect with other researchers and data professionals using FAIRdata Cologne.
+                        Attend our monthly webinars and networking events.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul class="toc-list">
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="toc-indicator.js"></script>
+</body>
+
+</html>

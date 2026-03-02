@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Research Software and Tools | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Main Topics -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul>
+                <li><a href="rdm-knowledge.html">Introduction to Research Data Management</a></li>
+                <li><a href="open-fair-data.html">Is Open Data the same as FAIR Data?</a></li>
+                <li><a href="data-security.html">Data Security and Privacy</a></li>
+                <li><a href="data-repositories.html">Data Repositories and Infrastructure</a></li>
+                <li><a href="research-software.html">Research Software and Tools</a></li>
+                <li><a href="data-reuse.html">Reusing Existing Data</a></li>
+                <li><a href="markdown-features-guide.html">Markdown Content Features Guide</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="knowledge-page" class="rdm-knowledge-page">
+                <h2>Research Software and Tools</h2>
+
+                <div id="overview" class="rdm-knowledge-card">
+                    <h3>Overview</h3>
+                    <p>
+                        Research software and tools play a critical role in the data management lifecycle. They help
+                        researchers
+                        collect, process, analyze, and preserve data while maintaining reproducibility and transparency.
+                    </p>
+                    <p>
+                        Selecting appropriate tools depends on your research domain, technical requirements, team
+                        expertise, and
+                        long-term sustainability considerations. Many research teams use multiple tools that integrate
+                        with each other.
+                    </p>
+                </div>
+
+                <div id="elns" class="rdm-knowledge-card">
+                    <h3>Electronic Lab Notebooks (ELNs)</h3>
+                    <p>
+                        Electronic Lab Notebooks (ELNs) are digital tools for recording research activities,
+                        experimental procedures,
+                        and observations. They replace traditional paper notebooks with searchable, secure digital
+                        records.
+                    </p>
+                    <div class="subsection">
+                        <h4>Benefits of ELNs:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li>Better organization and searchability compared to paper notebooks</li>
+                            <li>Secure backup and version history</li>
+                            <li>Easy sharing with collaborators</li>
+                            <li>Integration with data analysis tools</li>
+                            <li>Compliance with regulatory requirements</li>
+                            <li>Timestamp records for intellectual property protection</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h4>Popular ELN Platforms:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li><strong>LabArchives</strong> - Cloud-based ELN with regulatory compliance features</li>
+                            <li><strong>Benchling</strong> - Focuses on biological research workflows</li>
+                            <li><strong>eLabFTW</strong> - Open-source, self-hosted ELN</li>
+                            <li><strong>Quartzy</strong> - Lab management platform with ELN features</li>
+                            <li><strong>OpenTrons ELN</strong> - Integration with laboratory automation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="versioning" class="rdm-knowledge-card">
+                    <h3>Version Control Systems</h3>
+                    <p>
+                        Version control systems track changes to files over time, enabling collaboration, rollback
+                        capabilities,
+                        and a complete history of project evolution. They are essential for managing research code and
+                        documents.
+                    </p>
+                    <div class="subsection">
+                        <h4>Key Features of Version Control:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li>Track all changes with detailed commit messages</li>
+                            <li>Enable multiple researchers to work simultaneously</li>
+                            <li>Create branches for experimental features</li>
+                            <li>Revert to previous versions if needed</li>
+                            <li>Maintain a complete audit trail</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h4>Popular Version Control Tools:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li><strong>Git</strong> - Distributed version control system (free, open-source)</li>
+                            <li><strong>GitHub</strong> - Web-based Git hosting with collaboration features</li>
+                            <li><strong>GitLab</strong> - Open-source Git platform with CI/CD features</li>
+                            <li><strong>Bitbucket</strong> - Git repository hosting by Atlassian</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="protocols" class="rdm-knowledge-card">
+                    <h3>Protocol Documentation</h3>
+                    <p>
+                        Detailed documentation of research protocols ensures reproducibility and allows other
+                        researchers to understand
+                        and replicate your work. Well-documented protocols are crucial for open science and
+                        collaboration.
+                    </p>
+                    <div class="subsection">
+                        <h4>Protocol Documentation Tools:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li><strong>protocols.io</strong> - Platform for sharing and accessing research protocols
+                            </li>
+                            <li><strong>GitHub wikis</strong> - Use version-controlled documentation</li>
+                            <li><strong>OSF</strong> - Open Science Framework for protocol storage</li>
+                            <li><strong>Zenodo</strong> - Archive and share protocols with DOIs</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h4>Documentation Best Practices:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li>Be specific and detailed in your descriptions</li>
+                            <li>Include materials, methods, and expected outcomes</li>
+                            <li>Document troubleshooting tips and common issues</li>
+                            <li>Use clear formatting and visual elements</li>
+                            <li>Include appropriate citations and references</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="reproducible" class="rdm-knowledge-card">
+                    <h3>Reproducible Analysis Tools</h3>
+                    <p>
+                        Reproducible analysis tools help document your complete workflow, including data processing,
+                        statistical
+                        analysis, and visualization. This enables others to understand and verify your results.
+                    </p>
+                    <div class="subsection">
+                        <h4>Popular Tools for Reproducible Research:</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li><strong>Jupyter Notebooks</strong> - Mix code, documentation, and output in one document
+                            </li>
+                            <li><strong>R Markdown</strong> - Combine R code with narrative text</li>
+                            <li><strong>RStudio</strong> - Integrated development environment for R</li>
+                            <li><strong>Python Scripts</strong> - Well-commented analysis scripts</li>
+                            <li><strong>Snakemake</strong> - Workflow management system for data analysis</li>
+                            <li><strong>Docker</strong> - Containerize your analysis environment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="best-practices" class="rdm-knowledge-card">
+                    <h3>Best Practices for Research Software and Tools</h3>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li><strong>Document Everything</strong>: Maintain clear documentation of tools, methods, and
+                            workflows</li>
+                        <li><strong>Use Version Control</strong>: Track all changes to code and documentation</li>
+                        <li><strong>Share Code Openly</strong>: Use repositories and licenses that enable collaboration
+                        </li>
+                        <li><strong>Automate Processes</strong>: Use scripts and workflows to reduce manual errors</li>
+                        <li><strong>Test Regularly</strong>: Include quality assurance and validation steps</li>
+                        <li><strong>Plan for Sustainability</strong>: Choose tools that will be maintained long-term
+                        </li>
+                        <li><strong>Consider Accessibility</strong>: Use tools that your team can easily learn and use
+                        </li>
+                        <li><strong>Document Dependencies</strong>: Clearly list all software and version requirements
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#elns">Electronic Lab Notebooks (ELNs)</a></li>
+                <li><a href="#versioning">Version Control Systems</a></li>
+                <li><a href="#protocols">Protocol Documentation</a></li>
+                <li><a href="#reproducible">Reproducible Analysis Tools</a></li>
+                <li><a href="#best-practices">Best Practices</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="toc-indicator.js"></script>
+</body>
+
+</html>

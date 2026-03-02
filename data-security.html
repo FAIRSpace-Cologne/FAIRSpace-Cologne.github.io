@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Data Security and Privacy | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Main Topics -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul>
+                <li><a href="rdm-knowledge.html">Introduction to Research Data Management</a></li>
+                <li><a href="open-fair-data.html">Is Open Data the same as FAIR Data?</a></li>
+                <li><a href="data-security.html">Data Security and Privacy</a></li>
+                <li><a href="data-repositories.html">Data Repositories and Infrastructure</a></li>
+                <li><a href="research-software.html">Research Software and Tools</a></li>
+                <li><a href="data-reuse.html">Reusing Existing Data</a></li>
+                <li><a href="markdown-features-guide.html">Markdown Content Features Guide</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="knowledge-page" class="rdm-knowledge-page">
+                <h2>Data Security and Privacy</h2>
+
+                <div id="data-security" class="rdm-knowledge-card">
+                    <h3>Data Security</h3>
+                    <p>
+                        Data security involves implementing measures to protect data from unauthorized access,
+                        modification,
+                        disclosure, or destruction. In research contexts, data security is critical for protecting
+                        sensitive information
+                        and maintaining the integrity of research data.
+                    </p>
+                    <p>
+                        Effective data security requires a comprehensive approach that includes technical safeguards,
+                        administrative
+                        procedures, and physical security measures. Organizations must develop security policies and
+                        procedures tailored
+                        to their specific data and risk profile.
+                    </p>
+                </div>
+
+                <div id="privacy-protection" class="rdm-knowledge-card">
+                    <h3>Privacy Protection</h3>
+                    <p>
+                        Privacy protection involves safeguarding personal data and ensuring that individuals' rights
+                        regarding their data
+                        are respected. Researchers often work with sensitive personal data, including health
+                        information, genetic data,
+                        and other personally identifiable information.
+                    </p>
+                    <p>
+                        Privacy protection is increasingly regulated through laws like GDPR (General Data Protection
+                        Regulation) in Europe
+                        and similar regulations in other jurisdictions. Researchers must ensure they have appropriate
+                        legal bases for data
+                        processing and implement privacy-by-design principles.
+                    </p>
+                </div>
+
+                <div id="encryption" class="rdm-knowledge-card">
+                    <h3>Encryption</h3>
+                    <div class="subsection">
+                        <h4>Encryption in Transit</h4>
+                        <p>
+                            Data should be encrypted when being transmitted over networks. Using HTTPS, VPNs, and other
+                            secure
+                            communication protocols helps prevent unauthorized interception of data.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h4>Encryption at Rest</h4>
+                        <p>
+                            Data should be encrypted when stored on servers, databases, or storage devices. This
+                            protects data
+                            in case of physical theft or unauthorized access to storage systems.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="access-control" class="rdm-knowledge-card">
+                    <h3>Access Control</h3>
+                    <p>
+                        Access control measures determine who can access data and what they can do with it. Implementing
+                        role-based access control (RBAC) ensures that users only have access to data necessary for their
+                        role.
+                    </p>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li><strong>Authentication</strong>: Verify user identity through passwords, multi-factor
+                            authentication, or other methods</li>
+                        <li><strong>Authorization</strong>: Define what authenticated users are allowed to do</li>
+                        <li><strong>Audit Logging</strong>: Track who accessed what data and when</li>
+                        <li><strong>Data Minimization</strong>: Only collect and retain data that is necessary</li>
+                    </ul>
+                </div>
+
+                <div id="compliance" class="rdm-knowledge-card">
+                    <h3>Regulatory Compliance</h3>
+                    <p>
+                        Researchers must comply with relevant regulations regarding data protection and privacy. Key
+                        regulations include:
+                    </p>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li><strong>GDPR</strong>: Covers personal data processing in the EU</li>
+                        <li><strong>HIPAA</strong>: Applies to health information in the United States</li>
+                        <li><strong>CCPA</strong>: Covers consumer data privacy in California</li>
+                        <li><strong>National Data Protection Laws</strong>: Many countries have their own data
+                            protection regulations</li>
+                    </ul>
+                </div>
+
+                <div id="best-practices" class="rdm-knowledge-card">
+                    <h3>Best Practices for Data Security and Privacy</h3>
+                    <p>
+                        To ensure effective data security and privacy protection, organizations should:
+                    </p>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li>Conduct regular risk assessments to identify vulnerabilities</li>
+                        <li>Implement strong authentication mechanisms</li>
+                        <li>Use encryption for sensitive data</li>
+                        <li>Develop and maintain comprehensive security policies</li>
+                        <li>Provide security training for staff</li>
+                        <li>Conduct regular security audits and testing</li>
+                        <li>Maintain incident response procedures</li>
+                        <li>Perform data protection impact assessments (DPIA)</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul>
+                <li><a href="#data-security">Data Security</a></li>
+                <li><a href="#privacy-protection">Privacy Protection</a></li>
+                <li><a href="#encryption">Encryption</a></li>
+                <li><a href="#access-control">Access Control</a></li>
+                <li><a href="#compliance">Regulatory Compliance</a></li>
+                <li><a href="#best-practices">Best Practices</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="toc-indicator.js"></script>
+</body>
+
+</html>

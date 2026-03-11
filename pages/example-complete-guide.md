@@ -128,7 +128,7 @@ You can use all standard markdown formatting:
 
 ## 📊 Tables {#tables}
 
-Tables are automatically styled and responsive:
+Tables are automatically styled & responsive:
 
 | Feature | Old Workflow | New Workflow |
 |---------|-------------|--------------|

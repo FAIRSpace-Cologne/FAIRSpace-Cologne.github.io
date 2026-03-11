@@ -53,13 +53,13 @@
                     <li class="dropdown">
                         <a href="services.html">Services</a>
                         <div class="dropdown-content">
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                            <a href="rdm-training.html">RDM Training</a>
                             <a href="services.html">FAIR Data Consultation</a>
                             <a href="services.html">Training & Workshops</a>
                             <a href="services.html">Infrastructure Support</a>
                             <a href="services.html">Community Building</a>
                             <a href="services.html">Policy Consultation</a>
-                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
-                            <a href="rdm-training.html">RDM Training</a>
                         </div>
                     </li>
                     <li>
@@ -278,9 +278,10 @@
                 <div class="news-detail-footer">
                     <div class="news-share">
                         <span>Share:</span>
-                        <a href="#" class="share-btn" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="share-btn" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="share-btn" aria-label="Share via Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="share-btn share-linkedin" aria-label="Share on LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" class="share-btn share-email" aria-label="Share via Email"><i
+                                class="fas fa-envelope"></i></a>
                     </div>
                     <a href="latest-news.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to News</a>
                 </div>
@@ -303,6 +304,31 @@
         <p>© 2025 FAIRspace Cologne</p>
     </footer>
 
+    <script>
+        (function () {
+            const pageUrl = window.location.href;
+            const pageTitle = document.title || 'FAIRspace Cologne News';
+
+            const linkedInBtn = document.querySelector('.share-linkedin');
+            if (linkedInBtn) {
+                linkedInBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+                    window.open(linkedInShareUrl, 'linkedin-share', 'width=640,height=620,noopener,noreferrer');
+                });
+            }
+
+            const emailBtn = document.querySelector('.share-email');
+            if (emailBtn) {
+                emailBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const subject = encodeURIComponent(`FAIRspace News: ${pageTitle}`);
+                    const body = encodeURIComponent(`I wanted to share this news with you:\n\n${pageTitle}\n${pageUrl}`);
+                    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+                });
+            }
+        })();
+    </script>
     <script src="script.js"></script>
 </body>
 

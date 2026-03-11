@@ -2,6 +2,7 @@
 // This script loads markdown files and converts them to HTML with full TOC support
 // Features:
 // - Loads markdown files from the pages/ directory
+// - Supports frontmatter metadata (YAML-style) for automatic page routing
 // - Supports GitHub-style alerts (>[!TIP], >[!NOTE], >[!IMPORTANT], >[!WARNING])
 // - Supports <details> and <summary> tags
 // - Auto-generates IDs for headings for TOC linking
@@ -18,13 +19,62 @@ console.log('[markdown-loader.js] Loading...');
     console.log('[markdown-loader.js] MARKDOWN_BASE_PATH set to:', MARKDOWN_BASE_PATH);
 
     /**
+     * Parse YAML frontmatter from markdown
+     * Frontmatter format:
+     * ---
+     * section: rdm-knowledge
+     * title: Page Title
+     * subtitle: Optional subtitle
+     * ---
+     * @param {string} markdownText - The raw markdown text
+     * @returns {object} - { metadata: {...}, content: '...' }
+     */
+    function parseFrontmatter(markdownText) {
+        const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
+        const match = markdownText.match(frontmatterRegex);
+
+        if (!match) {
+            // No frontmatter found
+            return { metadata: {}, content: markdownText };
+        }
+
+        const frontmatterText = match[1];
+        const content = match[2];
+        const metadata = {};
+
+        // Parse simple YAML (key: value pairs)
+        const lines = frontmatterText.split('\n');
+        lines.forEach(line => {
+            const colonIndex = line.indexOf(':');
+            if (colonIndex > 0) {
+                const key = line.substring(0, colonIndex).trim();
+                const value = line.substring(colonIndex + 1).trim();
+                metadata[key] = value;
+            }
+        });
+
+        console.log('[parseFrontmatter] Extracted metadata:', metadata);
+        return { metadata, content };
+    }
+
+    /**
      * Load and render a markdown file
      * @param {string} filename - The markdown file name (e.g., 'data-reuse.md')
      * @param {string} targetSelector - CSS selector for the target container (default: '.main-content section')
      */
-    window.loadMarkdownContent = async function (filename, targetSelector = null) {
+    window.loadMarkdownContent = async function (filename, targetSelector = null, options = {}) {
         console.log('[loadMarkdownContent] FUNCTION CALLED with filename:', filename);
         try {
+            // Backward-compatible signature support:
+            // loadMarkdownContent(filename, options)
+            let resolvedTargetSelector = targetSelector;
+            let resolvedOptions = options || {};
+
+            if (targetSelector && typeof targetSelector === 'object') {
+                resolvedOptions = targetSelector;
+                resolvedTargetSelector = null;
+            }
+
             // Wait for marked.js to be loaded
             let attempts = 0;
             const maxAttempts = 50;
@@ -49,15 +99,56 @@ console.log('[markdown-loader.js] Loading...');
             const markdownText = await response.text();
             console.log('[loadMarkdownContent] Markdown file fetched, length:', markdownText.length);
 
-            // Parse and render the markdown
-            const htmlContent = await parseMarkdown(markdownText);
+            // Parse frontmatter
+            const { metadata, content } = parseFrontmatter(markdownText);
+
+            // Parse and render the markdown content (without frontmatter)
+            const htmlContent = await parseMarkdown(content);
             console.log('[loadMarkdownContent] Markdown parsed successfully');
+
+            // Quarto-style optional modes
+            const sectionId = (resolvedOptions.sectionId || '').trim();
+            const placeholderSelector = resolvedOptions.placeholderSelector || '[data-md-section]';
+            const placeholders = document.querySelectorAll(placeholderSelector);
+
+            // Mode A: Inject multiple sections into placeholders, if present
+            if (placeholders.length > 0) {
+                const sectionMap = extractSectionsByHeadingId(htmlContent);
+                let injectedCount = 0;
+
+                placeholders.forEach(placeholder => {
+                    const requestedSection = (placeholder.getAttribute('data-md-section') || '').trim();
+                    const sectionHtml = sectionMap[requestedSection];
+
+                    if (sectionHtml) {
+                        placeholder.innerHTML = `<div class="markdown-content">${sectionHtml}</div>`;
+                        enhanceCodeBlocks(placeholder);
+                        injectedCount++;
+                    } else {
+                        console.warn(`[loadMarkdownContent] Section not found for placeholder: ${requestedSection}`);
+                    }
+                });
+
+                // Rebuild TOC if present and at least one section was injected
+                if (injectedCount > 0) {
+                    try {
+                        if (typeof window.rebuildTOC === 'function') {
+                            window.rebuildTOC();
+                        }
+                    } catch (tocError) {
+                        console.warn('[loadMarkdownContent] TOC error:', tocError);
+                    }
+
+                    console.log(`[loadMarkdownContent] SUCCESS: Injected ${injectedCount} Quarto-style section(s) from ${filename}`);
+                    return;
+                }
+            }
 
             // Find target element - try multiple strategies
             let targetElement = null;
 
-            if (targetSelector) {
-                targetElement = document.querySelector(targetSelector);
+            if (resolvedTargetSelector) {
+                targetElement = document.querySelector(resolvedTargetSelector);
             }
 
             // If no target found, try to find the .rdm-knowledge-card div
@@ -80,9 +171,38 @@ console.log('[markdown-loader.js] Loading...');
                 throw new Error('Could not find target element to insert content');
             }
 
+            // Mode B: Inject one specific section into target
+            if (sectionId) {
+                const sectionMap = extractSectionsByHeadingId(htmlContent);
+                const selectedSection = sectionMap[sectionId];
+
+                if (!selectedSection) {
+                    throw new Error(`Section "${sectionId}" not found in ${filename}. Use heading IDs like "## My Heading {#my-heading}".`);
+                }
+
+                targetElement.innerHTML = `<div class="markdown-content">${selectedSection}</div>`;
+                enhanceCodeBlocks(targetElement);
+
+                try {
+                    if (typeof window.rebuildTOC === 'function') {
+                        window.rebuildTOC();
+                    }
+                } catch (tocError) {
+                    console.warn('[loadMarkdownContent] TOC error:', tocError);
+                }
+
+                console.log('[loadMarkdownContent] SUCCESS: Section loaded:', sectionId);
+                return;
+            }
+
             console.log('[loadMarkdownContent] Found target, setting innerHTML');
             targetElement.innerHTML = htmlContent;
             console.log('[loadMarkdownContent] Content inserted into DOM');
+
+            // Update page title if metadata contains title
+            if (metadata.title) {
+                document.title = `${metadata.title} | FAIRspace Cologne`;
+            }
 
             // Enhance rendered markdown with interactive features
             enhanceCodeBlocks(targetElement);
@@ -112,6 +232,48 @@ console.log('[markdown-loader.js] Loading...');
     };
 
     /**
+     * Auto-load markdown content based on URL parameter
+     * Usage: Simply add ?page=filename (without .md extension) to the URL
+     * Example: content-page.html?page=data-reuse will load pages/data-reuse.md
+     * 
+     * Or use the full path: ?md=pages/DataStorage/data-backup
+     */
+    window.autoLoadMarkdown = function (targetSelector = null) {
+        console.log('[autoLoadMarkdown] Starting auto-load from URL parameters');
+
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Optional Quarto-style section target
+        const sectionId = urlParams.get('section');
+        const options = sectionId ? { sectionId } : {};
+
+        // Check for 'page' parameter (just filename)
+        let mdFile = urlParams.get('page');
+        if (mdFile) {
+            mdFile = mdFile.endsWith('.md') ? mdFile : mdFile + '.md';
+            console.log('[autoLoadMarkdown] Loading from page parameter:', mdFile);
+            window.loadMarkdownContent(mdFile, targetSelector, options);
+            return true;
+        }
+
+        // Check for 'md' parameter (full path from pages/ directory)
+        const mdPath = urlParams.get('md');
+        if (mdPath) {
+            const fullPath = mdPath.endsWith('.md') ? mdPath : mdPath + '.md';
+            // Remove 'pages/' prefix if user included it
+            const cleanPath = fullPath.replace(/^pages\//, '');
+            console.log('[autoLoadMarkdown] Loading from md parameter:', cleanPath);
+            window.loadMarkdownContent(cleanPath, targetSelector, options);
+            return true;
+        }
+
+        console.log('[autoLoadMarkdown] No URL parameters found');
+        return false;
+    };
+
+    /**
+
      * Parse markdown text to HTML
      * @param {string} markdown - The markdown text
      * @returns {string} - HTML string
@@ -156,7 +318,7 @@ console.log('[markdown-loader.js] Loading...');
             html = '<p style="color: red;">Error parsing markdown: ' + e.message + '</p>';
         }
 
-        // Post-process HTML - add IDs to headings
+        // Post-process HTML - add/normalize IDs for headings
         html = addHeadingIds(html);
 
         // Post-process HTML
@@ -170,14 +332,77 @@ console.log('[markdown-loader.js] Loading...');
      * Add IDs to headings in the HTML
      */
     function addHeadingIds(html) {
-        // Find all headings and add IDs if they don't have them
-        const headingRegex = /<(h[1-6])((?!id=)[^>]*)>([^<]+)<\/\1>/gi;
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
 
-        return html.replace(headingRegex, (match, tag, attrs, text) => {
-            const id = generateId(text);
-            console.log(`[addHeadingIds] Adding ID to ${tag}: ${text} -> ${id}`);
-            return `<${tag}${attrs} id="${id}">${text}</${tag}>`;
+        const headings = temp.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        headings.forEach(heading => {
+            // Quarto/Pandoc-style explicit ID syntax in heading text:
+            // ## Section title {#section-id}
+            const text = (heading.textContent || '').trim();
+            const explicitIdMatch = text.match(/^(.*)\s\{#([A-Za-z][\w-]*)\}\s*$/);
+
+            if (explicitIdMatch) {
+                const cleanText = explicitIdMatch[1].trim();
+                const explicitId = explicitIdMatch[2].trim();
+
+                // Remove trailing {#id} from visible heading text
+                if (heading.lastChild && heading.lastChild.nodeType === Node.TEXT_NODE) {
+                    heading.lastChild.nodeValue = heading.lastChild.nodeValue.replace(/\s*\{#[A-Za-z][\w-]*\}\s*$/, '');
+                } else {
+                    heading.textContent = cleanText;
+                }
+
+                heading.id = explicitId;
+                return;
+            }
+
+            if (!heading.id) {
+                heading.id = generateId(text);
+            }
         });
+
+        return temp.innerHTML;
+    }
+
+    /**
+     * Extract section HTML by heading ID.
+     * A section includes the heading and all following sibling nodes
+     * until the next heading of the same or higher level.
+     */
+    function extractSectionsByHeadingId(html) {
+        const sectionMap = {};
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
+
+        const contentRoot = temp.querySelector('.markdown-content') || temp;
+        const children = Array.from(contentRoot.children);
+
+        for (let i = 0; i < children.length; i++) {
+            const node = children[i];
+            if (!node || !/^H[1-6]$/.test(node.tagName || '')) continue;
+
+            const id = (node.id || '').trim();
+            if (!id) continue;
+
+            const currentLevel = parseInt(node.tagName.substring(1), 10);
+            const sectionNodes = [node.cloneNode(true)];
+
+            for (let j = i + 1; j < children.length; j++) {
+                const next = children[j];
+                if (/^H[1-6]$/.test(next.tagName || '')) {
+                    const nextLevel = parseInt(next.tagName.substring(1), 10);
+                    if (nextLevel <= currentLevel) {
+                        break;
+                    }
+                }
+                sectionNodes.push(next.cloneNode(true));
+            }
+
+            sectionMap[id] = sectionNodes.map(n => n.outerHTML).join('');
+        }
+
+        return sectionMap;
     }
 
     /**
@@ -197,7 +422,7 @@ console.log('[markdown-loader.js] Loading...');
         const alertIcons = {
             'TIP': '💡',
             'NOTE': 'ℹ️',
-            'IMPORTANT': '⚠️',
+            'IMPORTANT': '❗',
             'WARNING': '⚠️',
             'CAUTION': '🛑'
         };

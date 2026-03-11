@@ -7,11 +7,11 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>Markdown Content Features Guide | FAIRspace Cologne</title>
+    <title>FAIRspace Cologne</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Markdown Parser Library - USE LOCAL COPY -->
+    <!-- Markdown Parser Library -->
     <script src="marked.min.js"></script>
 </head>
 
@@ -65,7 +65,7 @@
                             <a href="services.html">Infrastructure Support</a>
                             <a href="services.html">Community Building</a>
                             <a href="services.html">Policy Consultation</a>
-</div>
+                        </div>
                     </li>
                     <li>
                         <a href="team.html">Contributors</a>
@@ -92,8 +92,8 @@
         </aside>
 
         <main class="main-content">
-            <section id="markdown-features-page" class="rdm-knowledge-page">
-                <!-- Content loaded from Markdown file -->
+            <section class="rdm-knowledge-page">
+                <!-- Content automatically loaded from URL parameter -->
                 <div class="rdm-knowledge-card">
                     <p>Loading content...</p>
                 </div>
@@ -125,23 +125,49 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="markdown-loader.js?v=2"></script>
+    <script src="markdown-loader.js"></script>
     <script src="toc-indicator.js"></script>
 
-    <!-- Load markdown content on page load -->
+    <!-- Auto-load markdown content based on URL parameter -->
     <script>
-        console.log('[Init] Inline script starting');
+        console.log('[Init] Auto-load script starting');
 
         // Poll for dependencies and load when ready
         (function pollForDeps() {
-            if (typeof marked === 'undefined' || typeof window.loadMarkdownContent === 'undefined') {
-                console.log('[Init] Waiting for marked and loadMarkdownContent...');
+            if (typeof marked === 'undefined' || typeof window.autoLoadMarkdown === 'undefined') {
+                console.log('[Init] Waiting for marked and autoLoadMarkdown...');
                 setTimeout(pollForDeps, 500);
                 return;
             }
 
-            console.log('[Init] ✓ All ready, loading markdown content');
-            window.loadMarkdownContent('markdown-features-guide.md');
+            console.log('[Init] ✓ All ready, auto-loading markdown content');
+
+            // Try to auto-load from URL parameter
+            const loaded = window.autoLoadMarkdown();
+
+            if (!loaded) {
+                // No URL parameter found, show helpful message
+                const card = document.querySelector('.rdm-knowledge-card');
+                if (card) {
+                    card.innerHTML = `
+                        <div class="markdown-content">
+                            <h2>No Content Specified</h2>
+                            <p>Please specify a markdown file to load using URL parameters:</p>
+                            <ul>
+                                <li><strong>?page=filename</strong> - Load a file from the pages/ directory</li>
+                                <li>Example: <code>content-page.html?page=data-reuse</code></li>
+                                <li><strong>&amp;section=section-id</strong> - Load only one Quarto-style heading section</li>
+                                <li>Example: <code>content-page.html?page=example-complete-guide&amp;section=frontmatter-metadata</code></li>
+                            </ul>
+                            <p>Or use the full path:</p>
+                            <ul>
+                                <li><strong>?md=path/to/file</strong> - Load from a specific path in pages/</li>
+                                <li>Example: <code>content-page.html?md=DataStorage/data-backup</code></li>
+                            </ul>
+                        </div>
+                    `;
+                }
+            }
         })();
     </script>
 </body>

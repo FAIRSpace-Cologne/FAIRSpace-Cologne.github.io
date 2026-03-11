@@ -2,23 +2,85 @@
 
 This system allows anyone to create content for the website using simple Markdown files, without needing direct access to edit HTML. The markdown content is automatically converted to HTML with full support for all website features, including the animated table of contents and scroll effects.
 
-## 📁 Files Created
+## 🎉 NEW: Simplified Workflow
 
-1. **`markdown-loader.js`** - JavaScript that loads and parses markdown files
-2. **`format/markdown-template.md`** - Complete template and guide for writing content
-3. **Alert styles in `style.css`** - Styling for GitHub-style alerts and markdown content
-4. **Updated `toc-indicator.js`** - Exposed `rebuildTOC()` function for dynamic content
-5. **Updated `rdm-knowledge.html`** - Traditional HTML content (reverted)
-6. **New `data-reuse.html`** - Example page configured to load markdown content
+**NEW FEATURES (2025):**
+- ✨ **Frontmatter Support** - Add metadata to your markdown files
+- ✨ **Auto-Routing** - Load any markdown file using URL parameters
+- ✨ **Generic Template** - One HTML file (`content-page.html`) for all markdown content
+- ✨ **Unique Icons** - IMPORTANT (❗) and WARNING (⚠️) now have different icons
 
-## 🚀 How It Works
+**NEW FEATURES (2026):**
+- ✨ **Quarto-Style Section IDs** - Use heading attributes like `## Overview {#overview}`
+- ✨ **Section Routing** - Load a single section via URL parameter `?section=overview`
+- ✨ **Section Placeholders** - Auto-inject sections into intended HTML targets using `data-md-section`
 
-### For Content Contributors
+## 📁 Files in the System
 
-1. **Copy the template**: Start with `format/markdown-template.md`
-2. **Write your content**: Use standard markdown syntax with special features (see below)
-3. **Save in `pages/` folder**: Save your `.md` file (e.g., `my-topic.md`)
-4. **Send to maintainer**: The maintainer will link your file to the website
+1. **`markdown-loader.js`** - JavaScript that loads and parses markdown files with frontmatter support
+2. **`content-page.html`** - Generic template for auto-loading markdown content via URL parameters
+3. **`format/markdown-template.md`** - Complete template and guide for writing content
+4. **`format/markdown-with-frontmatter-example.md`** - Example showing the new frontmatter workflow
+5. **Alert styles in `style.css`** - Styling for GitHub-style alerts and markdown content
+6. **`toc-indicator.js`** - Exposed `rebuildTOC()` function for dynamic content
+
+## 🚀 Quick Start (Simplified Workflow)
+
+### For Content Contributors (The Easy Way! ✅)
+
+1. **Create your markdown file** with frontmatter:
+   ```markdown
+   ---
+   section: rdm-knowledge
+   title: Your Page Title
+   subtitle: Optional subti (Traditional Approach)
+
+For pages that need custom HTML structure, you can still use the traditional approach
+   # Your Content Starts Here
+   
+   Write your content using standard markdown...
+   ```
+
+2. **Save in `pages/` folder**: Save your `.md` file (e.g., `my-topic.md`)
+
+3. **Share the URL**: Your content is instantly accessible at:
+   - `content-page.html?page=my-topic`
+
+**That's it!** No HTML files to create or modify. No maintainer needed.
+
+### Using the Auto-Router
+
+The system now supports loading any markdown file using URL parameters:
+
+**Simple filename** (from `pages/` folder):
+```
+content-page.html?page=data-reuse
+content-page.html?page=my-new-topic
+```
+
+**Single section from markdown** (Quarto-style):
+```
+content-page.html?page=example-complete-guide&section=frontmatter-metadata
+```
+
+**Subfolder paths**:
+```
+content-page.html?md=DataStorage/data-backup
+content-page.html?md=dmp/data-management-plan
+```
+
+### Frontmatter Fields
+
+Add these at the top of your markdown file:
+
+```yaml
+---
+section: rdm-knowledge          # Section this belongs to
+title: Your Page Title          # Browser tab title (auto-set)
+subtitle: Optional subtitle     # Additional context
+author: Your Name              # Content author
+---
+```
 
 ### For Website Maintainers
 
@@ -59,6 +121,41 @@ To add a new markdown content page or update existing content:
 
 ## ✨ Special Features
 
+### Quarto-Style Section Linking
+
+You can define explicit section IDs directly in markdown headings (Quarto/Pandoc style):
+
+```markdown
+## Frontmatter Metadata {#frontmatter-metadata}
+## Alerts and Callouts {#alerts-callouts}
+```
+
+Then load only one section with URL parameter:
+
+```
+content-page.html?page=example-complete-guide&section=alerts-callouts
+```
+
+### Inject Sections Into Intended HTML Areas
+
+If a page has multiple content slots, add placeholders with `data-md-section`:
+
+```html
+<div data-md-section="overview"></div>
+<div data-md-section="examples"></div>
+<div data-md-section="faq"></div>
+```
+
+Then load one markdown file:
+
+```html
+<script>
+   window.loadMarkdownContent('my-page.md');
+</script>
+```
+
+The loader automatically matches heading IDs to placeholders and injects each section into its intended slot.
+
 ### GitHub-Style Alerts
 
 Use these to highlight important information:
@@ -71,10 +168,10 @@ Use these to highlight important information:
 > This is general information
 
 >[!IMPORTANT]
-> This is critical information
+> This is critical information (now with ❗ icon)
 
 >[!WARNING]
-> This is a warning
+> This is a warning (with ⚠️ icon)
 
 >[!CAUTION]
 > Use extreme caution
@@ -101,7 +198,20 @@ Hidden content goes here...
 
 ## 📝 Example Usage
 
-**Current Example**: The `data-reuse.html` page loads content from `pages/data-reuse.md`
+### New Simplified Approach (Recommended ⭐)
+
+1. Create your markdown file: `pages/my-new-topic.md`
+2. Add frontmatter at the top
+3. Access it at: `content-page.html?page=my-new-topic`
+4. Share the URL or add it to navigation
+
+**Example**: See it in action:
+- `content-page.html?page=data-reuse`
+- Or try the example: `content-page.html?md=format/markdown-with-frontmatter-example`
+
+### Traditional Approach
+
+**Example**: The `data-reuse.html` page loads content from `pages/data-reuse.md`
 
 To see it in action:
 1. Open `data-reuse.html` in a browser
@@ -115,12 +225,15 @@ To see it in action:
 
 Edit the script at the bottom of your HTML file:
 
-```html
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Change 'data-reuse.md' to your markdown file name
-        window.loadMarkdownContent('data-reuse.md');
-    });
+```htmls
+
+### With Frontmatter (Recommended)
+- **`format/markdown-with-frontmatter-example.md`** - Shows the new simplified workflow
+
+### Traditional Template
+- **`format/markdown-template.md`** - Complete template with all syntax examples
+
+Both templates include
 </script>
 ```
 
@@ -157,12 +270,39 @@ All markdown content is styled to match the website's design:
 
 ### Content not loading?
 - Check browser console for errors
-- Verify the markdown file exists in `pages/` folder
-- Ensure `marked.js` CDN is loaded
-- Check filename spelling in `loadMarkdownContent()` call
+### New Simplified Workflow
+✅ **No HTML needed** - Just write markdown and share the URL  
+✅ **Instant publishing** - No waiting for maintainers  
+✅ **One template** - `content-page.html` works for everything  
+✅ **Flexible** - Easy to reorganize content  
+✅ **Standard** - Frontmatter is used by Jekyll, Hugo, and many static site generators  
 
-### TOC not updating?
-- Ensure headings have proper hierarchy (don't skip levels)
+### General System Benefits
+✅ **Easy for Contributors** - No HTML knowledge required  
+✅ **Version Control Friendly** - Markdown is plain text  
+✅ **Maintainable** - Separate content from presentation  
+✅ **Consistent Styling** - Automatic formatting  
+- See `format/markdown-with-frontmatter-example.md` for the new workflow example
+
+---
+
+**Need help?** 
+- **New workflow**: Check `format/markdown-with-frontmatter-example.md`
+- **Traditional workflow**: Refer to `format/markdown-template.md`
+- **Complete syntax**: Both templates have full examples
+
+### Old Workflow ❌
+1. Create markdown file  
+2. Create or copy HTML file  
+3. Manually add scripts  
+4. Specify markdown filename in script  
+5. Update navigation links  
+6. Coordinate with maintainer  
+
+### New Workflow ✅
+1. Create markdown file with frontmatter  
+2. Share URL: `content-page.html?page=filename`  
+3. Done!levels)
 - Verify `toc-indicator.js` is loaded after `markdown-loader.js`
 - Check that headings use `#` syntax, not HTML tags
 

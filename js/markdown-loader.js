@@ -15,9 +15,11 @@ console.log('[markdown-loader.js] Loading...');
     console.log('[markdown-loader.js] IIFE starting...');
 
     // Configuration
-    // When HTML pages are moved into the html/ directory, markdown files are located one
-    // directory level up in pages/. This base path is used when fetching markdown content.
-    const MARKDOWN_BASE_PATH = '../pages/';
+    // Markdown files live in the pages/ directory. Depending on whether the page is
+    // served from the repository root or from an html/ subfolder, the base path needs
+    // to adjust accordingly.
+    const htmlFolderPrefix = window.location.pathname.includes('/html/') ? '../' : '';
+    const MARKDOWN_BASE_PATH = `${htmlFolderPrefix}pages/`;
     console.log('[markdown-loader.js] MARKDOWN_BASE_PATH set to:', MARKDOWN_BASE_PATH);
 
     /**

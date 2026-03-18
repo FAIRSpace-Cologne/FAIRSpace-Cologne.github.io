@@ -5,6 +5,12 @@ pages:
   script:
     - mkdir .public
     - cp -r * .public
+
+    # GitLab Pages expects index.html at the site root.
+    # Our source HTML files are stored in html/, so copy them to the public root.
+    - cp -r .public/html/* .public/ 2>/dev/null || true
+
+    # Optional: keep html/ folder in repo but not required for published site.
     - mv .public public
   publish: public
   artifacts:

@@ -94,9 +94,9 @@ To add a new markdown content page or update existing content:
 
 3. **Add scripts** before closing `</body>` tag:
    ```html
-   <script src="script.js"></script>
-   <script src="markdown-loader.js"></script>
-   <script src="toc-indicator.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/markdown-loader.js"></script>
+   <script src="js/toc-indicator.js"></script>
    ```
 
 4. **Add loader script** to specify which markdown file to load:

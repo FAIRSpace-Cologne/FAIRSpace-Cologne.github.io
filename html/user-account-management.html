@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>User Account Management | FAIRdata Cologne</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                            <a href="rdm-training.html">RDM Training</a>
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+</div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Document Layout with Dual Sidebars -->
+    <div class="document-layout">
+        <!-- Left Sidebar: Topic Navigation -->
+        <aside class="toc-sidebar toc-left">
+            <h3>Topics</h3>
+            <ul class="toc-list">
+                <li><a href="user-guidelines.html">Overview</a></li>
+                <li><a href="user-account-management.html" class="active">User Account Management</a></li>
+                <li><a href="version-control.html">Version Control</a></li>
+                <li><a href="metadata-management.html">Metadata Management</a></li>
+                <li><a href="metadata-publication.html">Publishing Metadata</a></li>
+                <li><a href="metadata-search.html">Searching Records</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="rdm-knowledge-page">
+                <h1>User Account Management</h1>
+                <p class="intro-text">
+                    This guide provides step-by-step instructions on how to create, manage, and administer user accounts
+                    in FAIRdata Cologne. Follow these procedures to set up and maintain user accounts for your
+                    organization.
+                </p>
+
+                <!-- Creating a User Account Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="creating-account">Creating a User Account</h2>
+                    <div class="subsection">
+                        <h3>Step 1: Access the Registration Page</h3>
+                        <p>
+                            Navigate to the FAIRdata Cologne login page. Click on the "Create New Account" or "Sign Up"
+                            button
+                            located below the login form.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 2: Fill in Personal Information</h3>
+                        <p>
+                            Complete the registration form with the following information:
+                        </p>
+                        <ul>
+                            <li><strong>First Name:</strong> Your given name</li>
+                            <li><strong>Last Name:</strong> Your family name</li>
+                            <li><strong>Email Address:</strong> A valid email address for account verification</li>
+                            <li><strong>Institution:</strong> Select your organization from the dropdown list</li>
+                            <li><strong>Department:</strong> Your department or research group</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 3: Create Login Credentials</h3>
+                        <p>
+                            Choose a username and password:
+                        </p>
+                        <ul>
+                            <li><strong>Username:</strong> 3-20 characters, alphanumeric with underscores</li>
+                            <li><strong>Password:</strong> At least 12 characters, including uppercase, lowercase,
+                                numbers, and symbols</li>
+                            <li><strong>Confirm Password:</strong> Re-enter your password for verification</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 4: Accept Terms and Conditions</h3>
+                        <p>
+                            Review and accept the Terms of Service and Privacy Policy. Check the checkbox to confirm you
+                            have
+                            read and understood these documents.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 5: Verify Your Email</h3>
+                        <p>
+                            A verification email will be sent to the address you provided. Click the verification link
+                            in the
+                            email within 24 hours to activate your account.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Logging In Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="logging-in">Logging Into Your Account</h2>
+                    <div class="subsection">
+                        <h3>Step 1: Navigate to Login Page</h3>
+                        <p>
+                            Go to the FAIRdata Cologne homepage and click on "Login" in the top navigation bar.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 2: Enter Credentials</h3>
+                        <p>
+                            Enter your username (or email) and password in the login form.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 3: Enable Two-Factor Authentication (Optional)</h3>
+                        <p>
+                            If two-factor authentication is enabled on your account, enter the verification code from
+                            your
+                            authentication app or check your email for a code.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h3>Step 4: Access Your Dashboard</h3>
+                        <p>
+                            Once logged in successfully, you will be directed to your user dashboard where you can
+                            manage your
+                            profile and access platform features.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Managing Profile Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="managing-profile">Managing Your Profile</h2>
+                    <div class="subsection">
+                        <h3>Editing Profile Information</h3>
+                        <p>
+                            To update your profile:
+                        </p>
+                        <ol>
+                            <li>Click on your username in the top-right corner of the navigation bar</li>
+                            <li>Select "Profile Settings" from the dropdown menu</li>
+                            <li>Edit your personal information as needed</li>
+                            <li>Click "Save Changes" to update your profile</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3>Changing Your Password</h3>
+                        <p>
+                            To change your password:
+                        </p>
+                        <ol>
+                            <li>Go to Profile Settings</li>
+                            <li>Click on the "Security" tab</li>
+                            <li>Enter your current password</li>
+                            <li>Enter your new password (must meet security requirements)</li>
+                            <li>Confirm your new password</li>
+                            <li>Click "Update Password"</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3>Managing Notifications</h3>
+                        <p>
+                            To customize your notification preferences:
+                        </p>
+                        <ol>
+                            <li>Go to Profile Settings</li>
+                            <li>Click on the "Notifications" tab</li>
+                            <li>Toggle notification types on or off as desired</li>
+                            <li>Select your preferred notification delivery method (email, in-app, or both)</li>
+                            <li>Save your preferences</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- User Roles and Permissions Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="user-roles">User Roles and Permissions</h2>
+                    <div class="subsection">
+                        <h3>Role Descriptions</h3>
+                        <ul>
+                            <li>
+                                <strong>Visitor:</strong> Browse and search published metadata. No login required.
+                            </li>
+                            <li>
+                                <strong>Contributor:</strong> Create and edit metadata records. Can submit records for
+                                review
+                                but cannot publish.
+                            </li>
+                            <li>
+                                <strong>Publisher:</strong> Review and approve metadata records. Can publish records and
+                                manage
+                                published content.
+                            </li>
+                            <li>
+                                <strong>Administrator:</strong> Full access to all platform features including user
+                                management,
+                                system settings, and configuration.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>Requesting Role Changes</h3>
+                        <p>
+                            If you need a different role or permission level:
+                        </p>
+                        <ol>
+                            <li>Go to Profile Settings</li>
+                            <li>Click "Request Role Change"</li>
+                            <li>Select the desired role</li>
+                            <li>Provide justification for the role change</li>
+                            <li>Submit your request</li>
+                        </ol>
+                        <p>
+                            Your request will be reviewed by administrators and you will receive notification of
+                            approval or denial.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Account Security Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="account-security">Account Security</h2>
+                    <div class="subsection">
+                        <h3>Best Practices for Account Security</h3>
+                        <ul>
+                            <li>Use a strong, unique password with a mix of uppercase, lowercase, numbers, and symbols
+                            </li>
+                            <li>Enable two-factor authentication for additional security</li>
+                            <li>Never share your credentials with others</li>
+                            <li>Log out when you're done, especially on shared computers</li>
+                            <li>Regularly review your login activity in the Security tab</li>
+                            <li>Update your password at least every 90 days</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>If You Suspect Unauthorized Access</h3>
+                        <p>
+                            If you suspect your account has been compromised:
+                        </p>
+                        <ol>
+                            <li>Immediately change your password</li>
+                            <li>Review your recent activity in the Security tab</li>
+                            <li>Contact support at support@fairspace-cologne.de</li>
+                            <li>Consider enabling two-factor authentication</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Deactivating Account Section -->
+                <div class="rdm-knowledge-card">
+                    <h2 id="deactivating-account">Deactivating Your Account</h2>
+                    <div class="subsection">
+                        <h3>Account Deactivation Process</h3>
+                        <p>
+                            To deactivate your account:
+                        </p>
+                        <ol>
+                            <li>Go to Profile Settings</li>
+                            <li>Scroll to the bottom and click "Deactivate Account"</li>
+                            <li>Confirm that you understand the implications</li>
+                            <li>Enter your password for verification</li>
+                            <li>Your account will be deactivated immediately</li>
+                        </ol>
+                        <p>
+                            <strong>Note:</strong> Deactivated accounts can be reactivated within 30 days. After 30
+                            days,
+                            the account and all associated data will be permanently deleted.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Right Sidebar: In-Page Navigation -->
+        <aside class="toc-sidebar toc-right">
+            <h3>Content</h3>
+            <ul class="toc-list">
+                <li><a href="#creating-account">Creating an Account</a></li>
+                <li><a href="#logging-in">Logging In</a></li>
+                <li><a href="#managing-profile">Managing Profile</a></li>
+                <li><a href="#user-roles">User Roles</a></li>
+                <li><a href="#account-security">Account Security</a></li>
+                <li><a href="#deactivating-account">Deactivating Account</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="../images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="../images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="../images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/toc-indicator.js"></script>
+</body>
+
+</html>
+

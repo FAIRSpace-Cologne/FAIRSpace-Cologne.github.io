@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Articles & Publications | FAIRspace Cologne</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="logo">FAIRspace Cologne</div>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-bar-center">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon-left"></i>
+                    <input type="text" class="search-input-desktop" placeholder="Search in FAIRspace Cologne"
+                        aria-label="Search" id="searchInput">
+                    <button class="search-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Results Dropdown -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="search-icon" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="latest-news.html">News</a></li>
+                    <li><a href="rdm-knowledge.html">RDM Knowledge</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="fairdata-cologne.html">FAIRdata Cologne</a>
+                            <a href="rdm-training.html">RDM Training</a>
+                            <a href="services.html">FAIR Data Consultation</a>
+                            <a href="services.html">Training & Workshops</a>
+                            <a href="services.html">Infrastructure Support</a>
+                            <a href="services.html">Community Building</a>
+                            <a href="services.html">Policy Consultation</a>
+</div>
+                    </li>
+                    <li>
+                        <a href="team.html">Contributors</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="publication.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="data-policies.html">Data Policies</a>
+                            <a href="data-management-plans.html">Data Management Plans</a>
+                            <a href="research-papers.html">Research Papers</a>
+                            <a href="contributions.html">Contributions</a>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="training-materials.html">Training Materials</a>
+                            <a href="white-papers.html">White Papers</a>
+                            <a href="conference-proceedings.html">Conference Proceedings</a>
+                            <a href="technical-reports.html">Technical Reports</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Publications Categories -->
+    <!-- <section id="publications" class="publications">
+        <h2>Publications</h2>
+        <p class="publications-subtitle">Browse our publications by category</p>
+
+        <div class="publication-categories">
+            <a href="data-policies.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h3>Data Policies</h3>
+                <p>Guidelines and policy documents related to research data management</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="data-management-plans.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3>Data Management Plans</h3>
+                <p>Resources and examples for creating effective data management plans</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="research-papers.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>Research Papers</h3>
+                <p>Scientific publications and research articles on FAIR data principles</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="contributions.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Contributions</h3>
+                <p>Our team's contributions to open science and research data initiatives</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="case-studies.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3>Case Studies</h3>
+                <p>Real-world examples of FAIR data implementation across different disciplines</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="training-materials.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Training Materials</h3>
+                <p>Educational resources and instructional content for data management</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="white-papers.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3>White Papers</h3>
+                <p>In-depth analysis and technical reports on research data management</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="conference-proceedings.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-presentation"></i>
+                </div>
+                <h3>Conference Proceedings</h3>
+                <p>Presentations and proceedings from academic conferences and workshops</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="technical-reports.html" class="publication-category-card">
+                <div class="category-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Technical Reports</h3>
+                <p>Technical documentation and detailed reports on data infrastructure</p>
+                <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos">
+            <img src="../images/BI-K-Logo-white-EN.png" alt="BI-K Logo" />
+            <img src="../images/ukklogowhite.png" alt="UKK Logo" />
+            <img src="../images/uzkwhite.png" alt="UZK Logo" />
+        </div>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <span id="toggleLabel">Dark Mode</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        <p>© 2025 FAIRspace Cologne</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
+

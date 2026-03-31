@@ -13,6 +13,71 @@
   --card-bg: #ffffff;
   --card-shadow: rgba(0, 0, 0, 0.1);
   --border-color: #e0e0e0;
+}
+
+html {
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* ===== TRAINING MATERIALS SECTION ===== */
+.main-content,
+.training-materials-section {
+  margin-top: 0;
+}
+
+main#training-materials-main {
+  margin-top: var(--nav-height);
+}
+
+.training-materials-section {
+  max-width: 1400px;
+  width: 70%;
+  margin: 0 auto;
+  padding: calc(var(--nav-height) + 1.5rem) 0 2rem;
+  box-sizing: border-box;
+}
+
+.rdm-training-header {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media (max-width: 992px) {
+  main#training-materials-main {
+    margin-top: var(--nav-height);
+  }
+
+  .training-materials-section {
+    width: 90%;
+    padding-top: calc(var(--nav-height) + 1.25rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .training-materials-section {
+    padding-top: calc(var(--nav-height) + 1rem);
+  }
+}
+
+@media (max-width: 1200px) {
+  .training-materials-section {
+    width: 90%;
+  }
+}
+
+body.light-mode {
+  --hero-height: 70vh;
+  /* hero height */
+  /* Light mode colors */
+  --bg-color: #f8f9fb;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --border-color: #e0e0e0;
   --service-dark-bg: #0a488b;
   --service-light-bg: #5dade2;
   --about-card-bg: #ffffff;
@@ -1775,19 +1840,40 @@ body.has-announcement .hero {
   flex: 0 0 300px;
   border-radius: 12px;
   color: #fff;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-content: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: space-between;
   text-align: center;
   scroll-snap-align: start;
   transition: transform 0.3s ease;
-  min-height: 350px;
+  min-height: 320px;
   width: 100%;
   box-sizing: border-box;
 }
+
+.service-card>img,
+.service-card>.service-icon {
+  margin: 0 auto;
+  width: 58px;
+  height: 58px;
+  display: block;
+}
+
+.service-card>h3 {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  font-size: 1.3rem;
+}
+
+.service-card>p {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  line-height: 1.3;
+  font-size: 0.95rem;
+}
+
 
 .service-card>img {
   flex-basis: 100%;
@@ -1804,6 +1890,26 @@ body.has-announcement .hero {
 .service-card>a.service-link {
   flex-basis: auto;
   margin: 0 0.3rem;
+}
+
+.service-btn-group {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.service-btn-group .service-link {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-weight: 600;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
 }
 
 .service-grid .service-card {
@@ -2766,7 +2872,7 @@ body.dark-mode .subsection h4 {
 
 .fairdata-header {
   text-align: center;
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto 3rem;
   padding-top: 2rem;
 }
@@ -2780,7 +2886,69 @@ body.dark-mode .subsection h4 {
 
 .fairdata-header p {
   color: #333;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0.8rem auto 1.8rem;
+}
+
+.fairdata-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2.5rem;
+  max-width: 800px;
+  font-size: 1.18rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.fairdata-benefits li {
+  margin: 0.35rem 0;
+  padding-left: 1.4rem;
+  text-indent: -1.4rem;
+}
+
+.fairdata-benefits li::before {
+  content: "\2022";
+  color: #0a488b;
+  margin-right: 0.7rem;
+}
+
+.fairdata-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.fairdata-actions .service-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fairdata-actions .service-card {
+  min-height: 240px;
+  padding: 1.3rem 1.3rem;
+  max-width: 450px;
+  width: calc(50% - 1rem);
+  margin: 0.6rem;
+}
+
+@media (max-width: 992px) {
+  .fairdata-actions .service-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.fairdata-actions .service-card h3 {
+  font-size: 1.6rem;
+}
+
+.fairdata-actions .service-card p {
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
@@ -3191,12 +3359,24 @@ body.dark-mode .subsection h4 {
   padding: 3rem 2rem 5rem;
   min-height: 70vh;
   scroll-margin-top: 80px;
+  font-family: 'Inter', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  max-width: calc(1400px * 1.2);
+  /* 120% wider base */
+  margin: calc(var(--nav-height) + 1rem) auto 0;
 }
+
+.rdm-training-header,
+.rdm-training-intro {
+  max-width: calc(1200px * 1.2);
+}
+
 
 .rdm-training-header {
   text-align: center;
   max-width: 1200px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2.5rem;
   padding-top: 2rem;
 }
 
@@ -3211,12 +3391,71 @@ body.dark-mode .subsection h4 {
   color: #333;
   font-size: 1.2rem;
   line-height: 1.6;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.rdm-training-intro {
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.rdm-training-intro h2 {
+  color: #0a488b;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.rdm-training-intro p {
+  color: #444;
+  margin-bottom: 1.25rem;
+}
+
+.rdm-training-intro ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.rdm-training-intro li {
+  margin-bottom: 0.7rem;
+}
+
+.rdm-training-actions {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.rdm-training-buttons {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.rdm-training-buttons .btn {
+  min-width: 210px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* ===== TRAINING MATERIALS SECTION ===== */
 .training-materials-section {
   max-width: 1400px;
+  width: 70%;
   margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .training-materials-section {
+    width: 90%;
+  }
 }
 
 .training-materials-section h2 {
@@ -3901,14 +4140,17 @@ footer {
 }
 
 /* ===== ABOUT PAGE ===== */
-.about-page {
+.about-page,
+.fairdata-page,
+.rdm-training-page {
   background: #ffffff;
   padding: 5rem 2rem 3rem;
   min-height: 70vh;
   scroll-margin-top: 80px;
 }
 
-.about-hero {
+.about-hero,
+.fairdata-hero {
   text-align: center;
   margin-bottom: 3rem;
   padding: 3rem 0;
@@ -3918,16 +4160,56 @@ footer {
   scroll-margin-top: 80px;
 }
 
-.about-hero h1 {
+.about-hero h1,
+.fairdata-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
-.about-hero p {
+
+.about-hero p,
+.fairdata-hero p {
   font-size: 1.2rem;
   opacity: 0.9;
   margin: 0;
+}
+
+.fairdata-intro {
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.fairdata-intro h2 {
+  color: #0a488b;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+.fairdata-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.fairdata-actions {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.fairdata-buttons {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fairdata-buttons .btn {
+  min-width: 210px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .about-content {
